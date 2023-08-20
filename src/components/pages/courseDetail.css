@@ -1,0 +1,249 @@
+.Course-Detail-Top-Container {
+    padding: 0 128px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.Left-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.Right-Box {
+    width: 50%;
+}
+
+.Left-Box>h1 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Left-Box>p {
+    color: #3B4A54;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.812px;
+    text-transform: capitalize;
+}
+
+.Class-Mode {
+    padding: 10px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.812px;
+    text-transform: uppercase;
+    border: none;
+    width: max-content;
+}
+
+.Starbox-Container {
+    display: flex;
+    padding: 4.765px 0px;
+    align-items: center;
+    gap: 4.765px;
+}
+
+.Rating-Box {
+    border-radius: 4.253px;
+    background: #FFD13C;
+    padding: 7.261px;
+    color: #FFF;
+    font-family: Satoshi;
+    font-size: 10.165px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15.248px;
+}
+
+
+.Icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    background: #9A9999;
+}
+
+.Course-Basic-Detail {
+    display: flex;
+    flex-direction: column;
+    gap: 26px 100px;
+}
+
+.Course-Basic-Detail>div> :nth-child(2)>h3 {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.812px;
+    text-transform: capitalize;
+}
+
+.Course-Basic-Detail>div> :nth-child(2)>span {
+    display: inline-block;
+    color: #000;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.812px;
+    text-transform: capitalize;
+}
+
+.Course-Additional-Detail-Container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 225px;
+    gap: 33px;
+}
+
+.Additional-Detail-grid-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(149px, 2fr));
+    gap: 40px;
+}
+
+.Additional-Detail-Box {
+    display: flex;
+    width: 149px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.Additional-Detail-Box>span {
+    border-radius: 2px;
+    background: #F1F1F1;
+    width: 36px;
+    height: 36px;
+    padding: 8px 7.5px 7px 7.5px;
+}
+
+.Additional-Detail-Box>p {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.Course-Basic-Detail-Row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Course-Basic-Detail-Row>div {
+    min-width: 200px;
+}
+
+.Price-Container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    gap: 60px;
+}
+
+.Price-Container>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Price-Container>div> :nth-child(1) {
+    color: #000;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Price-Container>div> :nth-child(2) {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: line-through;
+    display: inline-block;
+}
+
+.get-started {
+    padding: 20px 80px;
+    border-radius: 7px;
+    background: #14171A;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.Teachers-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    min-height: 424px;
+}
+
+.Teachers-Container>h1 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Teachers-Container>* {
+    flex-grow: 1;
+}
+
+.teacher-grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(304px, 0fr));
+    gap: 20px;
+}
+
+.Batch-Card-Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(472px, 1fr));
+    gap: 33px;
+}
+
+.Test-Series-Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
+    gap: 1%;
+    grid-row-gap: 29px;
+}

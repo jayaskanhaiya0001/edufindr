@@ -1,0 +1,35 @@
+.exam-box {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.Our-Course-Main-Container {
+    display: flex;
+    gap: 70px;
+}
+
+.test-series-title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.test-series-test-desc {
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.TestSeries-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(252.5px, 0fr));
+    flex-grow: 1;
+    grid-gap: 32px;
+}

@@ -1,0 +1,59 @@
+.common_card {
+    width: 304px;
+    height: 372px;
+    padding: 14px 13px 23px;
+    background: #FFF;
+    box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.common-card-image {
+    width: 278px;
+    height: 217px;
+}
+
+.common_card_image_box>img {
+    height: 100%;
+    width: 100%;
+}
+
+.common_card_desc_box {
+    margin: 22px 0px 28px;
+}
+
+.common-card-title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.common-card-description {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.common-card-icon {
+    width: 20.366px;
+    height: 15.043px;
+}
+
+.common-card-text {
+    color: #747474;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.common-card-btm-txt {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

@@ -1,0 +1,123 @@
+.Teacher-Detail-Container {
+    padding: 72.95px 128px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+
+.teacher-personal-detail {
+    display: flex;
+    gap: 49px;
+}
+
+.Teacher-Name {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.709px;
+    margin-bottom: 10px;
+}
+
+.Teacher-Dsignation> :nth-child(1) {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.709px;
+    display: inline-block;
+    padding-right: 12px;
+    border-right: 1px solid #000;
+    margin-right: 10px;
+}
+
+.Teacher-Dsignation> :nth-child(2) {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19.709px;
+}
+
+.teacher-personal-detail>img {
+    max-width: 224px;
+    min-height: 224px;
+    border-radius: 12px;
+}
+
+.basic-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    justify-content: center;
+
+}
+
+.Teacher-Cmn-Dtl>span {
+    padding: 10px 12px 10px 0px;
+    display: inline-block;
+    border-right: 1px solid #000;
+}
+
+.Teacher-Cmn-Dtl> :nth-child(2) {
+    margin: 0 10px;
+}
+
+.Teacher-Cmn-Dtl> :nth-child(3) {
+    border: none;
+}
+
+.bold {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.709px
+}
+
+.education-head {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.709px;
+    padding: 12px 0px;
+    border-bottom: 1px solid #000;
+    width: max-content;
+}
+
+.Eductation-Box {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+
+.education-ul-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.teacher-page-course-grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(193px, 1fr));
+    grid-gap: 24px 24px;
+}
+
+.Heading {
+    margin-bottom: 24px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.709px;
+}

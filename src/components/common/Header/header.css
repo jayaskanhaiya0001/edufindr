@@ -1,0 +1,130 @@
+.navigation_bar {
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+    justify-content: space-between;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.logo_icon {
+    width: 199.999px;
+    height: 58px;
+}
+
+.logo_name_box>span {
+    display: block;
+    color: #000;
+    font-size: 35.605px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.logo_name_box>p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 8.371px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+ul li {
+    list-style: none;
+}
+
+.nav_items {
+    gap: 20px;
+
+}
+
+.nav_title {
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+.flexbox {
+    display: flex;
+    align-items: center;
+}
+
+.nav_title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.search_bar_box {
+    border-radius: 4px;
+    border: 1.2px solid #DFE4E8;
+    background: #FFF;
+    padding: 20px;
+}
+
+.search_bar_box>span {
+    color: #757575;
+    font-family: Poppins;
+    font-size: 18.845px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search_bar_box>img {
+    width: 26.921px;
+    height: 26.921px;
+}
+
+.search_bar {
+    border: none;
+    background-color: transparent;
+}
+
+.search_bar:focus {
+    outline: none;
+}
+
+.get_started_btn {
+    border-radius: 7px;
+    background: #14171A;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .nav_items {
+        display: none;
+    }
+    .search_bar_box {
+        display: none;
+    }
+}
+
+@media (max-width: 567px) {
+    .navigation_bar {
+        padding: 16px 13px;
+    }
+    .logo_box > img {
+        width: 111px;
+        height: 58px;
+    }
+    .get_started_btn{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}

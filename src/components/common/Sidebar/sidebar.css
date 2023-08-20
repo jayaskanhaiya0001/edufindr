@@ -1,0 +1,26 @@
+.sidebar-container>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Common-Sidebar {
+    width: 162px;
+}
+
+.sidebar-container>ul {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.sidebar-container>ul>li {
+    display: flex;
+    padding: 9px 16.21px 9px 15px;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 18px 0px 0px 18px;
+}

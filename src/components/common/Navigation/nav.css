@@ -1,0 +1,18 @@
+.Nav {
+    padding: 10px;
+}
+
+.Nav>ul {
+    display: flex;
+    gap: 10px;
+}
+
+.Nav>ul>li {
+    padding: 10px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}

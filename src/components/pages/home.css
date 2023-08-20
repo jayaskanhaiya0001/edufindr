@@ -1,0 +1,623 @@
+.commonPadding {
+    padding: 0 128px;
+}
+
+.Popular_teacher_box {
+    background: #ECE9E9;
+    height: 241.372px;
+    position: relative;
+    padding: 25px 24px 0px;
+}
+
+#popular-teacher-section {
+    min-height: 600px;
+}
+
+.Popular_teacher_absolute_box {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+    top: 112px;
+    width: 100%;
+    left: 0;
+}
+
+.Popular_teacher_heading {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.one-destination_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.one-destination-btn-box {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+}
+
+.heading-one-destination {
+    color: #514D4D;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+
+}
+
+.one-destination-card-box {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    margin-top: 90px;
+}
+
+.path-point {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0px
+}
+
+.one-destination-card {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    border-radius: 8px;
+    background: #F2F2F2;
+    flex-grow: 1;
+    gap: 32px;
+}
+
+.ind-exam {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: -1px 1px 4px 0px rgba(0, 0, 0, 0.10);
+    justify-content: space-between;
+}
+
+.ind-exam>span {
+    display: inline-block;
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Popular-exam-box {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.Popular-Exam-Nav {
+    padding: 10px;
+}
+
+.Popular-Exam-Nav>ul {
+    display: flex;
+    gap: 10px;
+}
+
+.Popular-Exam-Nav>ul>li {
+    padding: 10px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.Popular-Ind-Exam-Box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 2fr));
+    gap: 1%;
+    grid-row-gap: 29px;
+}
+
+
+.ind-exam>img {
+    width: 24px;
+    height: 14px;
+}
+
+.Course-main-Box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 2fr));
+    height: 205px;
+    gap: 1%;
+}
+
+.course-box>img {
+    height: 100%;
+    width: 100%;
+}
+
+.edufinder-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    min-height: 635px;
+}
+
+.edufindr-box-container {
+    display: flex;
+    gap: 36px;
+}
+
+.edufinder-container>div {
+    min-height: 635px;
+}
+
+.edufinder-head {
+    color: #000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44.8px;
+}
+
+.edufinder-desc {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.edufinder-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.edufinder-content-container>img {
+    height: 58px;
+}
+
+.edu-des {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.horizontal-card-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(455px, 2fr));
+    grid-row: 193px;
+    gap: 1%;
+    grid-row-gap: 29px;
+    grid-template-rows: 193px;
+}
+
+.Our-Course-Main-Container {
+    display: flex;
+}
+
+.test-series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
+    gap: 1%;
+    grid-row-gap: 29px;
+    /* grid-template-rows: 336px; */
+}
+
+.TestSeries-Main-Container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 767px) {
+    .one-destination_box {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .heading-one-destination {
+        font-size: 30px;
+    }
+
+    .commonPadding {
+        padding: 0px;
+    }
+
+    .one-destination-card-box {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .one-destination-card {
+        width: 30%;
+        padding: 0px;
+        gap: 0px;
+        padding: 25px 5px;
+        justify-content: space-between;
+    }
+
+    .one-desntination-card-content>span {
+        font-size: 12px;
+    }
+
+    .one-destination-card-content>h2 {
+        font-size: 15px;
+        white-space: break-spaces;
+    }
+
+    .one-destination-card>img {
+        height: 40px;
+    }
+
+    .Popular-exam-box>nav {
+        overflow-x: scroll;
+    }
+
+    .Popular-exam-box>nav>ul {
+        align-items: center;
+    }
+
+    .Popular-exam-box>nav>ul>li {
+        text-wrap: nowrap;
+    }
+
+    .Popular-exam-box {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    /* Important */
+
+    .edufinder-container {
+        flex-direction: column;
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .edufinder-container>div {
+        min-height: auto;
+    }
+
+    .edufindr-box-container {
+        flex-direction: column;
+    }
+
+    .block1 {
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .block2 {
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .Popular_teacher_box {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0px;
+        background: #fff;
+        margin-top: 100px;
+    }
+
+    .Popular_teacher_absolute_box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+        grid-gap: 20px;
+        padding: 0 10px;
+    }
+
+    .common_card {
+        width: auto;
+        max-height: 310px;
+    }
+
+    .common-card-image {
+        height: 160px;
+        width: 100%;
+    }
+
+    .Popular_teacher_box>.Common-Header-Box {
+        padding: 10px 10px 0px;
+    }
+
+    .TestSeries-Main-Container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .test-series-grid {
+        grid-gap: 36px;
+    }
+
+    #popular-teacher-section {
+        min-height: 800px;
+    }
+
+    #Course-Container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .exam-box>div>nav {
+        overflow-x: scroll;
+        padding-left: 0px;
+    }
+
+    .exam-box>div>nav>ul {
+        align-items: center;
+    }
+
+    .exam-box>div>nav>ul>li {
+        text-wrap: nowrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .one-destination-card>img {
+        width: 17.568px;
+        height: 17.568px;
+    }
+
+    .one-destination-card-content>span {
+        color: #000;
+        font-family: Poppins;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .one-destination-card-content>h2 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .one-destination-card {
+        padding: 0px;
+        padding: 10.98px;
+        height: 56px;
+        justify-content: center;
+        gap: 8.784px;
+    }
+
+    .one-destination_box {
+        padding: 0 16px;
+    }
+
+    .Popular-exam-box {
+        min-width: 340px;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .edufinder-container {
+        min-width: 360px;
+        padding: 0 16px;
+    }
+
+    .edufinder-desc {
+        margin: 0 auto;
+    }
+
+    .edufinder-content-container>img {
+        display: none;
+    }
+
+    .edufinder-head {
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44.8px;
+    }
+
+    .edufinder-desc {
+        color: #646F79;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .common_btn {
+        margin: 0 auto;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 7.186px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 11.497px;
+        text-transform: capitalize;
+    }
+
+    .Square-Conatiner {
+        max-height: 191px;
+        padding: 11.576px;
+        border-radius: 3.873px;
+        background: var(--orange-0, #FFF6F0);
+        gap: 11.576px;
+    }
+
+    .Square-Image-Box {
+        width: 36px;
+        height: 36px;
+        padding: 6.385px 7.576px 7.816px 6.625px;
+        border-radius: 4.519px;
+        background: var(--orange-300, #D96A27);
+        box-shadow: 0px 1.9365575313568115px 6.455191135406494px 0px #E3C9BB;
+    }
+
+    .Square-Box-Title {
+        color: var(--black-400, #000);
+        font-family: Poppins;
+        font-size: 11.576px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.294px;
+    }
+
+    .Square-Conatiner>div {
+        display: flex;
+        flex-direction: column;
+        gap: 3.873px;
+    }
+
+    .Square-Conatiner>div>h2 {
+        width: 60%;
+    }
+
+    .Square-Conatiner>div>p {
+        color: var(--black-300, #747073);
+        font-family: Poppins;
+        font-size: 11.576px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.294px;
+    }
+
+    .edufindr-box-container {
+        width: 100%;
+    }
+
+    .Common-Header-title {
+        color: #722E60;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .description {
+        color: #646F79;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .ind-exam>span {
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Popular-Exam-Nav-Item {
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.793px;
+    }
+
+    .Popular_teacher_absolute_box {
+        flex-direction: column;
+        position: static;
+        gap: 24px;
+    }
+
+    .Popular_teacher_box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background: #fff !important;
+        padding: 0 16px;
+    }
+
+    .common_card {
+        width: 100%;
+    }
+
+    .common_card>img {
+        width: 100%;
+    }
+
+    .TestSeries-Main-Container {
+        padding: 0 16px;
+        margin-top: 32px;
+    }
+
+    .Popular_teacher_absolute_box {
+        padding: 20px 0px 0px;
+    }
+
+    #Course-Container {
+        padding: 0 16px;
+    }
+
+    .Our-Course-Main-Container>.Common-Sidebar {
+        width: 100%;
+    }
+
+    .Our-Course-Main-Container>.horizontal-card-grid {
+        display: none;
+    }
+
+    .Our-Course-Main-Container>.Common-Sidebar>div>ul>li {
+        height: 57.494px;
+        padding: 18.851px;
+        border-radius: 7.54px;
+        box-shadow: -0.9425287246704102px 0.9425287246704102px 3.7701148986816406px 0px rgba(0, 0, 0, 0.10);
+
+    }
+
+    .heading-one-destination {
+        color: #514D4D;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 21.565px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+    }
+    .commonPadding {
+        padding-top: 37px !important;
+    }
+    #Popular-Exam {
+        margin: 0px auto !important;
+    }
+    .block2 {
+        gap: 11.576px;
+    }
+    .block1 {
+        gap: 11.576px;
+    }
+}

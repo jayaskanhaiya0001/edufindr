@@ -1,0 +1,88 @@
+.test-series-container {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.test-series-main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.User-count-button {
+    display: flex;
+    padding: 3.5px 5.35px 5.5px 3.5px;
+    align-items: flex-start;
+    border-radius: 160px;
+    background: var(--orange-0, #FFF6F0);
+    color: var(--orange-400, #B34F12);
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.Updated-test-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.Updated-test-box>li {
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.Updated-test-box>span {
+    color: #858585;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: inline-block;
+}
+
+.TestSeriesSection-Flex-Box {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .common_btn {
+        width: 100%;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-transform: capitalize;
+    }
+}

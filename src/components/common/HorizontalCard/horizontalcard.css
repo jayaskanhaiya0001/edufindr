@@ -1,0 +1,49 @@
+.Horizontal-Common-Card {
+    display: flex;
+    gap: 12px;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.Horizontal-Common-Image-Box {
+    width: 185px;
+    /* height: 193px; */
+}
+
+.Horizontal-Common-Content-Box {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.Horizontal-Common-Content-disc {
+    color: #3B4A54;
+    font-family: Poppins;
+    font-size: 13.208px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.812px;
+    margin-top: 13px;
+    text-transform: capitalize;
+}
+
+.Horizontal-Common-Image-Box>img {
+    height: -webkit-fill-available;
+    width: 100%;
+}
+
+.star-box>span {
+    padding: 6.829px;
+    border-radius: 4px;
+    background: #FFD13C;
+    color: #fff;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 9.561px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14.341px;
+    display: inline-block;
+}
