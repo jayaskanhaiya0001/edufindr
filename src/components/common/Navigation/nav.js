@@ -7,7 +7,7 @@ export const Nav = ({navList , width}) => {
             <nav className="Nav" style={{width: width}}>
                 <ul>
                     {
-                        navList?.map((item, index) => {
+                      Object.keys(navList)?.map((item, index) => {
                             return (
                                 <>
                                     <li className="Popular-Exam-Nav-Item" id={index} >{item}</li>
