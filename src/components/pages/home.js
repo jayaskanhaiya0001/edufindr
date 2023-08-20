@@ -13,6 +13,7 @@ import trophy from "../../assets/Icons/trophy.svg";
 import test from "../../assets/Icons/test-series.svg";
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
+import { Footer } from "../common/Footer/footer";
 
 import "./home.css";
 const Teacher_Content = [{ title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }]
@@ -162,6 +163,9 @@ export const Homepage = () => {
                     <Button width={'max-content'} value={'Explore all Test Series'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} margin={'0 auto'} />
 
                 </div>
+            </section>
+            <section>
+                <Footer/>
             </section>
             {/* <section className="commonPadding" style={{ minHeight: "635px", marginTop: "100px" }}>
                 <TestSeriesSection />

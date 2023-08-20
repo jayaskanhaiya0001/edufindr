@@ -1,0 +1,188 @@
+.Footer-Container {
+    background: var(--purple-0, #FFF5FC);
+    padding: 0px 128px;
+}
+
+.Footer-Upper-Container {
+    min-height: 344px;
+    display: flex;
+    align-items: center;
+}
+
+.Footer-Upper-Container>ul {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.Footer-Upper-Container>ul> :nth-child(1)>img {
+    width: 199.999px;
+    height: 58px;
+}
+
+.Footer-Upper-Container>ul>li {
+    color: var(--black-400, #000);
+    font-family: Poppins;
+    font-size: 12.008px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.Footer-Upper-Container>ul>:nth-child(2)>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15.02px;
+}
+
+.Footer-Upper-Container>ul>:nth-child(3)>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Footer-Upper-Container>ul>:nth-child(3)>ul>li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Footer-Upper-Container>ul> :nth-child(4)>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.Footer-Upper-Container>ul> :nth-child(4)>ul>li>input {
+    outline: none;
+    border: none;
+}
+
+.Footer-Upper-Container>ul> :nth-child(4)>ul> :nth-child(2) {
+    border-radius: 8px;
+    border-bottom: 0.907px solid #D9D9D9;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    padding-left: 12px;
+}
+
+.Footer-Upper-Container>ul> :nth-child(4)>ul> :nth-child(2)>span {
+    width: 36.3px;
+    height: 36.3px;
+    display: inline-block;
+    border-radius: 4px;
+    background: var(--purple-400, #722E60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-Upper-Container>ul> :nth-child(4)>ul> :nth-child(2)>span>img {
+    width: 10.914px;
+    height: 8.19px;
+}
+
+.Footer-Bottom-Container {
+    padding: 44.8px 0px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.Footer-Bottom-Container>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(2)>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(2)>ul> :nth-child(1) {
+    color: var(--black-400, #000);
+    font-family: Poppins;
+    font-size: 12.008px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(2)>ul> :nth-child(2)>ul {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(2)>ul> :nth-child(2)>ul>li>a>img {
+    width: 29px;
+    height: 29px;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(2)>ul> :nth-child(2)>ul>li>a> {
+    display: inline-block;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(3)>ul {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+}
+
+
+.Footer-Bottom-Container>ul> :nth-child(3)>ul> :nth-child(1)>button {
+    padding: 17px 28px;
+    border-radius: 4px;
+    border: 1px solid var(--purple-400, #722E60);
+    color: var(--purple-400, #722E60);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-transform: capitalize;
+    background: transparent;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(3)>ul> :nth-child(2)>button {
+    border-radius: 4px;
+    background: var(--purple-400, #722E60);
+    padding: 17px 28px;
+    font-family: Poppins;
+    color: var(--black-0, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    padding: 17px 28px;
+    text-transform: capitalize;
+}
+
+.Footer-Bottom-Container>ul> :nth-child(1) {
+    color: var(--black-400, #000);
+    font-family: Poppins;
+    font-size: 24.017px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+}
+
+.Copyright-Container>p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.75);
+    font-family: Poppins;
+    font-size: 12.008px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    min-height: 65.3px;
+}
