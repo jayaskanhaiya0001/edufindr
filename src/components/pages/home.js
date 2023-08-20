@@ -99,16 +99,16 @@ export const Homepage = () => {
                     </div>
                     <div className="edufindr-box-container">
                         <div className="block1">
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"}/>
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"}/>
+                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"} src={'/images/reading-book.svg'}/>
+                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"} src={'/images/open-book.svg'}/>
                         </div>
                         <div className="block2">
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"}/>
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"}/>
+                            <SquareCard title={`Additional Discount on Books`} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"} src={'/images/additional-discount.svg'}/>
+                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"} src={'/images/fee-refund.svg'}/>
                         </div>
                         <div className="block1">
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"}/>
-                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"}/>
+                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={"var(--orange-300, #D96A27)"} src={'/images/reading-book.svg'}/>
+                            <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'var(--purple-0, #FFF5FC)'} bgColor={"var(--purple-300, #9F3282)"} src={'/images/open-book.svg'}/>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ export const TeacherDetail = () => {
         <>
             <div className="Teacher-Detail-Container">
                 <div className="teacher-personal-detail">
-                    <img src="/images/dummy.png" alt="" className="Teacher-Profile-image" />
+                    <img src="/images/teacher.png" alt="" className="Teacher-Profile-image" />
                     <div className="basic-detail">
                         <div>
                             <h1 className="Teacher-Name">Rahul Chandra <img src="" alt="" /></h1>
@@ -21,8 +21,8 @@ export const TeacherDetail = () => {
                         </div>
                     </div>
                 </div>
-                <About heading={'About Professor'} about={'Rahul Chandra is a renowned name is UPSC fraternity for his deep understanding of the Anthropology optional. He has industry experience of more than 10 years and is already known to have given toppers like Parikshit Thoudam, Devesh Chaturvedi, Bokka Chaitanya Redyy and many more.'} />
-                <Highlight heading={'Highlights'} hightlightListItems={HightLightList} />
+                <About heading={'About Professor'} about={'Rahul Chandra is a renowned name is UPSC fraternity for his deep understanding of the Anthropology optional. He has industry experience of more than 10 years and is already known to have given toppers like Parikshit Thoudam, Devesh Chaturvedi, Bokka Chaitanya Redyy and many more.'} color={'#722E60'} />
+                <Highlight heading={'Highlights'} hightlightListItems={HightLightList} color={"#722E60"} />
                 <div className="Eductation-Box">
                     <h1 className="education-head">Education</h1>
                     <ul className="education-ul-list">
@@ -30,18 +30,18 @@ export const TeacherDetail = () => {
                         <li><img /> 2009 - 2013</li>
                     </ul>
                 </div>
-                <div>
+                <div className="Ind-Teacher-Courses">
                     <h1 className="Heading">Courses By Rahul Chandra</h1>
                     <div className="teacher-page-course-grid-box">
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
                     </div>
                 </div>
-                <MobileCall />
+                {/* <MobileCall /> */}
             </div>
         </>
     )

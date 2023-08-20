@@ -1,9 +1,9 @@
 import "./about.css";
-export const About = ({ heading, about }) => {
+export const About = ({ heading, about , color }) => {
     return (
         <>
             <div className="about-container">
-                <h1>{heading}</h1>
+                <h1  style={{color: color}}>{heading}</h1>
                 <p>{about}</p>
             </div>
         </>
