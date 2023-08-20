@@ -76,7 +76,7 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="Copyright-Container">
-                    <p><span>&#169;2023 EduFindr PVT. LTD.</span><span>Site by EditTree Enterprises</span></p>
+                    <p><span>&#169;2023 EduFindr PVT. LTD.</span><span>Developed By Kanhaiya Singh</span><span>Site by EditTree Enterprises</span></p>
                 </div>
             </div>
         </>
