@@ -1,13 +1,13 @@
 .Batch-Card-Container {
     border-radius: 12px;
-    background: #FBFBFB;
+    background: var(--purple-0, #FFF5FC);
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
     padding: 24px;
 }
 
 .shift-btn {
     border-radius: 8px;
-    background: #D3D3D3;
+    background: var(--purple-100, #DFA6D0);
     color: #000;
     font-family: Poppins;
     font-size: 16px;

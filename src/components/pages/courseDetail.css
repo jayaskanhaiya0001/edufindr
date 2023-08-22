@@ -1,5 +1,5 @@
 .Course-Detail-Top-Container {
-    padding: 0 128px;
+    margin: 0 auto;
 }
 
 .main-container {
@@ -12,12 +12,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 50%;
 }
 
-.Right-Box {
-    width: 50%;
-}
+.Right-Box {}
 
 .Left-Box>h1 {
     color: #000;
@@ -78,7 +75,10 @@
     width: 36px;
     height: 36px;
     border-radius: 2px;
-    background: #9A9999;
+    background: var(--orange-0, #FFF6F0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Course-Basic-Detail {
@@ -124,7 +124,8 @@
 
 .Additional-Detail-Box {
     display: flex;
-    width: 149px;
+    min-width: 149px;
+    min-height: 142px;
     padding: 12px;
     flex-direction: column;
     align-items: center;
@@ -137,7 +138,7 @@
 
 .Additional-Detail-Box>span {
     border-radius: 2px;
-    background: #F1F1F1;
+    background: var(--orange-0, #FFF6F0);
     width: 36px;
     height: 36px;
     padding: 8px 7.5px 7px 7.5px;
@@ -156,11 +157,14 @@
 
 .Course-Basic-Detail-Row {
     display: flex;
-    justify-content: space-between;
+    gap: 100px;
 }
 
 .Course-Basic-Detail-Row>div {
     min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .Price-Container {
@@ -199,7 +203,7 @@
 .get-started {
     padding: 20px 80px;
     border-radius: 7px;
-    background: #14171A;
+    background: var(--purple-400, #722E60);
     color: #FFF;
     font-family: Poppins;
     font-size: 16px;
@@ -246,4 +250,180 @@
     grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
     gap: 1%;
     grid-row-gap: 29px;
+}
+
+
+@media(min-width: 300px) and (max-width:575px) {
+    .Course-Detail-Top-Container {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .Additional-Detail-grid-Container {
+        display: flex;
+        gap: 40px;
+        overflow-x: scroll;
+        padding-bottom: 16px;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .Course-Start-Detail-Container>img {
+       width: 100%;
+       
+    }
+
+    .Price-Container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0px 10px;
+    }
+
+    .get-started {
+        width: 100%;
+    }
+
+    .Left-Box {
+        align-items: center;
+    }
+
+    .Class-Mode {
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 11.887px;
+        text-transform: uppercase;
+    }
+
+    .Left-Box>h1 {
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Left-Box>p {
+        color: #3B4A54;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.812px;
+        text-transform: capitalize;
+    }
+
+    .Left-Box>p>b {
+        color: #3B4A54;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 19.812px;
+        text-transform: capitalize;
+    }
+
+    .Icon-box>img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .Course-Basic-Content>h3 {
+        color: #000;
+        font-family: Poppins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.812px;
+        text-transform: capitalize;
+    }
+
+    .Course-Basic-Content>span {
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.812px;
+        /* 165.1% */
+        text-transform: capitalize;
+    }
+    .Course-Basic-Detail-Row {
+        gap: 26px;
+    }
+    .Course-Basic-Detail-Row > div {
+        width: 50%;
+        min-width: max-content;
+    }
+}
+
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .Course-Detail-Top-Container {
+        max-width: 540px;
+        margin: 0 auto;
+
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .Additional-Detail-grid-Container {
+        display: flex;
+        gap: 40px;
+        overflow-x: scroll;
+    }
+
+    .teacher-grid-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 0fr));
+        gap: 20px;
+    }
+    .Price-Container  {
+        flex-direction: column;
+        gap: 26px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .Course-Detail-Top-Container {
+        max-width: 720px;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .Additional-Detail-grid-Container {
+        display: flex;
+        gap: 40px;
+        overflow-x: scroll;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .Course-Detail-Top-Container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .Course-Detail-Top-Container {
+        max-width: 1170px;
+    }
 }
