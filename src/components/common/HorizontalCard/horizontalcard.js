@@ -14,11 +14,11 @@ export const HorizontalCard = ({ image, title, additionalinfo, desc, bottomVal1,
                     <div className="star-box">
                         <div>
                             <span className="star-value">4.7</span>
-                            <img src="./images/Star.svg" alt="rate" />
-                            <img src="./images/Star.svg" alt="rate" />
-                            <img src="./images/Star.svg" alt="rate" />
-                            <img src="./images/Star.svg" alt="rate" />
-                            <img src="./images/Star.svg" alt="rate" />
+                            <img src="/images/Star.svg" alt="rate" />
+                            <img src="/images/Star.svg" alt="rate" />
+                            <img src="/images/Star.svg" alt="rate" />
+                            <img src="/images/Star.svg" alt="rate" />
+                            <img src="/images/Star.svg" alt="rate" />
                         </div>
 
                         <p>

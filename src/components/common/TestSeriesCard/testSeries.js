@@ -11,7 +11,7 @@ export const TestSeriesCard = () => {
                         <p className="test-series-test-desc">832 Total Tests | 4 Free Tests</p>
                     </div>
                     <div className="translate-box">
-                        <p className="translate-language"><img src="./images/translate.svg" alt="translate"/>English,Hindi</p>
+                        <p className="translate-language"><img src="/images/translate.svg" alt="translate"/>English,Hindi</p>
                     </div>
                     <ul className="Updated-test-box">
                         <li>53 New Test Additions</li>
