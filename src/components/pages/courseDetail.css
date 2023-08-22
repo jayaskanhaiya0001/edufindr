@@ -252,6 +252,20 @@
     grid-row-gap: 29px;
 }
 
+.Similiar-Courses-Grid {
+    padding: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    grid-template-columns: repeat(auto-fit, minmax(456px, 0fr));
+    grid-auto-columns: max-content;
+    grid-gap: 24px;
+}
+
+.Similiar-Courses-Grid::-webkit-scrollbar {
+    display: none;
+}
+
 
 @media(min-width: 300px) and (max-width:575px) {
     .Course-Detail-Top-Container {
@@ -267,6 +281,7 @@
         overflow-x: scroll;
         padding-bottom: 16px;
     }
+
     ::-webkit-scrollbar {
         display: none;
     }
@@ -277,8 +292,8 @@
     }
 
     .Course-Start-Detail-Container>img {
-       width: 100%;
-       
+        width: 100%;
+
     }
 
     .Price-Container {
@@ -360,12 +375,36 @@
         /* 165.1% */
         text-transform: capitalize;
     }
+
     .Course-Basic-Detail-Row {
         gap: 26px;
     }
-    .Course-Basic-Detail-Row > div {
+
+    .Course-Basic-Detail-Row>div {
         width: 50%;
         min-width: max-content;
+    }
+
+    .teacher-grid-box {
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        grid-template-columns: repeat(auto-fit, minmax(262px, 0fr));
+        grid-auto-columns: max-content;
+    }
+
+    .Batch-Card-Grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 33px;
+    }
+    .Similiar-Courses-Grid {
+        padding-bottom: 20px;
+        display: grid;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-columns: max-content;
+        grid-gap: 24px;
     }
 }
 
@@ -393,7 +432,8 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 0fr));
         gap: 20px;
     }
-    .Price-Container  {
+
+    .Price-Container {
         flex-direction: column;
         gap: 26px;
     }
@@ -420,6 +460,29 @@
     .Course-Detail-Top-Container {
         max-width: 960px;
     }
+
+    .Batch-Card-Container {
+        padding: 12px 18px;
+    }
+
+    .batch-general-detail {
+        gap: 24px;
+    }
+
+    .batch-general-detail {
+        gap: 10px;
+    }
+
+    .Batch-Timing {
+        text-wrap: nowrap;
+    }
+
+    .Batch-Card-Grid {
+        grid-template-rows: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+        gap: 20px;
+    }
+
 }
 
 @media(min-width: 1200px) {

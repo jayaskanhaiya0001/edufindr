@@ -29,9 +29,9 @@ export const CoursePage = () => {
                 <section>
                     <Course NavItem={NavItem} title={title} />
                 </section>
-                <section>
+                {/* <section>
                     <MobileCall />
-                </section>
+                </section> */}
             </div>
         </>
     )

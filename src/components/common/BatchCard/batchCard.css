@@ -98,3 +98,75 @@
     font-weight: 500;
     line-height: normal;
 }
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .batch-title {
+        color: var(--black-400, #000);
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .shift-btn {
+        padding: 5.693px 13.662px;
+        color: var(--black-400, #000);
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 4.554px;
+        background: var(--purple-100, #DFA6D0);
+        border: none;
+    }
+
+    .discounted-price {
+        color: var(--black-400, #000);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+    }
+
+    .price {
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Batch-Timing {
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Batch-Another-Detail>ul {
+        gap: 11.385px;
+    }
+
+    .normal-weight {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .bold-weight {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .batch-general-detail {
+        gap: 22.77px;
+    }
+
+    .Batch-Card-Container {
+        padding: 13.662px;
+    }
+}

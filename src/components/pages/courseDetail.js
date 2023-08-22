@@ -4,6 +4,7 @@ import { Highlight } from "../common/Highlight/highlight";
 import { Card } from "../common/Card/card";
 import { BatchCard } from "../common/BatchCard/batchCard";
 import { MobileCall } from "../common/MobileCall/mobileCall";
+import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
 import { TestSeriesCard } from "../common/TestSeriesCard/testSeries"
 import Hat from "../../assets/Icons/graduation_hat.svg";
 import Student from "../../assets/Course-Detailed-Page/Student.svg";
@@ -16,7 +17,7 @@ import LiveLectures from "../../assets/Course-Detailed-Page/Live-Lectures.svg";
 import RecordedLectures from "../../assets/Course-Detailed-Page/Recorded-Lecture.svg";
 import DoubtSession from "../../assets/Course-Detailed-Page/Doubt-Session.svg";
 import AnswerPaper from "../../assets/Course-Detailed-Page/Answer-Paper.svg";
-import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access.svg"
+import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access.svg";
 import "./courseDetail.css";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
@@ -64,7 +65,7 @@ export const CourseDetail = () => {
                                         <div className="Icon-box">
                                             <img src={Enrolled} alt="Enrolled" />
                                         </div>
-                                        <div className="Course-Basic-Content"> 
+                                        <div className="Course-Basic-Content">
                                             <h3>Already Enrolled</h3>
                                             <span>15</span>
                                         </div>
@@ -84,8 +85,11 @@ export const CourseDetail = () => {
                         <div className="Right-Box">
                             <div className="Course-Start-Detail-Container">
                                 <img src="/images/dummy.png" alt="dummy" />
-                                <div>
-
+                                <div className="Course-Start-Detail-Content">
+                                    <div>
+                                        <h3>Rahul Awasthi</h3>
+                                        <p>5000+ Students taught</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +132,7 @@ export const CourseDetail = () => {
                         </ul>
                     </div>
                 </section>
-                {/* <section>
+                <section>
                     <div className="Teachers-Container">
                         <h1>Know your Teachers</h1>
                         <div className="teacher-grid-box">
@@ -137,29 +141,38 @@ export const CourseDetail = () => {
                             <Card title={'Rahul Awasthi'} image={'/images/dummy.png'} description={'5000+ Students taught'} text={'Vidya Education'} icon={Hat} />
                         </div>
                     </div>
-                </section> */}
-                {/* <section>
+                </section>
+                <section>
                     <h1>Select Batch</h1>
                     <div className="Batch-Card-Grid">
                         <BatchCard />
                         <BatchCard />
+                        <BatchCard />
+                        <BatchCard />
                     </div>
-                </section> */}
-                {/* <section>
                     <div className="Price-Container">
                         <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
                         <button className="get-started">get started</button>
                     </div>
-                </section> */}
-                {/* <section>
+                </section>
+                <section>
+                    <h1>Similar Courses</h1>
+                    <div className="Test-Series-Grid">
+                        <div className="Similiar-Courses-Grid">
+                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        </div>
+                    </div>
+                </section>
+                <section>
                     <h1>Similar Test Series</h1>
                     <div className="Test-Series-Grid">
                         <TestSeriesCard />
                         <TestSeriesCard />
                         <TestSeriesCard />
-                        <TestSeriesCard />
                     </div>
-                </section> */}
+                </section>
                 {/* <section>
                     <MobileCall />
                 </section> */}
