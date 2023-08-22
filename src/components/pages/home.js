@@ -1,5 +1,6 @@
 import { Header } from "../common/Header/header";
 import { Card } from "../common/Card/card";
+import axios from "axios"
 import { Button } from "../common/Button/button";
 import { UpperHeader } from "../common/Heading/upperHeader.js";
 import { SquareCard } from "../common/SquareCard/squareCard";
@@ -14,14 +15,42 @@ import test from "../../assets/Icons/test-series.svg";
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
 import { Footer } from "../common/Footer/footer";
-
 import "./home.css";
-const Teacher_Content = [{ title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }]
+import { useState ,useEffect} from "react";
+//const Teacher_Content = [{ title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }]
 const destinationItem = ['learn', 'practice', 'improve', 'success'];
 const destinationCard = [{ icon: shield, title: "Trusted by", student: "4000+ Student" }, { icon: trophy, title: "Students Selected", student: "50+ Student" }, { icon: test, title: "Exam Attempted", student: "200+ Student" }]
 const PopularExamNavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching']
 const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
+
 export const Homepage = () => {
+    const [Teacher_Content, setTeacher_Content] = useState([]);
+const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
+    const headerapi=()=>{
+        axios.get('https://courseselling.onrender.com/api/v1/categories')
+        .then(response => {
+       
+            setPopularExamNavItem(response.data.data);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+     }
+     const getAllTeachersApi=()=>{
+        axios.get('https://courseselling.onrender.com/api/v1/getAllTeachers')
+        .then(response => {
+          console.log(response,"heelo")
+          setTeacher_Content(response.data.data);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+     }
+    useEffect(() => {
+        // Make the API request here
+        getAllTeachersApi();
+        headerapi();
+      }, []);
     return (
         <>
             <Header />
@@ -121,10 +150,10 @@ export const Homepage = () => {
                     <UpperHeader title={'Popular Teacher'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                     <div className="Popular_teacher_absolute_box">
                         {
-                            Teacher_Content.map((data, index) => {
+                            Teacher_Content?.map((data, index) => {
                                 return (
                                     <>
-                                        <Card title={data.title} description={data.description} text={data.text} />
+                                        <Card title={data?.title} description={data?.description} text={data?.text} />
                                     </>
                                 )
                             })
