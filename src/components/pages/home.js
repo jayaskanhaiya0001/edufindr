@@ -24,8 +24,19 @@ const PopularExamNavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'G
 const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
 
 export const Homepage = () => {
+
     const [Teacher_Content, setTeacher_Content] = useState([]);
 const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
+const testSeriesApi=()=>{
+    axios.get('https://courseselling.onrender.com/api/v1/categories')
+    .then(response => {
+   
+        setPopularExamNavItem(response.data.data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
     const headerapi=()=>{
         axios.get('https://courseselling.onrender.com/api/v1/categories')
         .then(response => {

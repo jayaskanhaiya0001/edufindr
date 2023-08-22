@@ -7,10 +7,18 @@ import { Button } from "../Button/button";
 import "./course.css";
 import { useState ,useEffect} from "react";
 export const Course = ({ title , children}) => {
-    const [NavItem,setNavItem] = useState([]);
+    const [NavItem,setNavItem] = useState({});
      const [courses, setCourses] = useState([]);
+     const [category,setCategory]=useState("")
+     const [exam,setExam]=useState("")
+     const handleCategory=(data)=>{
+       setCategory(data)
+     }
+     const handleExam=(data)=>{
+        setExam(data)
+      }
      const courseapi=()=>{
-        axios.get('https://courseselling.onrender.com/api/v1/getAllcourses')
+        axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}`)
         .then(response => {
         
           setCourses(response.data.courses);
@@ -32,6 +40,11 @@ export const Course = ({ title , children}) => {
     useEffect(() => {
         // Make the API request here
         courseapi();
+   
+      }, [category,exam]);
+      useEffect(() => {
+        // Make the API request here
+     
         headerapi();
       }, []);
     return (
@@ -39,10 +52,10 @@ export const Course = ({ title , children}) => {
             <div className="exam-box" style={{ paddingBottom: "100px" }}>
                 <div>
                     <UpperHeader title={title} />
-                    <Nav navList={NavItem} />
+                    <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} />
                 </div>
                 <div className="Our-Course-Main-Container">
-                    <Sidebar />
+                    <Sidebar data={NavItem[category]} handleExam={handleExam}/>
                     <div className="horizontal-card-grid">
                    { courses?.map((item)=>{
 return (<HorizontalCard image={'./images/dummy.png'} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal1={'30+ Courses'} bottomVal2={'Hinglish'} />)
