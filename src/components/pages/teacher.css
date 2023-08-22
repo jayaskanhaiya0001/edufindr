@@ -12,7 +12,7 @@
 
 .Teacher-Name {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +22,7 @@
 
 .Teacher-Dsignation> :nth-child(1) {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -35,7 +35,7 @@
 
 .Teacher-Dsignation> :nth-child(2) {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -73,7 +73,7 @@
 
 .bold {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -82,7 +82,7 @@
 
 .education-head {
     color: #722E60;
-    font-family: Poppins;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -116,7 +116,7 @@
 .Heading {
     margin-bottom: 24px;
     color: #000;
-    font-family: Poppins;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -126,7 +126,6 @@
 
 @media(min-width: 300px) and (max-width:575px) {
     .Teacher-Detail-Container {
-        max-width: 340px;
         gap: 24px;
         padding: 0 16px;
     }
@@ -150,7 +149,7 @@
     .Teacher-Name {
         color: #000;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -194,7 +193,7 @@
 
     .Heading {
         color: #722E60;
-        font-family: Poppins;
+        
         font-size: 16px;
         font-style: normal;
         font-weight: 700;

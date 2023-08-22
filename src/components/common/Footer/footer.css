@@ -1,6 +1,5 @@
 .Footer-Container {
     background: var(--purple-0, #FFF5FC);
-    padding: 0px 128px;
 }
 
 .Footer-Upper-Container {
@@ -22,7 +21,7 @@
 
 .Footer-Upper-Container>ul>li {
     color: var(--black-400, #000);
-    font-family: Poppins;
+    
     font-size: 12.008px;
     font-style: normal;
     font-weight: 400;
@@ -104,7 +103,7 @@
 
 .Footer-Bottom-Container>ul> :nth-child(2)>ul> :nth-child(1) {
     color: var(--black-400, #000);
-    font-family: Poppins;
+    
     font-size: 12.008px;
     font-style: normal;
     font-weight: 400;
@@ -140,7 +139,7 @@
     border: 1px solid var(--purple-400, #722E60);
     color: var(--purple-400, #722E60);
     text-align: center;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -153,7 +152,7 @@
     border-radius: 4px;
     background: var(--purple-400, #722E60);
     padding: 17px 28px;
-    font-family: Poppins;
+    
     color: var(--black-0, #FFF);
     text-align: center;
     font-size: 16px;
@@ -166,7 +165,7 @@
 
 .Footer-Bottom-Container>ul> :nth-child(1) {
     color: var(--black-400, #000);
-    font-family: Poppins;
+    
     font-size: 24.017px;
     font-style: normal;
     font-weight: 500;
@@ -179,7 +178,7 @@
     align-items: center;
     justify-content: space-between;
     color: rgba(0, 0, 0, 0.75);
-    font-family: Poppins;
+    
     font-size: 12.008px;
     font-style: normal;
     font-weight: 400;

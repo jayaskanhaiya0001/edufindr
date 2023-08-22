@@ -11,7 +11,7 @@
 
 .test-series-title {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -20,7 +20,7 @@
 
 .test-series-test-desc {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

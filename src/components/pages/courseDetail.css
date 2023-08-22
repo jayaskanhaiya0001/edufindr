@@ -18,7 +18,7 @@
 
 .Left-Box>h1 {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +41,7 @@
     background: #FFF;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -147,7 +147,7 @@
 .Additional-Detail-Box>p {
     color: #000;
     text-align: center;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -182,7 +182,7 @@
 
 .Price-Container>div> :nth-child(1) {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -191,7 +191,7 @@
 
 .Price-Container>div> :nth-child(2) {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -205,7 +205,7 @@
     border-radius: 7px;
     background: var(--purple-400, #722E60);
     color: #FFF;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -222,7 +222,7 @@
 
 .Teachers-Container>h1 {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -312,7 +312,7 @@
 
     .Class-Mode {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -323,7 +323,7 @@
     .Left-Box>h1 {
         color: #000;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -332,7 +332,7 @@
 
     .Left-Box>p {
         color: #3B4A54;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -342,7 +342,7 @@
 
     .Left-Box>p>b {
         color: #3B4A54;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -357,7 +357,7 @@
 
     .Course-Basic-Content>h3 {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 10px;
         font-style: normal;
         font-weight: 700;
@@ -367,7 +367,7 @@
 
     .Course-Basic-Content>span {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;

@@ -9,7 +9,7 @@
 .TestSeriesSection-Heading-Box>span {
     display: block;
     color: #14171A;
-    font-family: Poppins;
+    
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -27,7 +27,7 @@
 
 .TestSeriesSection-Heading {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -36,7 +36,7 @@
 
 .TestSeriesSection-Disc {
     color: #646F79;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

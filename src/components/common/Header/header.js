@@ -1,5 +1,5 @@
 import "./header.css";
-const navigationItem = ['Home', 'test series', 'freebies', 'blog']
+const navigationItem = ['Home', "courses", 'test series', 'freebies', 'blog']
 export const Header = () => {
     return (
         <>

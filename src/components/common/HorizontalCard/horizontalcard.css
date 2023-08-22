@@ -20,7 +20,7 @@
 
 .Horizontal-Common-Content-disc {
     color: #3B4A54;
-    font-family: Poppins;
+    
     font-size: 13.208px;
     font-style: normal;
     font-weight: 400;
@@ -45,7 +45,7 @@
     background: #FFD13C;
     color: #fff;
     color: #FFF;
-    font-family: Poppins;
+    
     font-size: 9.561px;
     font-style: normal;
     font-weight: 700;
@@ -67,7 +67,7 @@
 
     .Horizontal-Common-Content-Box> :nth-child(1)>h2 {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -76,7 +76,7 @@
 
     .Horizontal-Common-Content-Box> :nth-child(1)>p {
         color: #3B4A54;
-        font-family: Poppins;
+        
         font-size: 8px;
         font-style: normal;
         font-weight: 400;
@@ -110,7 +110,7 @@
 
     .star-box>p {
         color: #646F79;
-        font-family: Poppins;
+        
         font-size: 9.396px;
         font-style: normal;
         font-weight: 600;

@@ -1,7 +1,6 @@
-.commonPadding {
-    padding: 0 128px;
-}
-
+.homePage-Container {
+    margin: 0 auto;
+} 
 .Popular_teacher_box {
     background: #ECE9E9;
     height: 241.372px;
@@ -25,7 +24,7 @@
 
 .Popular_teacher_heading {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -47,7 +46,7 @@
 .heading-one-destination {
     color: #514D4D;
     text-align: center;
-    font-family: Poppins;
+    font-family: Satoshi;
     font-size: 48px;
     font-style: normal;
     font-weight: 900;
@@ -95,7 +94,7 @@
 .ind-exam>span {
     display: inline-block;
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -120,7 +119,7 @@
 .Popular-Exam-Nav>ul>li {
     padding: 10px;
     color: #000;
-    font-family: Poppins;
+    
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -170,7 +169,7 @@
 
 .edufinder-head {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -179,7 +178,7 @@
 
 .edufinder-desc {
     color: #000;
-    font-family: Poppins;
+    
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -231,152 +230,7 @@
     flex-direction: column;
 }
 
-
-@media (max-width: 767px) {
-    .one-destination_box {
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    .heading-one-destination {
-        font-size: 30px;
-    }
-
-    .commonPadding {
-        padding: 0px;
-    }
-
-    .one-destination-card-box {
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    .one-destination-card {
-        width: 30%;
-        padding: 0px;
-        gap: 0px;
-        padding: 25px 5px;
-        justify-content: space-between;
-    }
-
-    .one-desntination-card-content>span {
-        font-size: 12px;
-    }
-
-    .one-destination-card-content>h2 {
-        font-size: 15px;
-        white-space: break-spaces;
-    }
-
-    .one-destination-card>img {
-        height: 40px;
-    }
-
-    .Popular-exam-box>nav {
-        overflow-x: scroll;
-    }
-
-    .Popular-exam-box>nav>ul {
-        align-items: center;
-    }
-
-    .Popular-exam-box>nav>ul>li {
-        text-wrap: nowrap;
-    }
-
-    .Popular-exam-box {
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    /* Important */
-
-    .edufinder-container {
-        flex-direction: column;
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    .edufinder-container>div {
-        min-height: auto;
-    }
-
-    .edufindr-box-container {
-        flex-direction: column;
-    }
-
-    .block1 {
-        flex-direction: row;
-        flex-grow: 1;
-    }
-
-    .block2 {
-        flex-direction: row;
-        flex-grow: 1;
-    }
-
-    .Popular_teacher_box {
-        max-width: 540px;
-        margin: 0 auto;
-        padding: 0px;
-        background: #fff;
-        margin-top: 100px;
-    }
-
-    .Popular_teacher_absolute_box {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
-        grid-gap: 20px;
-        padding: 0 10px;
-    }
-
-    .common_card {
-        width: auto;
-        max-height: 310px;
-    }
-
-    .common-card-image {
-        height: 160px;
-        width: 100%;
-    }
-
-    .Popular_teacher_box>.Common-Header-Box {
-        padding: 10px 10px 0px;
-    }
-
-    .TestSeries-Main-Container {
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    .test-series-grid {
-        grid-gap: 36px;
-    }
-
-    #popular-teacher-section {
-        min-height: 800px;
-    }
-
-    #Course-Container {
-        max-width: 540px;
-        margin: 0 auto;
-    }
-
-    .exam-box>div>nav {
-        overflow-x: scroll;
-        padding-left: 0px;
-    }
-
-    .exam-box>div>nav>ul {
-        align-items: center;
-    }
-
-    .exam-box>div>nav>ul>li {
-        text-wrap: nowrap;
-    }
-}
-
-@media (max-width: 576px) {
+@media (min-width: 300px) and (max-width: 576px) {
     .one-destination-card>img {
         width: 17.568px;
         height: 17.568px;
@@ -384,7 +238,7 @@
 
     .one-destination-card-content>span {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 8px;
         font-style: normal;
         font-weight: 400;
@@ -393,7 +247,7 @@
 
     .one-destination-card-content>h2 {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 8px;
         font-style: normal;
         font-weight: 700;
@@ -413,14 +267,7 @@
     }
 
     .Popular-exam-box {
-        min-width: 340px;
-        padding: 0 16px;
         gap: 16px;
-    }
-
-    .edufinder-container {
-        min-width: 360px;
-        padding: 0 16px;
     }
 
     .edufinder-desc {
@@ -434,7 +281,7 @@
     .edufinder-head {
         color: #000;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -444,7 +291,7 @@
     .edufinder-desc {
         color: #646F79;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -455,7 +302,7 @@
         margin: 0 auto;
         color: #FFF;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 7.186px;
         font-style: normal;
         font-weight: 700;
@@ -482,7 +329,7 @@
 
     .Square-Box-Title {
         color: var(--black-400, #000);
-        font-family: Poppins;
+        
         font-size: 11.576px;
         font-style: normal;
         font-weight: 700;
@@ -501,7 +348,7 @@
 
     .Square-Conatiner>div>p {
         color: var(--black-300, #747073);
-        font-family: Poppins;
+        
         font-size: 11.576px;
         font-style: normal;
         font-weight: 400;
@@ -514,7 +361,7 @@
 
     .Common-Header-title {
         color: #722E60;
-        font-family: Poppins;
+        
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -523,7 +370,7 @@
 
     .description {
         color: #646F79;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -532,7 +379,7 @@
 
     .ind-exam>span {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
@@ -541,7 +388,7 @@
 
     .Popular-Exam-Nav-Item {
         color: #000;
-        font-family: Poppins;
+        
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -602,22 +449,166 @@
     .heading-one-destination {
         color: #514D4D;
         text-align: center;
-        font-family: Poppins;
+        
         font-size: 21.565px;
         font-style: normal;
         font-weight: 900;
         line-height: 130%;
     }
+
     .commonPadding {
         padding-top: 37px !important;
     }
+
     #Popular-Exam {
         margin: 0px auto !important;
     }
+
     .block2 {
         gap: 11.576px;
     }
+
     .block1 {
         gap: 11.576px;
     }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .homePage-Container {
+        max-width: 540px;
+    }
+
+    .heading-one-destination {
+        font-size: 30px;
+    }
+
+    .commonPadding {
+        padding: 0px;
+    }
+
+    .one-destination-card {
+        width: 30%;
+        padding: 0px;
+        gap: 0px;
+        padding: 25px 5px;
+        justify-content: space-between;
+    }
+
+    .one-desntination-card-content>span {
+        font-size: 12px;
+    }
+
+    .one-destination-card-content>h2 {
+        font-size: 15px;
+        white-space: break-spaces;
+    }
+
+    .one-destination-card>img {
+        height: 40px;
+    }
+
+    .Popular-exam-box>nav {
+        overflow-x: scroll;
+    }
+
+    .Popular-exam-box>nav>ul {
+        align-items: center;
+    }
+
+    .Popular-exam-box>nav>ul>li {
+        text-wrap: nowrap;
+    }
+
+
+    /* Important */
+
+    .edufinder-container {
+        flex-direction: column;
+    }
+
+    .edufinder-container>div {
+        min-height: auto;
+    }
+
+    .edufindr-box-container {
+        flex-direction: column;
+    }
+
+    .block1 {
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .block2 {
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .Popular_teacher_box {
+        padding: 0px;
+        background: #fff;
+        margin-top: 100px;
+    }
+
+    .Popular_teacher_absolute_box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+        grid-gap: 20px;
+        padding: 0 10px;
+    }
+
+    .common_card {
+        width: auto;
+        max-height: 310px;
+    }
+
+    .common-card-image {
+        height: 160px;
+        width: 100%;
+    }
+
+    .Popular_teacher_box>.Common-Header-Box {
+        padding: 10px 10px 0px;
+    }
+
+    .test-series-grid {
+        grid-gap: 36px;
+    }
+
+    #popular-teacher-section {
+        min-height: 800px;
+    }
+
+    .exam-box>div>nav {
+        overflow-x: scroll;
+        padding-left: 0px;
+    }
+
+    .exam-box>div>nav>ul {
+        align-items: center;
+    }
+
+    .exam-box>div>nav>ul>li {
+        text-wrap: nowrap;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .homePage-Container {
+        max-width: 720px;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .homePage-Container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .homePage-Container {
+        max-width: 1170px;
+    }
+
 }
