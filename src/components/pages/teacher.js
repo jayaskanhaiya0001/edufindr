@@ -1,11 +1,34 @@
 import { Highlight } from "../common/Highlight/highlight";
 import { About } from "../common/About/about";
 import { Course } from "../common/Course/course";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
 import "./teacher.css";
-const HightLightList = ["CoFounder of Vidya Education, one of the pioneer institute for BPSC aspirants.", "Eminent Faculty for History and Geography.", "Well Known for his unique teaching style and his motivation lectures among students."]
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+//const HightLightList = ["CoFounder of Vidya Education, one of the pioneer institute for BPSC aspirants.", "Eminent Faculty for History and Geography.", "Well Known for his unique teaching style and his motivation lectures among students."]
 export const TeacherDetail = () => {
+    const [teacher, setTeacher] = useState()
+    const navigate=useNavigate();
+    const { id } = useParams();
+    const [HightLightList, setHightLightList] = useState()
+    const getTeachersApi = () => {
+        axios.get(`https://courseselling.onrender.com/api/v1/teacher/${id}`)
+            .then(response => {
+               
+                setTeacher(response?.data?.data);
+                setHightLightList(response?.data?.data?.highlights)
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+    useEffect(() => {
+        // Make the API request here
+        getTeachersApi()
+    }, []);
     return (
         <>
             <div className="Teacher-Detail-Container">
@@ -13,32 +36,37 @@ export const TeacherDetail = () => {
                     <img src="/images/teacher.png" alt="" className="Teacher-Profile-image" />
                     <div className="basic-detail">
                         <div>
-                            <h1 className="Teacher-Name">Rahul Chandra <img src="" alt="" /></h1>
-                            <p className="Teacher-Dsignation"><span>Director. Vidya Education</span><span>+1 More</span></p>
+                            <h1 className="Teacher-Name">{teacher?.name}<img src="" alt="" /></h1>
+                            <p className="Teacher-Dsignation"><span>{teacher?.designation}</span><span>+1 More</span></p>
                         </div>
                         <div>
-                            <p className="Teacher-Cmn-Dtl"><span><b className="bold">50000+</b> Students Taught</span><span><b className="bold">28+ Years</b> of Experience</span><span><b className="bold">500+</b> Selectors</span></p>
+                            <p className="Teacher-Cmn-Dtl"><span><b className="bold">{teacher?.studentsTaught }+</b> Students Taught</span><span><b className="bold">{teacher?.yearsOfExperience}+ Years</b> of Experience</span><span><b className="bold">{teacher?.selections}+</b> Selectors</span></p>
                         </div>
                     </div>
                 </div>
-                <About heading={'About Professor'} about={'Rahul Chandra is a renowned name is UPSC fraternity for his deep understanding of the Anthropology optional. He has industry experience of more than 10 years and is already known to have given toppers like Parikshit Thoudam, Devesh Chaturvedi, Bokka Chaitanya Redyy and many more.'} color={'#722E60'} />
+                <About heading={'About Professor'} about={teacher?.about} color={'#722E60'} />
                 <Highlight heading={'Highlights'} hightlightListItems={HightLightList} color={"#722E60"} />
                 <div className="Eductation-Box">
                     <h1 className="education-head">Education</h1>
-                    <ul className="education-ul-list">
-                        <li><img /> B Tech Biochemical Engineering</li>
-                        <li><img /> 2009 - 2013</li>
-                    </ul>
+                    {teacher?.experiences?.map((item)=>{
+                       return  (  <ul className="education-ul-list">
+                       <li><img /> {item?.institution}</li>
+                       <li><img /> {item?.year}</li>
+                   </ul>)
+                    })}
+                 
                 </div>
                 <div className="Ind-Teacher-Courses">
-                    <h1 className="Heading">Courses By Rahul Chandra</h1>
+                    <h1 className="Heading">Courses By {teacher?.name}</h1>
                     <div className="teacher-page-course-grid-box">
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                        <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                        {teacher?.courses?.map((item)=>{
+                            return (
+                            <div onClick={()=>{navigate(`/course/course-detail/${item?._id}`)}}> 
+                            <HorizontalCard item={item} />
+                            </div>
+                            )
+                        })}
+                        
                     </div>
                 </div>
                 {/* <MobileCall /> */}

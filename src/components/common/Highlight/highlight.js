@@ -6,10 +6,10 @@ export const Highlight = ({ hightlightListItems , heading , color}) => {
                 <h2 style={{color: color}}>{heading}</h2>
                 <ul className="highlight-ul-list">
                     {
-                        hightlightListItems.map((items, index) => {
+                        hightlightListItems?.map((items, index) => {
                             return (
                                 <>
-                                <li key={index} >{items}</li>
+                                <li key={index} >{items.highlight}</li>
                                 </>
                             )
                         })

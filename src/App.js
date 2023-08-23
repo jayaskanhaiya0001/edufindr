@@ -13,8 +13,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/course' element={<CoursePage />} />
-          <Route path='/teachers' element={<TeacherDetail />} />
-          <Route path='/course/course-detail' element={<CourseDetail />} />
+          <Route path='/teachers/:id' element={<TeacherDetail />} />
+          <Route path='/course/course-detail/:id' element={<CourseDetail />} />
           <Route path='/testseries' element={<TestSeriesPage />} />
           <Route path='/freebeis' element={<Freebeis />} />
         </Routes>

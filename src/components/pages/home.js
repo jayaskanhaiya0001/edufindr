@@ -12,6 +12,7 @@ import { SlickSlider } from "../common/Slider/Slider";
 import shield from "../../assets/Icons/shield.svg";
 import trophy from "../../assets/Icons/trophy.svg";
 import test from "../../assets/Icons/test-series.svg";
+import { useNavigate } from 'react-router-dom';
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
 import { Footer } from "../common/Footer/footer";
@@ -24,14 +25,15 @@ const PopularExamNavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'G
 const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
 
 export const Homepage = () => {
-
+const navigate=useNavigate();
     const [Teacher_Content, setTeacher_Content] = useState([]);
     const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
+    const [testSeries, setTestSeries] = useState([])
     const testSeriesApi = () => {
-        axios.get('https://courseselling.onrender.com/api/v1/categories')
+        axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
             .then(response => {
-
-                setPopularExamNavItem(response.data.data);
+console.log(response.data.Tests)
+                setTestSeries(response.data.Tests);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -57,10 +59,12 @@ export const Homepage = () => {
                 console.error('Error fetching data:', error);
             });
     }
+
     useEffect(() => {
         // Make the API request here
         getAllTeachersApi();
         headerapi();
+        testSeriesApi()
     }, []);
     return (
         <>
@@ -185,9 +189,9 @@ export const Homepage = () => {
                             {
                                 Teacher_Content?.map((data, index) => {
                                     return (
-                                        <>
+                                        <div  onClick={()=>{navigate(`/teachers/${data._id}`)}} >
                                             <Card title={data?.title} description={data?.description} text={data?.text} />
-                                        </>
+                                        </div>
                                     )
                                 })
 
@@ -199,10 +203,10 @@ export const Homepage = () => {
                     <div className="TestSeries-Main-Container">
                         <UpperHeader title={'Popular Test Series'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                         <div className="test-series-grid" style={{ margin: "36px 0" }}>
-                            <TestSeriesCard />
-                            <TestSeriesCard />
-                            <TestSeriesCard />
-                            <TestSeriesCard />
+                            {testSeries?.map((item) => {
+                                return <TestSeriesCard key={item.id} data={item} />;
+                                
+                            })}
                         </div>
 
                         <Button width={'max-content'} value={'Explore all Test Series'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} margin={'0 auto'} />
