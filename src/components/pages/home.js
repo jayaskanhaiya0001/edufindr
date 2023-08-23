@@ -26,18 +26,18 @@ const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Poli
 export const Homepage = () => {
 
     const [Teacher_Content, setTeacher_Content] = useState([]);
-const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
-const testSeriesApi=()=>{
-    axios.get('https://courseselling.onrender.com/api/v1/categories')
-    .then(response => {
-   
-        setPopularExamNavItem(response.data.data);
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-}
-    const headerapi=()=>{
+    const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
+    const testSeriesApi = () => {
+        axios.get('https://courseselling.onrender.com/api/v1/categories')
+            .then(response => {
+
+                setPopularExamNavItem(response.data.data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+    const headerapi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/categories')
             .then(response => {
 
@@ -64,30 +64,43 @@ const testSeriesApi=()=>{
     }, []);
     return (
         <>
-            <Header />
+            {/* <Header />
             <div className="homePage-Container">
+
                 <section className="one-destination">
                     <div className="one-destination_box" >
-                        <h1 className="heading-one-destination">
-                            One Destination for <br />Complete Exam <br />Preparation
-                        </h1>
-                        <ul className="path-point">
-                            {
-                                destinationItem.map((item, index) => {
-                                    return (
-                                        <>
-                                            <li id={index}>{item}</li>
-                                        </>
-                                    )
-                                })
-                            }
-                        </ul>
-                        {/* <SlickSlider/>
-                    <div className="one-destination-btn-box">
-                        <Button value={'Get Started For Free'} background={'#F4F4F4'} txtColor={'#514D4D'} border={'none'} />
-                        <Button value={'Contact Us'} background={'#000'} txtColor={'#FFF'} border={'none'} />
-                    </div> */}
+                        <div>
+                            <div>
+                                <h1 className="heading-one-destination">
+                                    One Destination for <br />Complete Exam <br />Preparation
+                                </h1>
+                                <ul className="path-point">
+                                    {
+                                        destinationItem.map((item, index) => {
+                                            return (
+                                                <>
+                                                    <li id={index}>{item}</li>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            <div className="home-form">
+                                <div>
+                                    <input placeholder="Enter your mobile number" />
+                                </div>
+                                <button className="Call-Back-Btn">Get a call back</button>
+                                <p><img src={shield} alt="" />30,000+ students trust us</p>
+                            </div>
+                        </div>
+                        <div>
+                            <SlickSlider />
+                        </div>
                     </div>
+
+                </section>
+                <section>
                     <div className="one-destination-card-box">
                         {
                             destinationCard.map((item, index) => {
@@ -108,7 +121,11 @@ const testSeriesApi=()=>{
 
                     </div>
                 </section>
-                <section className="commonPadding" style={{ background: "linear-gradient(180deg, #FFF 0%, #FFF5FC 100%)" }} id="Popular-Exam">
+
+
+            </div>
+            <section style={{ background: "linear-gradient(180deg, #FFF 0%, #FFF5FC 100%)" }} id="Popular-Exam">
+                <div className="homePage-Container">
                     <div className="Popular-exam-box" style={{ paddingBottom: "100px" }}>
                         <UpperHeader title={'Popular Exam'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                         <Nav navList={PopularExamNavItem} />
@@ -127,7 +144,11 @@ const testSeriesApi=()=>{
                             }
                         </div>
                     </div>
-                </section>
+                </div>
+
+            </section>
+            <div className="homePage-Container">
+
                 <section id="edufinder">
                     <div className="edufinder-container">
                         <div className="edufinder-content-container">
@@ -188,10 +209,10 @@ const testSeriesApi=()=>{
 
                     </div>
                 </section>
-                <section>
-                    <Footer />
-                </section>
-            </div>
+            </div> */}
+            <section>
+                <Footer />
+            </section>
 
             {/* <section className="commonPadding" style={{ minHeight: "635px", marginTop: "100px" }}>
                 <TestSeriesSection />

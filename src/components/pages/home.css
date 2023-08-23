@@ -1,6 +1,60 @@
 .homePage-Container {
-    margin: 0 auto;
-} 
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.home-form>div {
+    padding: 20px 24px;
+    border-radius: 5.6px;
+    border: 1.4px solid #ECECEC;
+    width: 100%;
+}
+
+.home-form>div>input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.Call-Back-Btn {
+    padding: 17px 28px;
+    border-radius: 4px;
+    background: var(--purple-400, #722E60);
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.4px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.home-form>p {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #514D4D;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.home-form>p>img {
+    width: 36px;
+    height: 36px;
+}
+
 .Popular_teacher_box {
     background: #ECE9E9;
     height: 241.372px;
@@ -9,7 +63,7 @@
 }
 
 #popular-teacher-section {
-    min-height: 600px;
+    min-height: 484px;
 }
 
 .Popular_teacher_absolute_box {
@@ -24,7 +78,7 @@
 
 .Popular_teacher_heading {
     color: #000;
-    
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -34,7 +88,11 @@
 .one-destination_box {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    gap: 80px;
+}
+
+.one-destination_box>div {
+    width: 50%;
 }
 
 .one-destination-btn-box {
@@ -45,7 +103,7 @@
 
 .heading-one-destination {
     color: #514D4D;
-    text-align: center;
+    text-align: left;
     font-family: Satoshi;
     font-size: 48px;
     font-style: normal;
@@ -61,13 +119,12 @@
     padding: 10px;
     display: flex;
     gap: 10px;
-    margin-top: 90px;
 }
 
 .path-point {
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: left;
     margin: 20px 0px
 }
 
@@ -94,7 +151,7 @@
 .ind-exam>span {
     display: inline-block;
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -119,7 +176,7 @@
 .Popular-Exam-Nav>ul>li {
     padding: 10px;
     color: #000;
-    
+
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -169,7 +226,7 @@
 
 .edufinder-head {
     color: #000;
-    
+
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -178,7 +235,7 @@
 
 .edufinder-desc {
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -238,7 +295,7 @@
 
     .one-destination-card-content>span {
         color: #000;
-        
+
         font-size: 8px;
         font-style: normal;
         font-weight: 400;
@@ -247,7 +304,7 @@
 
     .one-destination-card-content>h2 {
         color: #000;
-        
+
         font-size: 8px;
         font-style: normal;
         font-weight: 700;
@@ -281,7 +338,7 @@
     .edufinder-head {
         color: #000;
         text-align: center;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -291,7 +348,7 @@
     .edufinder-desc {
         color: #646F79;
         text-align: center;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -302,7 +359,7 @@
         margin: 0 auto;
         color: #FFF;
         text-align: center;
-        
+
         font-size: 7.186px;
         font-style: normal;
         font-weight: 700;
@@ -329,7 +386,7 @@
 
     .Square-Box-Title {
         color: var(--black-400, #000);
-        
+
         font-size: 11.576px;
         font-style: normal;
         font-weight: 700;
@@ -348,7 +405,7 @@
 
     .Square-Conatiner>div>p {
         color: var(--black-300, #747073);
-        
+
         font-size: 11.576px;
         font-style: normal;
         font-weight: 400;
@@ -361,7 +418,7 @@
 
     .Common-Header-title {
         color: #722E60;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -370,7 +427,7 @@
 
     .description {
         color: #646F79;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -379,7 +436,7 @@
 
     .ind-exam>span {
         color: #000;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
@@ -388,7 +445,7 @@
 
     .Popular-Exam-Nav-Item {
         color: #000;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -449,7 +506,7 @@
     .heading-one-destination {
         color: #514D4D;
         text-align: center;
-        
+
         font-size: 21.565px;
         font-style: normal;
         font-weight: 900;
