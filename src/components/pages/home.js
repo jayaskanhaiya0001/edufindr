@@ -64,7 +64,7 @@ export const Homepage = () => {
     }, []);
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div className="homePage-Container">
 
                 <section className="one-destination">
@@ -95,7 +95,16 @@ export const Homepage = () => {
                             </div>
                         </div>
                         <div>
-                            <SlickSlider />
+                            <SlickSlider settings={{
+                                dots: true,
+                                infinite: true,
+                                speed: 500,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                fade: true,
+                                cssEase: 'linear',
+                                autoplay: true,
+                            }} />
                         </div>
                     </div>
 
