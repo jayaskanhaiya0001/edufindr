@@ -64,7 +64,7 @@ export const Homepage = () => {
     }, []);
     return (
         <>
-            {/* <Header />
+            <Header />
             <div className="homePage-Container">
 
                 <section className="one-destination">
@@ -209,7 +209,7 @@ export const Homepage = () => {
 
                     </div>
                 </section>
-            </div> */}
+            </div>
             <section>
                 <Footer />
             </section>
