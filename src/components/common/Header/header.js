@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./header.css";
-import { Link } from "react-router-dom";
 const navigationItem = [{ name: "Home", url: "/" }, { name: "courses", url: "/course" }, { name: "test series", url: "/testseries" }, { name: "freebies", url: "/freebies" }, { name: "blog", url: "/blog" }]
 export const Header = () => {
     const [sidebarVisible, setSidebarVisible] = useState(false)
+    const location = useLocation();
     return (
         <>
             <header>
@@ -16,7 +17,7 @@ export const Header = () => {
                             navigationItem.map((item, index) => {
                                 return (
                                     <>
-                                        <li id={index} className="nav_title"><Link to={item.url}>{item.name}</Link></li>
+                                        <li id={index} className="nav_title" ><Link to={item.url} style={location.pathname === `${item.url}` ? { color: "#722E60" } : { color: "#000" }}>{item.name}</Link></li>
                                     </>
                                 )
                             })
