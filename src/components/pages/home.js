@@ -64,7 +64,7 @@ export const Homepage = () => {
     }, []);
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <div className="homePage-Container">
 
                 <section className="one-destination">
@@ -72,7 +72,7 @@ export const Homepage = () => {
                         <div>
                             <div>
                                 <h1 className="heading-one-destination">
-                                    One Destination for <br />Complete Exam <br />Preparation
+                                    One Destination for <br />Complete Exam Preparation
                                 </h1>
                                 <ul className="path-point">
                                     {
@@ -94,7 +94,7 @@ export const Homepage = () => {
                                 <p><img src={shield} alt="" />30,000+ students trust us</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="Web-Caraousel">
                             <SlickSlider settings={{
                                 dots: true,
                                 infinite: true,
@@ -105,6 +105,9 @@ export const Homepage = () => {
                                 cssEase: 'linear',
                                 autoplay: true,
                             }} />
+                        </div>
+                        <div className="Mob-Caraousel">
+                           
                         </div>
                     </div>
 

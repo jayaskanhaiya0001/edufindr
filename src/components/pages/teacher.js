@@ -3,11 +3,14 @@ import { About } from "../common/About/about";
 import { Course } from "../common/Course/course";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
+import { Header } from "../common/Header/header";
+import { Footer } from "../common/Footer/footer";
 import "./teacher.css";
 const HightLightList = ["CoFounder of Vidya Education, one of the pioneer institute for BPSC aspirants.", "Eminent Faculty for History and Geography.", "Well Known for his unique teaching style and his motivation lectures among students."]
 export const TeacherDetail = () => {
     return (
         <>
+        <Header/>
             <div className="Teacher-Detail-Container">
                 <div className="teacher-personal-detail">
                     <img src="/images/teacher.png" alt="" className="Teacher-Profile-image" />
@@ -41,8 +44,9 @@ export const TeacherDetail = () => {
                         <HorizontalCard image={'./images/dummy.png'} title={'GS Foundation'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
                     </div>
                 </div>
-                {/* <MobileCall /> */}
+                <MobileCall />
             </div>
+            <Footer/>
         </>
     )
 }

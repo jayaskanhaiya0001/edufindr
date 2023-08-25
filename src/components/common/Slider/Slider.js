@@ -4,6 +4,7 @@ import library from "../../../assets/slider-image/library.svg";
 import Edufindr from "../../../assets/slider-image/edufindr-log.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./slider.css"
 const sliderImage = [StudentGrp, library, Edufindr]
 export const SlickSlider = ({settings}) => {
     // var settings = {

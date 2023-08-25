@@ -20,7 +20,7 @@
 
 .Horizontal-Common-Content-disc {
     color: #3B4A54;
-    
+
     font-size: 13.208px;
     font-style: normal;
     font-weight: 400;
@@ -30,8 +30,8 @@
 }
 
 .Horizontal-Common-Image-Box>img {
-    height: -webkit-fill-available;
     width: 100%;
+    height: 100%;
 }
 
 .star-box>div {
@@ -45,7 +45,7 @@
     background: #FFD13C;
     color: #fff;
     color: #FFF;
-    
+
     font-size: 9.561px;
     font-style: normal;
     font-weight: 700;
@@ -59,15 +59,26 @@
     gap: 32.72px;
 }
 
+.Class-Mode {}
 @media(min-width: 300px) and (max-width:575px) {
     .Horizontal-Common-Image-Box {
         width: 158px;
         max-height: 154.2px;
     }
 
+    .star-box>div>span {
+        padding: 4.304px;
+        color: #FFF;
+        font-family: Satoshi;
+        font-size: 6.025px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 9.038px;
+    }
+
     .Horizontal-Common-Content-Box> :nth-child(1)>h2 {
         color: #000;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -76,17 +87,13 @@
 
     .Horizontal-Common-Content-Box> :nth-child(1)>p {
         color: #3B4A54;
-        
+
         font-size: 8px;
         font-style: normal;
         font-weight: 400;
         line-height: 19.812px;
         margin: 0;
         text-transform: capitalize;
-    }
-
-    .Horizontal-Common-Content-Box {
-        padding: 8px;
     }
 
     .star-value {
@@ -106,17 +113,21 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        align-items: flex-start;
     }
+
 
     .star-box>p {
         color: #646F79;
-        
+
         font-size: 9.396px;
         font-style: normal;
         font-weight: 600;
         line-height: 14.094px;
     }
-    .Horizontal-Common-Content-Box  {
-        gap: 0px;
+
+    .Horizontal-Common-Content-Box {
+        gap: 4px;
+        padding: 8px;
     }
 }

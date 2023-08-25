@@ -6,7 +6,7 @@ import { UpperHeader } from "../Heading/upperHeader";
 import { Button } from "../Button/button";
 import "./course.css";
 import { useState, useEffect } from "react";
-export const Course = ({ title, children }) => {
+export const Course = ({ title, children , display}) => {
   const [NavItem, setNavItem] = useState({});
   const [courses, setCourses] = useState([]);
   const [category, setCategory] = useState("")
@@ -49,7 +49,7 @@ export const Course = ({ title, children }) => {
   }, []);
   return (
     <>
-      <div className="exam-box" style={{ paddingBottom: "100px" }}>
+      <div className="exam-box">
         <div>
           <UpperHeader title={title} />
           <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} />
@@ -64,7 +64,7 @@ export const Course = ({ title, children }) => {
 
           </div>
         </div>
-        <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} />
+        <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} display={display}/>
       </div>
     </>
   )
