@@ -289,7 +289,17 @@
     display: none;
 }
 
+.one-destination-card-box> :nth-child(1) {
+    background: var(--purple-0, #FFF5FC);
+}
 
+.one-destination-card-box> :nth-child(2) {
+    background: var(--orange-0, #FFF6F0);
+}
+
+.one-destination-card-box> :nth-child(3) {
+    background: #E3F8FF;
+}
 
 @media (min-width: 300px) and (max-width: 575px) {
     .Mob-Caraousel {

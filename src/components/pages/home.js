@@ -122,7 +122,7 @@ export const Homepage = () => {
                                 return (
                                     <>
 
-                                        <div className="one-destination-card" style={index === 1 ? { background: "#FFF1E9" } : { background: "#E3F8FF" }}>
+                                        <div className="one-destination-card">
                                             <img src={item.icon} alt="icon" />
                                             <div className="one-destination-card-content">
                                                 <span>{item.title}</span>
