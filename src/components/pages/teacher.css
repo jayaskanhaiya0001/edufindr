@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 58px;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 .teacher-personal-detail {
@@ -12,7 +12,7 @@
 
 .Teacher-Name {
     color: #000;
-    
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +22,7 @@
 
 .Teacher-Dsignation> :nth-child(1) {
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -35,7 +35,7 @@
 
 .Teacher-Dsignation> :nth-child(2) {
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -73,7 +73,7 @@
 
 .bold {
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -82,7 +82,7 @@
 
 .education-head {
     color: #722E60;
-    
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -109,14 +109,13 @@
 .teacher-page-course-grid-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(193px, 1fr));
     grid-gap: 24px 24px;
 }
 
 .Heading {
     margin-bottom: 24px;
     color: #000;
-    
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -128,12 +127,12 @@
     .Teacher-Detail-Container {
         gap: 24px;
         padding: 0 16px;
+        margin: 37px auto;
     }
 
     .teacher-page-course-grid-box {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
-
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .teacher-personal-detail {
@@ -149,7 +148,7 @@
     .Teacher-Name {
         color: #000;
         text-align: center;
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -193,7 +192,7 @@
 
     .Heading {
         color: #722E60;
-        
+
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -205,13 +204,13 @@
 @media(min-width: 576px) and (max-width: 767px) {
     .Teacher-Detail-Container {
         max-width: 540px;
-        margin: 0 auto;
     }
 
     .teacher-page-course-grid-box {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(540px, 0fr));
     }
+
     .teacher-personal-detail {
         flex-direction: column;
     }
@@ -226,6 +225,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
     }
+
     .teacher-personal-detail {
         flex-direction: column;
     }

@@ -9,3 +9,7 @@
   font-family: 'Satoshi';
   src: url('../public/Fonts/Satoshi-Variable.ttf');
 }
+
+.root {
+  overflow-x: hidden;
+}

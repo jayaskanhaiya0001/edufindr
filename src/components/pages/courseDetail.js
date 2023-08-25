@@ -18,12 +18,15 @@ import RecordedLectures from "../../assets/Course-Detailed-Page/Recorded-Lecture
 import DoubtSession from "../../assets/Course-Detailed-Page/Doubt-Session.svg";
 import AnswerPaper from "../../assets/Course-Detailed-Page/Answer-Paper.svg";
 import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access.svg";
+import { Footer } from "../common/Footer/footer";
+import { Header } from "../common/Header/header";
 import "./courseDetail.css";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
 export const CourseDetail = () => {
     return (
         <>
+            <Header />
             <div className="Course-Detail-Top-Container">
                 <section id="Hero-Section">
                     <div className="main-container">
@@ -94,13 +97,14 @@ export const CourseDetail = () => {
                             </div>
                         </div>
                     </div>
+                    <section>
+                        <div className="Price-Container">
+                            <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
+                            <button className="get-started">get started</button>
+                        </div>
+                    </section>
                 </section>
-                <section>
-                    <div className="Price-Container">
-                        <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
-                        <button className="get-started">get started</button>
-                    </div>
-                </section>
+
                 <section>
                     <div className="Course-Additional-Detail-Container">
                         <UpperHeader title={'What all you are getting'} />
@@ -173,10 +177,11 @@ export const CourseDetail = () => {
                         <TestSeriesCard />
                     </div>
                 </section>
-                {/* <section>
+                <section>
                     <MobileCall />
-                </section> */}
+                </section>
             </div>
+            <Footer />
 
         </>
     )

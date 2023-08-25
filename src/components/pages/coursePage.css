@@ -1,22 +1,25 @@
 #course-first-section {
-    min-height: 449px;
+    gap: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 72px;
 }
 
 .course-page {
-    padding: 0 128px;
+    margin: 85px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 
-#course-first-section > :nth-child(1){
+#course-first-section> :nth-child(1) {
     display: flex;
     gap: 40px;
     justify-content: center;
     flex-direction: column;
 }
+
 .corse-page-head-box {
     display: flex;
     flex-direction: column;
@@ -25,7 +28,6 @@
 
 .corse-page-head-box>h1 {
     color: #000;
-    
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -36,7 +38,6 @@
 .corse-page-head-box>p {
     color: #000;
     text-align: center;
-    
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -54,6 +55,65 @@
 .course-page-grid-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
-    gap: 1%;
     grid-column-gap: 36px;
+}
+
+@media(min-width: 300px) and (max-width:575px) {
+    .course-page {
+        gap: 24px;
+        padding: 0 16px;
+        margin: 37px auto;
+    }
+
+    .Course-Page-Square-Card {
+        width: 100%;
+    }
+
+    .Course-Page-Image-Box {
+        width: 68px;
+        height: 68px;
+        padding: 12px;
+        border-radius: 14px;
+        background: var(--orange-300, #D96A27);
+        box-shadow: 0px 6px 20px 0px rgba(218, 218, 218, 0.80);
+    }
+}
+
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .course-page {
+        max-width: 540px;
+    }
+    .course-page-grid-box {
+        grid-row-gap: 16px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .course-page {
+        max-width: 720px;
+    }
+
+    .Course-Page-Square-Card {
+        width: auto;
+    }
+
+    .course-page-grid-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+        grid-row-gap: 36px;
+        grid-column-gap: 36px;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .course-page {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .course-page {
+        max-width: 1170px;
+    }
 }

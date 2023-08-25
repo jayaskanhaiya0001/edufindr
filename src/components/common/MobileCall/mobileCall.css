@@ -2,8 +2,6 @@
     display: flex;
     justify-content: space-between;
     gap: 14%;
-    min-height: 354px;
-    margin-top: 100px;
 }
 
 .FormBox {
@@ -23,6 +21,7 @@
     border-radius: 8px;
     border: 1px solid #DFE4E7;
     background: #FFF;
+    width: 100%;
 }
 
 .Mobile-Form>div {
@@ -47,13 +46,113 @@
     line-height: normal;
     width: 100%;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .Mobile-Call-Container>img {
-    width: 640.801px;
     height: 288px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+@media(min-width: 300px) and (max-width: 575px) {
+    .Mobile-Call-Container {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+    .Form-Title-Container {
+        margin: 0 auto;
+    }
+    .Form-Title-Container>h3 {
+        color: #000;
+        text-align: center;
+        font-family: Satoshi;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .Form-Title-Container>p {
+        color: #000;
+        text-align: center;
+        font-family: Satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .Mobile-Call-Container>:nth-child(2)>img {
+        min-width: 259px;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .Mobile-Call-Container {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .Form-Title-Container>h3 {
+        color: #000;
+        text-align: center;
+        font-family: Satoshi;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .Form-Title-Container>p {
+        color: #000;
+        text-align: center;
+        font-family: Satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .Form-Title-Container {
+        width: 100%;
+    }
+    .Mobile-Call-Container>:nth-child(2)>img {
+        min-width: 460px;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .Mobile-Call-Container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .Mobile-Call-Container > :nth-child(2) > img {
+       display: block;
+       margin: 0 auto;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1200px) {
+    .Mobile-Call-Container {
+        gap: 50px;
+    }
+    .Mobile-Call-Container > div {
+        width: 50%;
+    }
+    .Mobile-Call-Container > :nth-child(2) > img {
+        width: 100%;
+        height: 100%;
+    }
 }

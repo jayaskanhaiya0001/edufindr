@@ -263,11 +263,9 @@
 .horizontal-card-grid {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(455px, 2fr));
-    grid-row: 193px;
-    gap: 1%;
+    grid-template-columns: repeat(auto-fit, minmax(449px, 1fr));
+    gap: 40px;
     grid-row-gap: 29px;
-    grid-template-rows: 193px;
 }
 
 .Our-Course-Main-Container {
@@ -286,8 +284,33 @@
     display: flex;
     flex-direction: column;
 }
+.Mob-Caraousel {
+    display: none;
+}
 
-@media (min-width: 300px) and (max-width: 576px) {
+
+
+@media (min-width: 300px) and (max-width: 575px) {
+    .Mob-Caraousel {
+        display: block;
+    }
+    .Web-Caraousel {
+        display: none;
+    }
+    .path-point {
+        text-align: center;
+        justify-content: center;
+    }
+    .homePage-Container {
+        margin: 37px auto;
+        padding: 0 16px;
+    }
+    .one-destination_box {
+        flex-direction: column;
+    }
+    .one-destination_box > div{
+        width: 100%;
+    }
     .one-destination-card>img {
         width: 17.568px;
         height: 17.568px;
@@ -317,10 +340,6 @@
         height: 56px;
         justify-content: center;
         gap: 8.784px;
-    }
-
-    .one-destination_box {
-        padding: 0 16px;
     }
 
     .Popular-exam-box {
@@ -414,6 +433,7 @@
 
     .edufindr-box-container {
         width: 100%;
+        flex-direction: column;
     }
 
     .Common-Header-title {
@@ -463,7 +483,6 @@
         flex-direction: column;
         height: auto;
         background: #fff !important;
-        padding: 0 16px;
     }
 
     .common_card {
@@ -475,16 +494,11 @@
     }
 
     .TestSeries-Main-Container {
-        padding: 0 16px;
         margin-top: 32px;
     }
 
     .Popular_teacher_absolute_box {
         padding: 20px 0px 0px;
-    }
-
-    #Course-Container {
-        padding: 0 16px;
     }
 
     .Our-Course-Main-Container>.Common-Sidebar {
@@ -523,11 +537,20 @@
 
     .block2 {
         gap: 11.576px;
+        flex-direction: row;
     }
 
     .block1 {
         gap: 11.576px;
+        flex-direction: row;
     }
+    .edufinder-container {
+        flex-direction: column;
+    }
+    .edufinder-container>div {
+        min-height: auto;
+    }
+    
 }
 
 
@@ -655,11 +678,42 @@
     .homePage-Container {
         max-width: 720px;
     }
+
+    .edufinder-container {
+        flex-direction: column;
+    }
+
+    .edufinder-container>:nth-child(1) {
+        height: min-content;
+        min-height: min-content;
+    }
+
+    .one-destination_box {
+        flex-direction: column-reverse;
+    }
+
+    .one-destination_box>div {
+        width: 100%;
+    }
 }
 
 @media(min-width: 992px) and (max-width: 1199px) {
     .homePage-Container {
         max-width: 960px;
+    }
+
+    .edufinder-container {
+        flex-direction: column;
+    }
+
+    .edufindr-box-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .edufinder-container>:nth-child(1) {
+        height: min-content;
+        min-height: min-content;
     }
 }
 

@@ -5,6 +5,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
+import { Header } from "../common/Header/header";
+import { Footer } from "../common/Footer/footer";
 import "./teacher.css";
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -31,6 +33,7 @@ export const TeacherDetail = () => {
     }, []);
     return (
         <>
+        <Header/>
             <div className="Teacher-Detail-Container">
                 <div className="teacher-personal-detail">
                     <img src="/images/teacher.png" alt="" className="Teacher-Profile-image" />
@@ -69,8 +72,9 @@ export const TeacherDetail = () => {
                         
                     </div>
                 </div>
-                {/* <MobileCall /> */}
+                <MobileCall />
             </div>
+            <Footer/>
         </>
     )
 }

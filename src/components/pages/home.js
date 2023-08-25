@@ -76,7 +76,7 @@ console.log(response.data.Tests)
                         <div>
                             <div>
                                 <h1 className="heading-one-destination">
-                                    One Destination for <br />Complete Exam <br />Preparation
+                                    One Destination for <br />Complete Exam Preparation
                                 </h1>
                                 <ul className="path-point">
                                     {
@@ -98,8 +98,20 @@ console.log(response.data.Tests)
                                 <p><img src={shield} alt="" />30,000+ students trust us</p>
                             </div>
                         </div>
-                        <div>
-                            <SlickSlider />
+                        <div className="Web-Caraousel">
+                            <SlickSlider settings={{
+                                dots: true,
+                                infinite: true,
+                                speed: 500,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                fade: true,
+                                cssEase: 'linear',
+                                autoplay: true,
+                            }} />
+                        </div>
+                        <div className="Mob-Caraousel">
+                           
                         </div>
                     </div>
 

@@ -8,15 +8,20 @@ export const MobileCall = () => {
         <>
             <div className="Mobile-Call-Container">
                 <div className="FormBox">
-                    <UpperHeader title={'Join to access 3000+ '} desc={'Create a free account and access free classes playlists & more'} />
+                    <div className="Form-Title-Container">
+                        <h3>Join to access 3000+</h3>
+                        <p>Create a free account and access free classes playlists & more</p>
+                    </div>
                     <form className="Mobile-Form">
                         <div>
                             <img src={MobileIcon} alt="mob-icon" /> <input type="Number" placeholder="Please Enter your mobile number" />
                         </div>
-                        <Button value={'Get Started'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} margin={'0 auto'} />
+                        <Button value={'Get Started'} background={'#722E60'} txtColor={'#FFF'} border={'1px solid #000'} margin={'0 auto'} width={'inherit'} />
                     </form>
                 </div>
-                <img src={DummyImage} alt=""/>
+                <div>
+                    <img src={DummyImage} alt="" />
+                </div>
             </div>
         </>
     )
