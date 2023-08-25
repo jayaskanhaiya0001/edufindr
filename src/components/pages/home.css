@@ -284,6 +284,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .Mob-Caraousel {
     display: none;
 }
@@ -294,23 +295,30 @@
     .Mob-Caraousel {
         display: block;
     }
+
     .Web-Caraousel {
         display: none;
     }
+
     .path-point {
         text-align: center;
         justify-content: center;
     }
+
     .homePage-Container {
         margin: 37px auto;
         padding: 0 16px;
     }
+
     .one-destination_box {
         flex-direction: column;
+        gap: 38px;
     }
-    .one-destination_box > div{
+
+    .one-destination_box>div {
         width: 100%;
     }
+
     .one-destination-card>img {
         width: 17.568px;
         height: 17.568px;
@@ -544,19 +552,38 @@
         gap: 11.576px;
         flex-direction: row;
     }
+
     .edufinder-container {
         flex-direction: column;
     }
+
     .edufinder-container>div {
         min-height: auto;
     }
-    
+
 }
 
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .one-destination_box {
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .one-destination_box>div {
+        width: 100%;
+    }
+
     .homePage-Container {
         max-width: 540px;
+    }
+
+    .Web-Caraousel {
+        display: none;
+    }
+
+    .Mob-Caraousel {
+        display: block;
     }
 
     .heading-one-destination {

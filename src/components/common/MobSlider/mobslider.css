@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+    .slick-slide>div>div>img {
+        min-height: 134.074px;
+        height: 100%;
+    }
+    .slick-track {
+        display: flex;
+        gap: 20px;
+    }
+    .slick-slide {
+        width: 234px !important;
+    }
+}

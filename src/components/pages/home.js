@@ -14,6 +14,7 @@ import trophy from "../../assets/Icons/trophy.svg";
 import test from "../../assets/Icons/test-series.svg";
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
+import { MobSlider } from "../common/MobSlider/mobslider";
 import { Footer } from "../common/Footer/footer";
 import "./home.css";
 import { useState, useEffect } from "react";
@@ -107,7 +108,9 @@ export const Homepage = () => {
                             }} />
                         </div>
                         <div className="Mob-Caraousel">
-                           
+                            <section>
+                                <MobSlider />
+                            </section>
                         </div>
                     </div>
 
@@ -188,7 +191,7 @@ export const Homepage = () => {
                     </div>
                 </section>
                 <section id="Course-Container">
-                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} />
+                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} path={'/course/course-detail'}/>
                 </section>
                 <section className="Popular_teacher" id="popular-teacher-section" >
                     <div className="Popular_teacher_box" style={{ background: "#FFF5FC" }}>
@@ -198,7 +201,7 @@ export const Homepage = () => {
                                 Teacher_Content?.map((data, index) => {
                                     return (
                                         <>
-                                            <Card title={data?.title} description={data?.description} text={data?.text} />
+                                            <Card title={data?.title} description={data?.description} text={data?.text} path={'/teachers'}/>
                                         </>
                                     )
                                 })
@@ -222,6 +225,7 @@ export const Homepage = () => {
                     </div>
                 </section>
             </div>
+
             <section>
                 <Footer />
             </section>
