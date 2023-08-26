@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./horizontalcard.css";
-export const HorizontalCard = ({ image, title, additionalinfo, desc, bottomVal1, bottomVal2 }) => {
+export const HorizontalCard = ({ image, title, additionalinfo, desc, bottomVal1, bottomVal2, path }) => {
+    const navigate = useNavigate();
     return (
         <>
-            <div className="Horizontal-Common-Card">
+            <div className="Horizontal-Common-Card" onClick={() => navigate(path)}>
                 <div className="Horizontal-Common-Image-Box">
                     <img src={image} alt="" />
                 </div>

@@ -15,6 +15,7 @@ import test from "../../assets/Icons/test-series.svg";
 import { useNavigate } from 'react-router-dom';
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
+import { MobSlider } from "../common/MobSlider/mobslider";
 import { Footer } from "../common/Footer/footer";
 import "./home.css";
 import { useState, useEffect } from "react";
@@ -111,7 +112,9 @@ console.log(response.data.Tests)
                             }} />
                         </div>
                         <div className="Mob-Caraousel">
-                           
+                            <section>
+                                <MobSlider />
+                            </section>
                         </div>
                     </div>
 
@@ -123,7 +126,7 @@ console.log(response.data.Tests)
                                 return (
                                     <>
 
-                                        <div className="one-destination-card" style={index === 1 ? { background: "#FFF1E9" } : { background: "#E3F8FF" }}>
+                                        <div className="one-destination-card">
                                             <img src={item.icon} alt="icon" />
                                             <div className="one-destination-card-content">
                                                 <span>{item.title}</span>
@@ -192,7 +195,7 @@ console.log(response.data.Tests)
                     </div>
                 </section>
                 <section id="Course-Container">
-                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} />
+                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} path={'/course/course-detail'}/>
                 </section>
                 <section className="Popular_teacher" id="popular-teacher-section" >
                     <div className="Popular_teacher_box" style={{ background: "#FFF5FC" }}>
@@ -226,6 +229,7 @@ console.log(response.data.Tests)
                     </div>
                 </section>
             </div>
+
             <section>
                 <Footer />
             </section>

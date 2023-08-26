@@ -6,7 +6,7 @@ import { UpperHeader } from "../Heading/upperHeader";
 import { Button } from "../Button/button";
 import "./course.css";
 import { useState, useEffect } from "react";
-export const Course = ({ title, children , display}) => {
+export const Course = ({ title, children , display , path}) => {
   const [NavItem, setNavItem] = useState({});
   const [courses, setCourses] = useState([]);
   const [category, setCategory] = useState("")
@@ -58,7 +58,7 @@ export const Course = ({ title, children , display}) => {
           <Sidebar data={NavItem[category]} handleExam={handleExam} />
           <div className="horizontal-card-grid">
             {courses?.map((item) => {
-              return (<HorizontalCard image={'./images/dummy.png'} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />)
+              return (<HorizontalCard image={'./images/dummy.png'} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)
             })}
 
 
