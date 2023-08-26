@@ -1,5 +1,10 @@
 .Nav {
     padding: 10px;
+    overflow-x: scroll;
+}
+
+.Nav::-webkit-scrollbar {
+    display: none;
 }
 
 .Nav>ul {
@@ -15,4 +20,5 @@
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
+    text-wrap: nowrap;
 }

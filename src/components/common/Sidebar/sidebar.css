@@ -24,3 +24,7 @@
     align-self: stretch;
     border-radius: 18px 0px 0px 18px;
 }
+
+@media(min-width: 576px) and (max-width: 767px) {
+    
+}

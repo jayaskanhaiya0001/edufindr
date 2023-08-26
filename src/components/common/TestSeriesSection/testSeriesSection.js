@@ -1,11 +1,13 @@
 import "./testSeriesSection.css";
+import MobImage from "../../../assets/Images/Mob.svg";
 import { Button } from "../Button/button"
 export const TestSeriesSection = () => {
     return (
         <>
             <div className="TestSeriesSection-Container">
                 <div className="Img-Box">
-                    <img src="/images/Wavy_Tech-31_Single-01.svg" alt="" />
+                    <img src="/images/Wavy_Tech-31_Single-01.svg" alt="" className="Web-img" />
+                    <img src={MobImage} alt="" className="Mob-img" />
                 </div>
                 <div className="TestSeriesSection-Content-Box">
                     <div className="TestSeriesSection-Heading-Box">
@@ -18,31 +20,33 @@ export const TestSeriesSection = () => {
                         <div className="TestSeriesSection-Grid-Box">
                             <div className="TestSeriesSection-Flex-Box">
                                 <div className="TestSeriesSection-Rectangle-Box">
-                                    <img src="" alt="" />
+                                    <img src="/Icons/Writing.svg" alt="" />
                                 </div>
                                 <p>Get <br />exam-ready</p>
                             </div>
                             <div className="TestSeriesSection-Flex-Box">
                                 <div className="TestSeriesSection-Rectangle-Box">
-                                    <img src="" alt="" />
+                                    <img src="/Icons/ExamPatterns.svg" alt="" />
                                 </div>
                                 <p>Latest Exam <br />Patterns</p>
                             </div>
                             <div className="TestSeriesSection-Flex-Box">
                                 <div className="TestSeriesSection-Rectangle-Box">
-                                    <img src="" alt="" />
+                                    <img src="/Icons/Performance.svg" alt="" />
                                 </div>
                                 <p>In-depth  <br /> Performance <br />Analysisexam</p>
                             </div>
                             <div className="TestSeriesSection-Flex-Box">
                                 <div className="TestSeriesSection-Rectangle-Box">
-                                    <img src="" alt="" />
+                                    <img src="/Icons/multi-lingual.svg" alt="" />
                                 </div>
                                 <p>Multi-lingual <br />Mock Tests</p>
                             </div>
                         </div>
                     </div>
-                    <Button value={'Explore Test Series Now'} background={'#000'} txtColor={'#FFF'} border={'none'} margin={'57px 0 0 0'}/>
+                    <div className="test-series-btn-box">
+                        <Button value={'Explore Test Series Now'} background={'var(--purple-400, #722E60)'} txtColor={'#FFF'} border={'none'}  width={'max-content'}/>
+                    </div>
                 </div>
             </div>
         </>
