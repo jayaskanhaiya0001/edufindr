@@ -10,7 +10,9 @@ export const Header = () => {
             <header>
                 <nav className="navigation_bar flexbox">
                     <div className="logo_box flexbox">
+                        <Link to={'/'}>
                         <img src="/images/edufindr.svg" alt="logo" className="logo_icon" />
+                        </Link>
                     </div>
                     <ul className={sidebarVisible ? "displaySidebar flexbox" : "nav_items flexbox"} >
                         {

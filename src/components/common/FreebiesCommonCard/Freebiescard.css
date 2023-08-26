@@ -1,3 +1,9 @@
+.FreeeBies-Card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .Freebies-View-Card {
     height: 270px;
     border-radius: 18px;
@@ -13,7 +19,7 @@
 .date-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10%;
 }
 
 .date-container>span {
@@ -40,6 +46,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding-right: 10px;
 }
 
 .Freebies-discription {
@@ -49,10 +56,34 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding-right: 15px;
 }
 
 .Freebies-View-Card>img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+@media(min-width: 300px) and (max-width:575px) {
+    .Freebies-title {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        width: 60%;
+    }
+
+    .Freebies-discription {
+        font-size: 12px;
+    }
+
+    .Freebies-View-Card {
+        height: 170px;
+    }
+}
+
+@media(min-width: 576px) and (max-width:767px) {
+    .Freebies-discription {
+        width: 95%;
+    }
 }

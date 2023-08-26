@@ -12,8 +12,9 @@ export const Freebeis = () => {
             <div className="Freebeis-Main-Container">
                 <Header/>
                 <section>
-                    <div className="Upper-Section">
-
+                    <div className="Freebeis-Upper-Section">
+                        <h1>Freebies</h1>
+                        <div><button><img/><span>Videos</span></button><button><img/><span>Videos</span></button></div>
                     </div>
                 </section>
                 <div className="Freebeis-Card-Container">

@@ -1,3 +1,5 @@
+import Timer from "../../../assets/Icons/Timer.svg";
+import Calendar from "../../../assets/Icons/Calendar.svg"
 import "./Freebiescard.css";
 export const FreeBiesCards = ({ freebies, imgsrc, date, title, subTitle, disc }) => {
     return (
@@ -18,7 +20,7 @@ export const FreeBiesCards = ({ freebies, imgsrc, date, title, subTitle, disc })
                 </div>
                 <div className="Freebies-View-Content">
                     {
-                        date && (<><p className="date-container"><span><img src="" alt="timer" />8 min read</span> <span><img src="" alt="claendar" />14 Aug 2023</span></p></>)
+                        date && (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />14 Aug 2023</span></p></>)
                     }
                     <h3 className="Freebies-title">{title ? title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
                     {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)}
