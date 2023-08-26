@@ -306,6 +306,7 @@
         box-shadow: none;
         border-radius: 0px;
     }
+
     .Mob-Caraousel {
         display: block;
     }
@@ -580,6 +581,22 @@
 
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .Our-Course-Main-Container>.Common-Sidebar {
+        width: 100%;
+    }
+
+    .Our-Course-Main-Container>.horizontal-card-grid {
+        display: none;
+    }
+
+
+    .Our-Course-Main-Container>.Common-Sidebar>div>ul>li {
+        height: 57.494px;
+        padding: 18.851px;
+        border-radius: 7.54px;
+        box-shadow: -0.9425287246704102px 0.9425287246704102px 3.7701148986816406px 0px rgba(0, 0, 0, 0.10);
+    }
+
     .one-destination_box {
         flex-direction: column;
         gap: 38px;
