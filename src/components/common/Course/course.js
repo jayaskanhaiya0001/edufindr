@@ -55,7 +55,7 @@ export const Course = ({ title, children , display , path}) => {
           <Sidebar data={NavItem[category]} handleExam={handleExam} />
           <div className="horizontal-card-grid">
             {courses?.map((item) => {
-              return (<HorizontalCard image={'./images/dummy.png'} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)
+              return (<HorizontalCard image={'./images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)
             })}
 
 
