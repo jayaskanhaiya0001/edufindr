@@ -26,5 +26,12 @@
 }
 
 @media(min-width: 576px) and (max-width: 767px) {
+    .sidebar-container>ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
     
+    }
+    .sidebar-container>ul>li {
+        border-radius: 8px;
+    }
 }
