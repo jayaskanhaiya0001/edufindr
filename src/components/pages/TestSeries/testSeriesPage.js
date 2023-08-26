@@ -7,17 +7,10 @@ import { useState } from "react";
 import { Footer } from "../../common/Footer/footer";
 import "./testSeriesPage.css";
 
-const NavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
+
 
 export const TestSeriesPage = () => {
-    const [category, setCategory] = useState("")
-const [exam, setExam] = useState("")
-const handleCategory = (data) => {
-  setCategory(data) 
-}
-const handleExam = (data) => {
-  setExam(data)
-}
+
     return (
         <>
             <Header />
@@ -56,7 +49,7 @@ const handleExam = (data) => {
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav NavItem={NavItem} handleCategory={handleCategory} handleExam={handleExam} />
+                        <TestSeriesNav NavItem={NavItem}  />
                     </div>
                 </section>
                 <section>
