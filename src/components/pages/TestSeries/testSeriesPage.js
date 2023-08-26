@@ -49,7 +49,7 @@ export const TestSeriesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav NavItem={NavItem}  />
+                        <TestSeriesNav   />
                     </div>
                 </section>
                 <section>
