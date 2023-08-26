@@ -1,5 +1,8 @@
 .Test-Series-Page-Container {
-    padding: 0 128px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .hero-section {
@@ -17,7 +20,7 @@
 
 .top-heading {
     color: #000;
-    
+
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -26,7 +29,7 @@
 
 .discription {
     color: #000;
-    
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -35,7 +38,7 @@
 
 .input-heading {
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -63,12 +66,11 @@
     width: 78px;
     height: 40px;
     display: inline-block;
-    background: #ECECEC;
+    background: var(--purple-400, #722E60);
 }
 
 .img-box>img {
     max-width: 481px;
-    min-height: 420px;
 }
 
 .Category-Top-Box {
@@ -78,10 +80,190 @@
 }
 
 .Category-Top-Box>h2 {
-    color: #000;
-    
+    color: var(--purple-400, #722E60);
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.Category-Top-Box>p {
+    display: none;
+}
+
+@media(min-width: 300px) and (max-width: 575px) {
+    .Category-Top-Box>p {
+        display: block;
+        color: #646F79;
+        font-family: Satoshi;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .Test-Series-Page-Container {
+        padding: 0 16px;
+        gap: 40px;
+    }
+
+    .TestSeriesSection-Container>* {
+        width: 100%;
+    }
+
+    .TestSeriesSection-Container {
+        flex-direction: column;
+    }
+
+    .TestSeriesSection-Content-Box {
+        width: 100%;
+    }
+
+    .TestSeriesSection-Heading-Box {
+        gap: 16.108px;
+        padding: 0 20px;
+    }
+
+    .TestSeriesSection-Heading-Box>span {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        margin: 0 auto;
+    }
+
+    .TestSeriesSection-Heading {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .TestSeriesSection-Disc {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0 auto;
+        text-align-last: center;
+    }
+
+    .top-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .content-box>div {
+        gap: 12px;
+    }
+
+    .search-bar-container {
+        margin: 0 auto;
+    }
+
+    .search-bar-container>h3 {
+        text-align: center;
+    }
+
+    .img-box>img {
+        width: 290px;
+        height: 182px;
+        margin: 0 auto;
+    }
+
+    .discription {
+        text-align: center;
+    }
+    .Category-Top-Box {
+        flex-direction: column;
+        gap: 8px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .Category-Top-Box>.search-bar-container {
+        display: none;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .Test-Series-Page-Container {
+        max-width: 540px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero-section>div {
+        width: 100%;
+    }
+
+    .TestSeriesSection-Container>* {
+        width: 100%;
+    }
+
+    .TestSeriesSection-Container {
+        flex-direction: column;
+    }
+
+    .TestSeriesSection-Content-Box {
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .Test-Series-Page-Container {
+        max-width: 720px;
+    }
+
+    .hero-section {
+        gap: 40px;
+    }
+
+    .top-heading {
+        font-size: 28px;
+    }
+
+    .discription {
+        font-size: 12px;
+    }
+
+    .img-box>img {
+        max-inline-size: 100%;
+        block-size: auto;
+        aspect-ratio: 2/1;
+        object-fit: cover;
+    }
+
+    .TestSeriesSection-Container {
+        flex-direction: column;
+    }
+
+    .TestSeriesSection-Content-Box {
+        width: 100%;
+    }
+
+    .Img-Box {
+        display: none;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .Test-Series-Page-Container {
+        max-width: 960px;
+    }
+
+    .Img-Box>img {
+        height: 410px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .Test-Series-Page-Container {
+        max-width: 1170px;
+    }
 }

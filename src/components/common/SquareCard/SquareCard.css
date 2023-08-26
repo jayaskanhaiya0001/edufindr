@@ -1,6 +1,6 @@
 .Square-Conatiner {
     width: 244px;
-    height: 244px;
+    min-height: 244px;
     padding: 20px;
     border-radius: 12px;
     background: #F4F4F4;
@@ -63,5 +63,8 @@
     .Square-Image-Box>img {
         width: 21.303px;
         height: 21.303px;
+    }
+    .Square-Conatiner {
+        min-height: 192px;
     }
 }

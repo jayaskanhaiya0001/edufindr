@@ -275,9 +275,8 @@
 .test-series-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
-    gap: 1%;
     grid-row-gap: 29px;
-    /* grid-template-rows: 336px; */
+    grid-column-gap: 58px;
 }
 
 .TestSeries-Main-Container {
@@ -302,6 +301,11 @@
 }
 
 @media (min-width: 300px) and (max-width: 575px) {
+    .one-destination-card-box {
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
     .Mob-Caraousel {
         display: block;
     }
@@ -405,7 +409,6 @@
     }
 
     .Square-Conatiner {
-        max-height: 191px;
         padding: 11.576px;
         border-radius: 3.873px;
         background: var(--orange-0, #FFF6F0);
@@ -556,6 +559,8 @@
     .block2 {
         gap: 11.576px;
         flex-direction: row;
+        min-height: 192px;
+        height: max-content;
     }
 
     .block1 {
@@ -607,7 +612,7 @@
     .one-destination-card {
         width: 30%;
         padding: 0px;
-        gap: 0px;
+        gap: 20px;
         padding: 25px 5px;
         justify-content: space-between;
     }

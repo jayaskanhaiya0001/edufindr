@@ -9,7 +9,7 @@
 .TestSeriesSection-Heading-Box>span {
     display: block;
     color: #14171A;
-    
+
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -27,7 +27,7 @@
 
 .TestSeriesSection-Heading {
     color: #000;
-    
+
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -36,7 +36,7 @@
 
 .TestSeriesSection-Disc {
     color: #646F79;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -45,16 +45,72 @@
 
 .TestSeriesSection-Rectangle-Box {
     border-radius: 6px;
-    background: #D9D9D9;
+    background: var(--orange-0, #FFF6F0);
     width: 82.286px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .TestSeriesSection-Grid-Box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1%;
     grid-row-gap: 33px;
- }
+}
+
+.Mob-img {
+    display: none;
+}
+.test-series-btn-box {
+    margin-top: 50px;
+}
+
+@media(min-width: 300px) and (max-width:575px) {
+    .Web-img {
+        display: none !important;
+    }
+
+    .Mob-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .TestSeriesSection-Rectangle-Box {
+        width: 63.117px;
+        height: 61.364px;
+    }
+
+    .TestSeriesSection-Flex-Box>p {
+        font-size: 12px;
+    }
+
+    .TestSeriesSection-Rectangle-Box>img {
+        width: 32.016px;
+        height: 32.016px;
+    }
+
+    .TestSeriesSection-Grid-Box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        grid-row-gap: 33px;
+    }
+    .test-series-btn-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+}
+
+@media(min-width: 576px) and (max-width:767px) {
+    .Web-img {
+        display: none !important;
+    }
+
+    .Mob-img {
+        display: block;
+        margin: 0 auto;
+    }
+}
