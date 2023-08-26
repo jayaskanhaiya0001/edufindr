@@ -1,0 +1,58 @@
+.Freebies-View-Card {
+    height: 270px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.Freebies-View-Content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-container>span {
+    color: #7A7A7A;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.date-container>span>img {
+    width: 20px;
+    height: 20px;
+}
+
+.Freebies-title {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Freebies-discription {
+    color: #727272;
+    font-family: Satoshi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Freebies-View-Card>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

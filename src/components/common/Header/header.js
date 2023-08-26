@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./header.css";
-const navigationItem = [{ name: "Home", url: "/" }, { name: "courses", url: "/course" }, { name: "test series", url: "/testseries" }, { name: "freebies", url: "/freebies" }, { name: "blog", url: "/blog" }]
+const navigationItem = [{ name: "Home", url: "/" }, { name: "courses", url: "/course" }, { name: "test series", url: "/testseries" }, { name: "freebies", url: "/freebeis" }, { name: "blog", url: "/freebeis/blog" }]
 export const Header = () => {
     const [sidebarVisible, setSidebarVisible] = useState(false)
     const location = useLocation();
