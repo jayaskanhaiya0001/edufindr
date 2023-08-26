@@ -5,7 +5,7 @@ import OnlineTestSeries from "../../../assets/Images/Online-Test-Series.svg";
 import { Header } from "../../common/Header/header";
 import { Footer } from "../../common/Footer/footer";
 import "./testSeriesPage.css";
-const NavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching'];
+const NavItem = {'SSC':[], 'Teaching Exams':[], 'UPSC':[], 'civil service':[], 'GATE':[], 'AE & JE':[], 'Goverment Exmas':[], 'Bamnking & Insurance':[], 'Degfence Exams':[], 'Raleway':[], 'Teaching':[]};
 export const TestSeriesPage = () => {
     return (
         <>
