@@ -22,8 +22,10 @@ export const FreeBiesCards = ({ freebies, imgsrc, date, title, subTitle, disc })
                     {
                         date && (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />14 Aug 2023</span></p></>)
                     }
-                    <h3 className="Freebies-title">{title ? title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
-                    {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)}
+                    <div>
+                        <h3 className="Freebies-title">{title ? title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
+                        {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)}
+                    </div>
                     {
                         disc && (<><p className="Freebies-discription">{disc ? disc : 'Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings'}</p></>)
                     }

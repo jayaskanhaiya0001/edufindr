@@ -78,7 +78,7 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
                     files?.map((data) => {
                         return (
                             <>
-                                <FreeBiesCards title={data.title} subTitle={data.subTitle} />
+                                <FreeBiesCards title={data.title} subTitle={data.subtitle} />
                             </>
                         )
                     })
