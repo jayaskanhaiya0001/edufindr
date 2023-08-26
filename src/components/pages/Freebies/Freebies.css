@@ -2,3 +2,83 @@
     border-radius: 22px;
     border: 1px solid #DFE4E7;
 }
+.Freebeis-Upper-Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 306px;
+    background: var(--purple-0, #FFF5FC);
+    justify-content: center;
+    gap: 40px;
+}
+.Freebeis-Upper-Section > div {
+    display: flex;
+}
+.Freebeis-Upper-Section > div > button {
+    border: none;
+    padding: 10.909px 20.966px 10.909px 21.818px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.Freebeis-Main-Container {}
+
+.Freebeis-Card-Container {
+    margin: 80px auto;
+}
+
+.FreebeisVideoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.FreebeisBlogGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 42px 42px;
+}
+
+@media(min-width: 300px) and (max-width:575px) {
+    .Freebeis-Card-Container {
+        padding: 0 16px;
+        margin: 38px auto;
+    }
+}
+
+@media(min-width: 576px) and (max-width:767px) {
+    .Freebeis-Card-Container {
+        max-width: 540px;
+        margin: 80px auto;
+    }
+
+    .FreebeisBlogGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-gap: 42px 42px;
+    }
+}
+
+
+@media(min-width: 768px) and (max-width:991px) {
+    .Freebeis-Card-Container {
+        max-width: 720px;
+        margin: 80px auto;
+    }
+}
+
+@media(min-width: 992px) and (max-width:1199px) {
+    .Freebeis-Card-Container {
+        max-width: 960px;
+        margin: 80px auto;
+    }
+}
+
+@media(min-width: 1200px) {
+    .Freebeis-Card-Container {
+        max-width: 1170px;
+
+    }
+}

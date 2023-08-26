@@ -17,6 +17,7 @@ function App() {
           <Route path='/course/course-detail/:id' element={<CourseDetail />} />
           <Route path='/testseries' element={<TestSeriesPage />} />
           <Route path='/freebeis' element={<Freebeis />} />
+          <Route path='/freebeis/blog' element={<Freebeis />} />
         </Routes>
       </BrowserRouter>
 
