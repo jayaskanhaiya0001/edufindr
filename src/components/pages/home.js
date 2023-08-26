@@ -22,13 +22,13 @@ import { useState, useEffect } from "react";
 //const Teacher_Content = [{ title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }]
 const destinationItem = ['learn', 'practice', 'improve', 'success'];
 const destinationCard = [{ icon: shield, title: "Trusted by", student: "4000+ Student" }, { icon: trophy, title: "Students Selected", student: "50+ Student" }, { icon: test, title: "Exam Attempted", student: "200+ Student" }]
-const PopularExamNavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching']
+const PopularExamNavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
 const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
 
 export const Homepage = () => {
 const navigate=useNavigate();
     const [Teacher_Content, setTeacher_Content] = useState([]);
-    const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
+    // const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
     const [testSeries, setTestSeries] = useState([])
     const testSeriesApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
@@ -40,16 +40,16 @@ console.log(response.data.Tests)
                 console.error('Error fetching data:', error);
             });
     }
-    const headerapi = () => {
-        axios.get('https://courseselling.onrender.com/api/v1/categories')
-            .then(response => {
+    // const headerapi = () => {
+    //     axios.get('https://courseselling.onrender.com/api/v1/categories')
+    //         .then(response => {
 
-                setPopularExamNavItem(response.data.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }
+    //             setPopularExamNavItem(response.data.data);
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching data:', error);
+    //         });
+    // }
     const getAllTeachersApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTeachers')
             .then(response => {
@@ -64,7 +64,7 @@ console.log(response.data.Tests)
     useEffect(() => {
         // Make the API request here
         getAllTeachersApi();
-        headerapi();
+        // headerapi();
         testSeriesApi()
     }, []);
     return (
