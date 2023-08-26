@@ -3,10 +3,14 @@ import { TestSeriesSection } from "../../common/TestSeriesSection/testSeriesSect
 import { MobileCall } from "../../common/MobileCall/mobileCall";
 import OnlineTestSeries from "../../../assets/Images/Online-Test-Series.png";
 import { Header } from "../../common/Header/header";
+import { useState } from "react";
 import { Footer } from "../../common/Footer/footer";
 import "./testSeriesPage.css";
-const NavItem = {'SSC':[], 'Teaching Exams':[], 'UPSC':[], 'civil service':[], 'GATE':[], 'AE & JE':[], 'Goverment Exmas':[], 'Bamnking & Insurance':[], 'Degfence Exams':[], 'Raleway':[], 'Teaching':[]};
+
+
+
 export const TestSeriesPage = () => {
+
     return (
         <>
             <Header />
@@ -45,7 +49,7 @@ export const TestSeriesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav NavItem={NavItem} />
+                        <TestSeriesNav   />
                     </div>
                 </section>
                 <section>

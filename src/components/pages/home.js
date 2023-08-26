@@ -60,14 +60,22 @@ console.log(response.data.Tests)
                 console.error('Error fetching data:', error);
             });
     }
-
+    const [category, setCategory] = useState("")
+    const [exam, setExam] = useState("")
+    const handleCategory = (data) => {
+      setCategory(data)
+    }
+    const handleExam = (data) => {
+      setExam(data)
+    }
     useEffect(() => {
         // Make the API request here
         getAllTeachersApi();
         // headerapi();
-        testSeriesApi()
+        testSeriesApi();
     }, []);
     return (
+
         <>
             <Header />
             <div className="homePage-Container">
@@ -147,7 +155,7 @@ console.log(response.data.Tests)
                 <div className="homePage-Container">
                     <div className="Popular-exam-box" style={{ paddingBottom: "100px" }}>
                         <UpperHeader title={'Popular Exam'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
-                        <Nav navList={PopularExamNavItem} />
+                        <Nav navList={PopularExamNavItem} handleCategory={handleCategory} handleExam={handleExam}/>
                         <div className="Popular-Ind-Exam-Box">
                             {
                                 PopularExam.map((item, index) => {

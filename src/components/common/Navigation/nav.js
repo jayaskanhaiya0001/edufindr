@@ -4,6 +4,7 @@ export const Nav = ({navList , width,handleCategory,handleExam}) => {
    
     return (
         <>
+        {console.log(navList,"herooo")}
             <nav className="Nav" style={{width: width}}>
                 <ul>
                     {
