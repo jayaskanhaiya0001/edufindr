@@ -1,0 +1,82 @@
+.Conatct-Us-Container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.Conatct-Top-Container {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+.Conatct-Top-Container > * {
+    width: 50%;
+}
+
+.Conatct-Content-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+}
+
+.Contact-Head-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-key-point {
+    margin-left: 18px;
+ }
+
+.contact-key-point > li{
+    list-style: disc;
+}
+
+.Contact-us-btm-container {
+    display: flex;
+}
+.Contact-us-btm-container > * {
+    width: 50%;
+}
+.Contact-us-btm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Contact-us-img-container {
+    position: relative;
+}
+
+.Contact-us-img-container > div > img {
+    min-height: 395px;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .Conatct-Us-Container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Conatct-Us-Container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Conatct-Us-Container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .Conatct-Us-Container {
+        max-width: 1170px;
+    }
+}

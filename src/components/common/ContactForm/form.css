@@ -1,0 +1,79 @@
+.Contact-Form-Container {
+    border-radius: 8px;
+    border: 1px solid #DFE4E7;
+    background: #FFF;
+    padding: 24px;
+}
+
+.Contact-form {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.Contact-form>h1 {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.Contact-form>div {
+    width: 100%;
+    display: flex;
+    padding: 12px 0px;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #CACACA;
+}
+
+.Contact-form>div > input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.Contact-form>div>input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* Firefox */
+}
+
+.Contact-form>div>input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Contact-form>div>input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.contact-form-btn {
+    padding: 16px;
+    border-radius: 4.588px;
+    background: var(--purple-400, #722E60);
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

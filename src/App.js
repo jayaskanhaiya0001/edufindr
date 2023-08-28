@@ -6,6 +6,7 @@ import { CourseDetail } from './components/pages/courseDetail';
 import { TeacherDetail } from './components/pages/teacher';
 import { TestSeriesPage } from './components/pages/TestSeries/testSeriesPage';
 import { Freebeis } from './components/pages/Freebies/freebeis';
+import { ContactUs } from './components/pages/ContactUs/contact';
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/testseries' element={<TestSeriesPage />} />
           <Route path='/freebeis' element={<Freebeis />} />
           <Route path='/freebeis/blog' element={<Freebeis />} />
+          <Route path='/contact-us' element={<ContactUs/>}/>
         </Routes>
       </BrowserRouter>
 
