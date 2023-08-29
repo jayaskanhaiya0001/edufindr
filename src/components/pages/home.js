@@ -27,9 +27,26 @@ const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Poli
 
 export const Homepage = () => {
 const navigate=useNavigate();
+    const [lead,setLead]=useState("");
     const [Teacher_Content, setTeacher_Content] = useState([]);
     // const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
     const [testSeries, setTestSeries] = useState([])
+
+    const onChange=(e)=>{
+setLead(e.target.value);
+    }
+    const leadGeneration=()=>{
+        axios.post('https://courseselling.onrender.com/api/v1/leadCollection',{
+            mobileNumber: lead
+        })
+        .then(response => {
+console.log("Lead generated")
+setLead("")
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }
     const testSeriesApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
             .then(response => {
@@ -53,7 +70,7 @@ console.log(response.data.Tests)
     const getAllTeachersApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTeachers')
             .then(response => {
-                console.log(response, "heelo")
+           
                 setTeacher_Content(response.data.data);
             })
             .catch(error => {
@@ -101,9 +118,9 @@ console.log(response.data.Tests)
                             </div>
                             <div className="home-form">
                                 <div>
-                                    <input placeholder="Enter your mobile number" />
+                                    <input onChange={(e)=>{onChange(e)}} value={lead} placeholder="Enter your mobile number" />
                                 </div>
-                                <button className="Call-Back-Btn">Get a call back</button>
+                                <button onClick={()=>{leadGeneration()}}className="Call-Back-Btn">Get a call back</button>
                                 <p><img src={shield} alt="" />30,000+ students trust us</p>
                             </div>
                         </div>
