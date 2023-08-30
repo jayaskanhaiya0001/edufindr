@@ -10,7 +10,7 @@ export const Course = ({ title, children , display , path}) => {
   const NavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
   // const [NavItem, setNavItem] = useState({});
   const [courses, setCourses] = useState([]);
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("SSC")
   const [exam, setExam] = useState("")
   const handleCategory = (data) => {
     setCategory(data)
@@ -49,7 +49,7 @@ export const Course = ({ title, children , display , path}) => {
       <div className="exam-box">
         <div>
           <UpperHeader title={title} />
-          <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} />
+          <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category}/>
         </div>
         <div className="Our-Course-Main-Container">
           <Sidebar data={NavItem[category]} handleExam={handleExam} />

@@ -51,13 +51,17 @@ export const TeacherDetail = () => {
                 <Highlight heading={'Highlights'} hightlightListItems={HightLightList} color={"#722E60"} />
                 <div className="Eductation-Box">
                     <h1 className="education-head">Education</h1>
+                    <ul className="education-ul-list">
                     {teacher?.experiences?.map((item)=>{
-                       return  (  <ul className="education-ul-list">
-                       <li><img /> {item?.institution}</li>
-                       <li><img /> {item?.year}</li>
-                   </ul>)
+
+                       return  (  
+                        <> 
+                        <li><img /> {item?.institution}</li>
+                        <li><img /> {item?.year}</li>
+                        </>
+                   )
                     })}
-                 
+                 </ul>
                 </div>
                 <div className="Ind-Teacher-Courses">
                     <h1 className="Heading">Courses By {teacher?.name}</h1>

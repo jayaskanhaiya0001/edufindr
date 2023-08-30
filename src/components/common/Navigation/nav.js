@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./nav.css";
-export const Nav = ({navList , width,handleCategory,handleExam}) => {
-   
+export const Nav = ({ navList, width, handleCategory, handleExam, category }) => {
     return (
         <>
-        {console.log(navList,"herooo")}
-            <nav className="Nav" style={{width: width}}>
+
+            <nav className="Nav" style={{ width: width }}>
                 <ul>
                     {
-                      Object.keys(navList)?.map((item, index) => {
+                        Object.keys(navList)?.map((item, index) => {
                             return (
                                 <>
-                                    <li onClick={()=>{handleCategory(item);handleExam("")}} className="Popular-Exam-Nav-Item" id={index} >{item}</li>
+                                {console.log(item , index)}
+                                    <li onClick={() => { handleCategory(item); handleExam("") }} className="Popular-Exam-Nav-Item"  id={index}>{item}</li>
                                 </>
                             )
                         })
