@@ -49,7 +49,7 @@ export const TestSeriesPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav   />
+                        <TestSeriesNav  />
                     </div>
                 </section>
                 <section>

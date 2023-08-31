@@ -1,17 +1,21 @@
 import "./testSeries.css";
 import { Button } from "../Button/button"
-export const TestSeriesCard = () => {
+export const TestSeriesCard = ({data}) => {
     return (
         <>
             <div className="test-series-container">
                 <div className="test-series-main-box">
                     <div className="title-box">
-                        <button className="User-count-button"> <img src="/images/Strength.svg"/>115.1k Users</button>
-                        <h2 className="test-series-title">SSC CHSL Mock Test<br />2023 (Tier I & Tier II)</h2>
-                        <p className="test-series-test-desc">832 Total Tests | 4 Free Tests</p>
+                        <button className="User-count-button"> <img src="/images/Strength.svg"/>{data?.alreadyEnrolled} Users</button>
+                        <h2 className="test-series-title">{data?.title}<br />2023 (Tier I & Tier II)</h2>
+                        <p className="test-series-test-desc">832 Total Tests | {data?.freeTest} Free Tests</p>
                     </div>
                     <div className="translate-box">
-                        <p className="translate-language"><img src="/images/translate.svg" alt="translate"/>English,Hindi</p>
+                        <p className="translate-language"><img src="/images/translate.svg" alt="translate"/>
+                        {data?.languages?.map((item)=>{
+                            return (item.lanuguage)+","
+                        })}
+                       </p>
                     </div>
                     <ul className="Updated-test-box">
                         <li>53 New Test Additions</li>

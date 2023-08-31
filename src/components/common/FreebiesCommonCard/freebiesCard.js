@@ -1,7 +1,7 @@
 import Timer from "../../../assets/Icons/Timer.svg";
 import Calendar from "../../../assets/Icons/Calendar.svg"
 import "./Freebiescard.css";
-export const FreeBiesCards = ({ freebies, imgsrc, date, title, subTitle, disc }) => {
+export const FreeBiesCards = ({ data, freebies='video'}) => {
     return (
         <>
             <div className="FreeeBies-Card">
@@ -13,21 +13,21 @@ export const FreeBiesCards = ({ freebies, imgsrc, date, title, subTitle, disc })
                         </>
                     ) : (
                         <>
-                            <img src={imgsrc ? imgsrc : "/images/dummy.png"} alt="freebies" />
+                            <img src={data?.image ? data?.image : "/images/dummy.png"} alt="freebies" />
                         </>
                     )
                     }
                 </div>
                 <div className="Freebies-View-Content">
                     {
-                        date && (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />14 Aug 2023</span></p></>)
+                       (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />{data?.createdAt}</span></p></>)
                     }
                     <div>
-                        <h3 className="Freebies-title">{title ? title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
-                        {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)}
+                        <h3 className="Freebies-title">{data?.title ? data?.title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
+                        {/* {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)} */}
                     </div>
                     {
-                        disc && (<><p className="Freebies-discription">{disc ? disc : 'Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings'}</p></>)
+                        data?.content && (<><p className="Freebies-discription">{data?.content ? data?.content : 'Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings'}</p></>)
                     }
                 </div>
             </div>
