@@ -4,6 +4,7 @@
     border-radius: 4px;
     background: #FFF;
     box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
+    width: fit-content;
 }
 
 .Horizontal-Common-Image-Box {
