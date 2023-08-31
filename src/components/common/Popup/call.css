@@ -1,0 +1,47 @@
+.Get-Call-Back-Popup-Container {
+    position: absolute;
+    top: 120px;
+    left: -100%;
+    width: 30vw; 
+    border-radius: 4px;
+    z-index: 99999;
+    min-width: max-content;
+}
+
+.Get-Call-Back-Popup-Content {
+    background-color: rgb(237, 247, 237);
+}
+.Get-Call-Back-Popup-Content {
+    display: flex;
+    gap: 24px;
+    padding: 30px 40px;
+}
+.Get-Call-Back-Popup-Content > svg {
+    height: 50px;
+    width: 50px;
+}
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
