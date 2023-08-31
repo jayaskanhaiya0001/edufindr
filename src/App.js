@@ -7,6 +7,7 @@ import { TeacherDetail } from './components/pages/teacher';
 import { TestSeriesPage } from './components/pages/TestSeries/testSeriesPage';
 import { Freebeis } from './components/pages/Freebies/freebeis';
 import { ContactUs } from './components/pages/ContactUs/contact';
+import { BlogPage } from './components/pages/Blog/blog';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/freebeis' element={<Freebeis />} />
           <Route path='/freebeis/blog' element={<Freebeis />} />
           <Route path='/contact-us' element={<ContactUs/>}/>
+          <Route path='/blog/:id' element={<BlogPage/>}/>
         </Routes>
       </BrowserRouter>
 

@@ -16,41 +16,44 @@ import { useNavigate } from 'react-router-dom';
 import { CoursePage } from "./coursePage";
 import { CourseDetail } from "./courseDetail";
 import { MobSlider } from "../common/MobSlider/mobslider";
+import { GetCallBack } from "../common/Popup/call";
 import { Footer } from "../common/Footer/footer";
 import "./home.css";
 import { useState, useEffect } from "react";
 //const Teacher_Content = [{ title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }, { title: "Rahul Awasthi", description: "5000+ Students taught", text: "Vidya Education" }]
 const destinationItem = ['learn', 'practice', 'improve', 'success'];
 const destinationCard = [{ icon: shield, title: "Trusted by", student: "4000+ Student" }, { icon: trophy, title: "Students Selected", student: "50+ Student" }, { icon: test, title: "Exam Attempted", student: "200+ Student" }]
-const PopularExamNavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
+const PopularExamNavItem = { 'SSC': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Teaching Exams': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'UPSC': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'civil service': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'GATE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'AE & JE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Goverment Exmas': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Bamnking & Insurance': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Degfence Exams': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Raleway': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Teaching': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"] };
 const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
 
 export const Homepage = () => {
-const navigate=useNavigate();
-    const [lead,setLead]=useState("");
+    const navigate = useNavigate();
+    const [lead, setLead] = useState("");
     const [Teacher_Content, setTeacher_Content] = useState([]);
     // const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
     const [testSeries, setTestSeries] = useState([])
+    const [succesAlert ,setSuccessAlert] = useState(false) 
 
-    const onChange=(e)=>{
-setLead(e.target.value);
+    const onChange = (e) => {
+        setLead(e.target.value);
     }
-    const leadGeneration=()=>{
-        axios.post('https://courseselling.onrender.com/api/v1/leadCollection',{
+    const leadGeneration = () => {
+        axios.post('https://courseselling.onrender.com/api/v1/leadCollection', {
             mobileNumber: lead
         })
-        .then(response => {
-console.log("Lead generated")
-setLead("")
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+            .then(response => {
+                console.log("Lead generated")
+                setLead("")
+                setSuccessAlert(true)
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
     }
     const testSeriesApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
             .then(response => {
-console.log(response.data.Tests)
+                console.log(response.data.Tests)
                 setTestSeries(response.data.Tests);
             })
             .catch(error => {
@@ -70,7 +73,7 @@ console.log(response.data.Tests)
     const getAllTeachersApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTeachers')
             .then(response => {
-           
+
                 setTeacher_Content(response.data.data);
             })
             .catch(error => {
@@ -80,10 +83,10 @@ console.log(response.data.Tests)
     const [category, setCategory] = useState("")
     const [exam, setExam] = useState("")
     const handleCategory = (data) => {
-      setCategory(data)
+        setCategory(data)
     }
     const handleExam = (data) => {
-      setExam(data)
+        setExam(data)
     }
     useEffect(() => {
         // Make the API request here
@@ -94,9 +97,10 @@ console.log(response.data.Tests)
     return (
 
         <>
-            <Header />
-            <div className="homePage-Container">
 
+            <Header />
+            {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)}
+            <div className="homePage-Container">
                 <section className="one-destination">
                     <div className="one-destination_box" >
                         <div>
@@ -118,9 +122,9 @@ console.log(response.data.Tests)
                             </div>
                             <div className="home-form">
                                 <div>
-                                    <input onChange={(e)=>{onChange(e)}} value={lead} placeholder="Enter your mobile number" />
+                                    <input onChange={(e) => { onChange(e) }} value={lead} maxLength={10} type="number" placeholder="Enter your mobile number" />
                                 </div>
-                                <button onClick={()=>{leadGeneration()}}className="Call-Back-Btn">Get a call back</button>
+                                <button onClick={() => { leadGeneration() }} className="Call-Back-Btn">Get a call back</button>
                                 <p><img src={shield} alt="" />30,000+ students trust us</p>
                             </div>
                         </div>
@@ -172,7 +176,7 @@ console.log(response.data.Tests)
                 <div className="homePage-Container">
                     <div className="Popular-exam-box" style={{ paddingBottom: "100px" }}>
                         <UpperHeader title={'Popular Exam'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
-                        <Nav navList={PopularExamNavItem} handleCategory={handleCategory} handleExam={handleExam}/>
+                        <Nav navList={PopularExamNavItem} handleCategory={handleCategory} handleExam={handleExam} />
                         <div className="Popular-Ind-Exam-Box">
                             {
                                 PopularExam.map((item, index) => {
@@ -220,7 +224,7 @@ console.log(response.data.Tests)
                     </div>
                 </section>
                 <section id="Course-Container">
-                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} path={'/course/course-detail'}/>
+                    <Course title={'What you will get with our course'} NavItem={PopularExamNavItem} path={'/course/course-detail'} />
                 </section>
                 <section className="Popular_teacher" id="popular-teacher-section" >
                     <div className="Popular_teacher_box" style={{ background: "#FFF5FC" }}>
@@ -229,7 +233,7 @@ console.log(response.data.Tests)
                             {
                                 Teacher_Content?.map((data, index) => {
                                     return (
-                                        <div  onClick={()=>{navigate(`/teachers/${data._id}`)}} >
+                                        <div onClick={() => { navigate(`/teachers/${data._id}`) }} >
                                             <Card title={data?.title} description={data?.description} text={data?.text} />
                                         </div>
                                     )
@@ -245,7 +249,7 @@ console.log(response.data.Tests)
                         <div className="test-series-grid" style={{ margin: "36px 0" }}>
                             {testSeries?.map((item) => {
                                 return <TestSeriesCard key={item.id} data={item} />;
-                                
+
                             })}
                         </div>
 
@@ -279,6 +283,7 @@ console.log(response.data.Tests)
                     </div>
                 </div>
             </section> */}
+
         </>
     )
 }
