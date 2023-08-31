@@ -4,10 +4,16 @@ import { Course } from "../common/Course/course";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { Footer } from "../common/Footer/footer";
 import { Header } from "../common/Header/header";
+import { useLocation } from "react-router-dom";
 import "./coursePage.css";
 const NavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching'];
 const title = '50+ Courses By Best Teachers';
 export const CoursePage = () => {
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const search = queryParams.get('search');
+    const type = queryParams.get('category');
+    console.log(search,type,"himanshu")
     return (
         <>
             <Header />

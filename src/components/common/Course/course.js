@@ -5,12 +5,20 @@ import axios from "axios"
 import { UpperHeader } from "../Heading/upperHeader";
 import { Button } from "../Button/button";
 import "./course.css";
+
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 export const Course = ({ title, children , display , path}) => {
   const NavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
   // const [NavItem, setNavItem] = useState({});
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const search = queryParams.get('search');
+  const type = queryParams.get('category');
+  
+  console.log(search,type,"himanshu")
   const [courses, setCourses] = useState([]);
-  const [category, setCategory] = useState("SSC")
+  const [category, setCategory] = useState(search? "": "SSC")
   const [exam, setExam] = useState("")
   const handleCategory = (data) => {
     setCategory(data)
@@ -19,7 +27,7 @@ export const Course = ({ title, children , display , path}) => {
     setExam(data)
   }
   const courseapi = () => {
-    axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}`)
+    axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}&search=${search?search:""}`)
       .then(response => {
 
         setCourses(response.data.courses);
@@ -42,7 +50,7 @@ export const Course = ({ title, children , display , path}) => {
     // Make the API request here
     courseapi();
 
-  }, [category, exam]);
+  }, [category, exam,search]);
 
   return (
     <>
