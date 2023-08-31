@@ -97,7 +97,7 @@ export const Homepage = () => {
     if(succesAlert) {
         setTimeout(() => {
             setSuccessAlert(false)
-        },5000)
+        },50000)
     }
         
     
