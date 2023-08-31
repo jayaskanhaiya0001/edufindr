@@ -1,15 +1,17 @@
 .Conatct-Us-Container {
-    margin: 0 auto;
+    margin: 80px auto;
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
+
 .Conatct-Top-Container {
     display: flex;
     align-items: flex-start;
     gap: 48px;
 }
-.Conatct-Top-Container > * {
+
+.Conatct-Top-Container>* {
     width: 50%;
 }
 
@@ -28,18 +30,20 @@
 
 .contact-key-point {
     margin-left: 18px;
- }
+}
 
-.contact-key-point > li{
+.contact-key-point>li {
     list-style: disc;
 }
 
 .Contact-us-btm-container {
     display: flex;
 }
-.Contact-us-btm-container > * {
+
+.Contact-us-btm-container>* {
     width: 50%;
 }
+
 .Contact-us-btm-content {
     display: flex;
     flex-direction: column;
@@ -50,12 +54,47 @@
     position: relative;
 }
 
-.Contact-us-img-container > div > img {
+.Contact-us-img-container>div>img {
     min-height: 395px;
 }
 
-@media (min-width: 300px) and (max-width: 575px) {
+.Contact-Details-Grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 16px;
+    border: 1px solid #DFE4E7;
+    background: #FFF;
+    padding: 16px;
 }
+
+.Contact-Detail-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Contact-Detail-Box>p {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Contact-Detail-Box>p>img {
+    width: 30px;
+    height: 22.031px;
+}
+
+.Contact-Detail-Box>h6 {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {}
 
 @media (min-width: 576px) and (max-width: 767px) {
     .Conatct-Us-Container {
@@ -75,7 +114,7 @@
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
     .Conatct-Us-Container {
         max-width: 1170px;
     }

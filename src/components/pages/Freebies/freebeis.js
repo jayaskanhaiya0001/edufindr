@@ -7,7 +7,17 @@ import axios from "axios"
 import "./Freebies.css";
 export const Freebeis = () => {
     const location = useLocation();
+    const [btnValue , setBtnValue] = useState([])
     const [toggle, setToggle] = useState('File')
+    useEffect(() => {
+        if(location.pathname !== "/freebeis"){
+            setBtnValue( [{Value:'All', url: ""}, {Value:'SSC', url: ""},{Value:'UPSC', url: ""},{Value:'Civil Services', url: ""},{Value:'Teaching Exams', url: ""},{Value:'Goverment Exams', url: ""},{Value:'Railway', url: ""}])
+            setToggle("All")
+        }else {
+            setBtnValue([{Value:'File', url: ""}, {Value:'Videos', url: ""}])
+            setToggle("File")
+        }
+    },[location.pathname])
     return (
         <>
             <div className="Freebeis-Main-Container">
@@ -15,7 +25,33 @@ export const Freebeis = () => {
                 <section>
                     <div className="Freebeis-Upper-Section">
                         <h1>Freebies</h1>
-                        <div><button><img /><span>Videos</span></button><button><img /><span>Videos</span></button></div>
+                        <div>
+                            {location.pathname === "/freebeis" ? (<>
+                                {btnValue?.map((data) => {
+                                    return(
+                                        <>
+                                        
+                                        <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? {background: "#722E60" , transition: "2s", color: "#fff",transitionTimingFunction: "ease"} : {background: "#fff"}}><img /><span>{data.Value}</span></button>
+                                        
+                                        </>
+                                    )
+                                })}
+
+
+                            </>) : (
+                                <>
+                                 {btnValue?.map((data) => {
+                                    return(
+                                        <>
+                                        
+                                        <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? {background: "#722E60" , transition: "2s", color: "#fff",transitionTimingFunction: "ease"} : {background: "#fff"}}><img /><span>{data.Value}</span></button>
+                                        
+                                        </>
+                                    )
+                                })}
+                                </>
+                            )}
+                            </div>
                     </div>
                 </section>
                 <div className="Freebeis-Card-Container">
@@ -53,7 +89,7 @@ const FreebeisVideo = ({ FreeBiesCards }) => {
     return (
         <>
             <div className="FreebeisVideoGrid">
-                <FreeBiesCards />
+                <FreeBiesCards freebies={"Video"} />
             </div>
         </>
     )
@@ -91,17 +127,9 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
 
 const FreebeisBlog = ({ FreeBiesCards }) => {
     const [blogs, setBlogs] = useState([])
-    // const InvokeFreebiesBlog = () => {
-    //     const FreebiesBlogs = [];
-    //     for (let i = 0; i < 20; i++) {
-    //         FreebiesBlogs.push({ title: "UPSC History Syllabus for UPSC Mains 2024", disc: "Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings" })
-    //     }
-    //     setBlogs(FreebiesBlogs)
-    // }
     const InvokeFreebiesBlog = () => {
         axios.get('https://courseselling.onrender.com/api/v1/blogs')
             .then(response => {
-console.log(response.data)
                 setBlogs(response.data?.data);
             })
             .catch(error => {
@@ -109,22 +137,22 @@ console.log(response.data)
             });
     }
 
-useEffect(() => {
-    InvokeFreebiesBlog()
-}, []);
-return (
-    <>
-        <div className="FreebeisBlogGrid">
-            {
-                blogs?.map((data) => {
-                    return (
-                        <>
-                            <FreeBiesCards data={data} date={true} />
-                        </>
-                    )
-                })
-            }
-        </div>
-    </>
-)
+    useEffect(() => {
+        InvokeFreebiesBlog()
+    }, []);
+    return (
+        <>
+            <div className="FreebeisBlogGrid">
+                {
+                    blogs?.map((data) => {
+                        return (
+                            <>
+                                <FreeBiesCards data={data} date={true} />
+                            </>
+                        )
+                    })
+                }
+            </div>
+        </>
+    )
 }

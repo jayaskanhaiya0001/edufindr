@@ -1,14 +1,14 @@
 import Timer from "../../../assets/Icons/Timer.svg";
 import Calendar from "../../../assets/Icons/Calendar.svg"
 import "./Freebiescard.css";
-export const FreeBiesCards = ({ data, freebies='video'}) => {
+export const FreeBiesCards = ({ data, freebies}) => {
     return (
         <>
             <div className="FreeeBies-Card">
                 <div className="Freebies-View-Card">
                     {(freebies === "Video") ? (
                         <>
-                            <iframe src="https://www.youtube.com/watch?v=y7MW7d8fb1Y&list=RDy7MW7d8fb1Y&start_radio=1" width="100%" height="100%" ></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/y7MW7d8fb1Y?si=L3eN2KVbDUR2ya8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                         </>
                     ) : (

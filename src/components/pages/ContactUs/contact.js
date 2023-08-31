@@ -3,12 +3,15 @@ import Email from "../../../assets/Icons/Email.svg";
 import Mobile from "../../../assets/Icons/mobile.svg";
 import Location from "../../../assets/Icons/Location.svg";
 import { About } from "../../common/About/about";
+import { Header } from "../../common/Header/header";
+import { Footer } from "../../common/Footer/footer";
 import "./contact.css";
 import { Link } from "react-router-dom";
 const ContactKeyPoints = ["Interactive live classes", "High quality notes", "Doubt solving sessions", "Recorded video lectures", "Answer paper writing"]
 export const ContactUs = () => {
     return (
         <>
+        <Header/>
             <div className="Conatct-Us-Container">
                 <section>
                     <div className="Conatct-Top-Container">
@@ -69,6 +72,7 @@ export const ContactUs = () => {
                     </div>
                 </section>
             </div>
+            <Footer/>
         </>
     )
 }

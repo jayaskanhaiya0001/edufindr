@@ -117,7 +117,7 @@ ul li {
     height: 100vh;
     z-index: 999;
     width: 218px;
-    background: red;
+    background: var(--purple-0, #FFF5FC);
     width: 100vw;
 }
 
@@ -157,10 +157,20 @@ ul li {
         height: 100vh;
         z-index: 999;
         width: 218px;
-        background: red;
+        background: var(--purple-0, #FFF5FC);
         width: 360px;
         right: -100%;
         transition: 0.3s;
+    }
+
+    .nav_title {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .nav_title:hover {
+        background: #fff;
+        color: #722E60;
     }
 }
 
@@ -193,10 +203,20 @@ ul li {
         height: 100vh;
         z-index: 999;
         width: 218px;
-        background: red;
+        background: var(--purple-0, #FFF5FC);
         width: 360px;
         right: -100%;
         transition: 0.3s;
+    }
+    .nav_title {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .nav_title:hover {
+        background: #fff;
+        transition: 0.3s;
+        color: #722E60;
     }
 }
 

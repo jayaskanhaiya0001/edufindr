@@ -28,7 +28,7 @@ export const TestSeriesPage = () => {
                                 <h3 className="input-heading">Which exam you preparing for?</h3>
                                 <div className="input-box">
                                     <input type="text" placeholder="search for your exam" />
-                                    <span className="search-icon-box"> <img src="" alt="" /></span>
+                                    <span className="search-icon-box"> <img src="/images/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
