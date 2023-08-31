@@ -8,6 +8,7 @@ import { TestSeriesPage } from './components/pages/TestSeries/testSeriesPage';
 import { Freebeis } from './components/pages/Freebies/freebeis';
 import { ContactUs } from './components/pages/ContactUs/contact';
 import { BlogPage } from './components/pages/Blog/blog';
+import { TestSeries } from './components/pages/TestSeries/testSeries';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/freebeis/blog' element={<Freebeis />} />
           <Route path='/contact-us' element={<ContactUs/>}/>
           <Route path='/blog/:id' element={<BlogPage/>}/>
+          <Route path="/testseries/test" element={<TestSeries/>}/>
         </Routes>
       </BrowserRouter>
 

@@ -94,6 +94,13 @@ export const Homepage = () => {
         // headerapi();
         testSeriesApi();
     }, []);
+    if(succesAlert) {
+        setTimeout(() => {
+            setSuccessAlert(false)
+        },5000)
+    }
+        
+    
     return (
 
         <>
