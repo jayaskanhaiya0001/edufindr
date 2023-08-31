@@ -3,7 +3,9 @@ import "./footer.css"
 import axios from "axios"
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import { GetCallBack } from "../Popup/call";
 export const Footer = () => {
+    const [succesAlert ,setSuccessAlert] = useState(false) 
     const [lead,setLead]=useState("");
     const navigate=useNavigate();
     const onChange=(e)=>{
@@ -18,6 +20,8 @@ export const Footer = () => {
                 .then(response => {
       
         setLead("")
+        if(response.data.success){ setSuccessAlert(true)}
+       
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
@@ -25,7 +29,9 @@ export const Footer = () => {
             }
     return (
         <>
+         {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)}
             <footer>
+
                 <div className="Footer-Container">
                     <div className="Footer-Main-Container">
                         <div className="Footer-Upper-Container">

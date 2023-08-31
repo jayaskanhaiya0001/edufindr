@@ -44,6 +44,7 @@ export const Homepage = () => {
             .then(response => {
                 console.log("Lead generated")
                 setLead("")
+                if(response.data.success)
                 setSuccessAlert(true)
             })
             .catch(error => {

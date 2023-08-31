@@ -54,15 +54,18 @@ export const Course = ({ title, children , display , path}) => {
 
   return (
     <>
+   { (search?.length!=0 && search!=undefined&& courses?.length==0)?<h1>No Course Found of your matching search</h1>:
       <div className="exam-box">
+        {(search?.length==0 || search==undefined )&& 
         <div>
           <UpperHeader title={title} />
           <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category}/>
-        </div>
+        </div>}
         <div className="Our-Course-Main-Container">
-          <Sidebar data={NavItem[category]} handleExam={handleExam} />
+        {(search?.length==0 || search==undefined ) &&  <Sidebar data={NavItem[category]} handleExam={handleExam} />}
           <div className="horizontal-card-grid">
-            {courses?.map((item) => {
+          {courses?.length==0? <h1>No Course Found of this type</h1>:
+            courses?.map((item) => {
               return (<HorizontalCard image={'./images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)
             })}
 
@@ -70,7 +73,7 @@ export const Course = ({ title, children , display , path}) => {
           </div>
         </div>
         <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} display={display}/>
-      </div>
+      </div>}
     </>
   )
 }
