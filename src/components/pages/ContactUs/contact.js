@@ -11,13 +11,13 @@ const ContactKeyPoints = ["Interactive live classes", "High quality notes", "Dou
 export const ContactUs = () => {
     return (
         <>
-        <Header/>
+            <Header />
             <div className="Conatct-Us-Container">
                 <section>
                     <div className="Conatct-Top-Container">
                         <div className="Conatct-Content-Box">
                             <div className="Contact-Head-Box">
-                                <h1 className="Contatct-Page-Heading">5000+ learners trust us for<br />online & offline coaching</h1>
+                                <h1 className="Contatct-Page-Heading">5000+ learners trust us for online & offline coaching</h1>
                                 <p className="Contatct-Page-Discription">Fill up the form and our team will contact you immediately!</p>
                             </div>
                             <ul className="contact-key-point">
@@ -57,22 +57,30 @@ export const ContactUs = () => {
                         </Link>
                     </div>
                 </section>
-                <section>
+                <section className="Contact-us-About-section">
                     <div className="Contact-us-btm-container">
                         <div className="Contact-us-btm-content">
-                            <About heading={'About Us'} about={'Welcome to EduFindr, your one-stop destination for comprehensive and result-oriented preparation for various government exams. We understand the challenges that aspirants face while preparing for competitive exams, and our mission is to provide you with the tools, guidance, and resources necessary to excel in your journey.'}/>
-                            <About heading={'Our Vision'} about={'About Us Welcome to EduFindr, your one-stop destination for comprehensive and result-oriented preparation for various government exams. We understand the challenges that aspirants face while preparing for competitive exams, and our mission is to provide you with the tools, guidance, and resources necessary to excel in your journey. Our Vision Our vision is to empower aspirants from all walks of life to achieve their dreams of a successful career in the government sector. We believe that quality education should be accessible to everyone, regardless of their geographical location or background. Through a combination of online and offline courses, we aim to bridge the gap between your aspirations and success. Our Commitment We are committed to your success. We believe that with the right guidance, resources, and your determination, you can achieve your goals. Join us at EduFindr and embark on a transformative learning journey that will prepare you to excel in UPSC, SSC, and other government exams. Your success story begins here!'}/>
-                            <About heading={'Our Commitment'} about={'About Us Welcome to EduFindr, your one-stop destination for comprehensive and result-oriented preparation for various government exams. We understand the challenges that aspirants face while preparing for competitive exams, and our mission is to provide you with the tools, guidance, and resources necessary to excel in your journey. Our Vision Our vision is to empower aspirants from all walks of life to achieve their dreams of a successful career in the government sector. We believe that quality education should be accessible to everyone, regardless of their geographical location or background. Through a combination of online and offline courses, we aim to bridge the gap between your aspirations and success. Our Commitment We are committed to your success. We believe that with the right guidance, resources, and your determination, you can achieve your goals. Join us at EduFindr and embark on a transformative learning journey that will prepare you to excel in UPSC, SSC, and other government exams. Your success story begins here!'}/>
+                            <About heading={'About Us'} about={'Welcome to EduFindr, your one-stop destination for comprehensive and result-oriented preparation for various government exams. We understand the challenges that aspirants face while preparing for competitive exams, and our mission is to provide you with the tools, guidance, and resources necessary to excel in your journey.'} />
+                            <About heading={'Our Vision'} about={'Our Vision Our vision is to empower aspirants from all walks of life to achieve their dreams of a successful career in the government sector. We believe that quality education should be accessible to everyone, regardless of their geographical location or background. Through a combination of online and offline courses, we aim to bridge the gap between your aspirations and success.'} />
+
+                            <div className="Contact-us-about-container">
+                                <h1>Our Commitment</h1>
+                                <p>Our Commitment We are committed to your success. We believe that with the right guidance, resources, and your determination, you can achieve your goals. Join us at EduFindr and embark on a transformative learning journey that will prepare you to excel in UPSC, SSC, and other government exams. Your success story begins here!</p>
+                            </div>
                         </div>
-                    
-                    <div className="Contact-us-img-container">
-                        <div className="first_image"><img src="/images/dummy.png" alt="dummy"/></div>
-                        <div className="Second_image"><img src="/images/dummy.png" alt="dummy"/></div>
+
+                        <div className="Contact-us-img-container">
+                            <div className="first_image"><img src="/images/dummy.png" alt="dummy" /></div>
+                            <div className="Second_image"><img src="/images/dummy.png" alt="dummy" /></div>
+                        </div>
                     </div>
-                    </div>
-                </section>
+                    <div className="Contact-us-about-container">
+                        <h1>Our Commitment</h1>
+                        <p>Our Commitment We are committed to your success. We believe that with the right guidance, resources, and your determination, you can achieve your goals. Join us at EduFindr and embark on a transformative learning journey that will prepare you to excel in UPSC, SSC, and other government exams. Your success story begins here!</p>
+                    </div>                
+                    </section>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }
