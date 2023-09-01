@@ -1,11 +1,34 @@
+import { Header } from "../../common/Header/header";
+import { Footer } from "../../common/Footer/footer";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./blog.css"
 export const BlogPage = () => {
+    const param = useParams();
+    const [blog, setBlog] = useState({})
+    const getBlog = async () => {
+        try {
+            let res = await axios.get(`https://courseselling.onrender.com/api/v1/blog/${param?.id}`)
+            if(res?.data?.success){
+                setBlog(res?.data?.data)
+            } 
+        } catch (err) {
+
+        }
+    }
+    useEffect(() => {
+        getBlog()
+    }, [])
+    console.log(blog)
     return (
         <>
-            <div className="Indvidual-Blog-Container">
+            <Header />
+            <div className="Course-Detail-Top-Container">
                 <section>
                     <div className="Indvidual-Blog-Main-Container">
                         <div className="Indvidual-Blog-ImageContainer">
-                            <img src="/images/dummy.png" alt="dummyImage" />
+                            <img src={blog?.image ? blog?.image :"/images/dummy.png"} alt="dummyImage" className="Blog-Page-Image"/>
                         </div>
                         <div className="Indvidual-Blog-Content-Container">
                             <h1 className="Indvidual-Blog-Content-Heading">What is current research in drought preparation?</h1>
@@ -18,6 +41,7 @@ export const BlogPage = () => {
                     </div>
                 </section>
             </div>
+            <Footer />
         </>
     )
 }

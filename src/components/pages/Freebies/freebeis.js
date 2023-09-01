@@ -147,7 +147,7 @@ const FreebeisBlog = ({ FreeBiesCards }) => {
                     blogs?.map((data) => {
                         return (
                             <>
-                                <FreeBiesCards data={data} date={true} />
+                                <FreeBiesCards data={data} date={true} path={true} id={data?._id}/>
                             </>
                         )
                     })

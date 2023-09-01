@@ -1,10 +1,19 @@
 import Timer from "../../../assets/Icons/Timer.svg";
-import Calendar from "../../../assets/Icons/Calendar.svg"
+import Calendar from "../../../assets/Icons/Calendar.svg";
+import { useNavigate } from "react-router-dom";
 import "./Freebiescard.css";
-export const FreeBiesCards = ({ data, freebies}) => {
+export const FreeBiesCards = ({ data, freebies , path , id}) => {
+    const navigate = useNavigate();
+    const handleRedirect = () => {
+        if(!path) {
+            return;
+        } else {
+            navigate(`/blog/${id}`,)
+        }
+    }
     return (
         <>
-            <div className="FreeeBies-Card">
+            <div className="FreeeBies-Card" onClick={() => handleRedirect(path , id)}>
                 <div className="Freebies-View-Card">
                     {(freebies === "Video") ? (
                         <>
