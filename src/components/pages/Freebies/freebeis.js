@@ -128,7 +128,7 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
 const FreebeisBlog = ({ FreeBiesCards,toggle }) => {
     const [blogs, setBlogs] = useState([])
     const InvokeFreebiesBlog = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/blogs?tags=${toggle}`)
+        axios.get(`https://courseselling.onrender.com/api/v1/blogs?tag=${toggle}`)
             .then(response => {
                 setBlogs(response.data?.data);
             })
@@ -143,7 +143,7 @@ const FreebeisBlog = ({ FreeBiesCards,toggle }) => {
     return (
         <>
             <div className="FreebeisBlogGrid">
-                {
+                { blogs.length==0? <h1>No Blogs are their for this category</h1>:
                     blogs?.map((data) => {
                         return (
                             <>
