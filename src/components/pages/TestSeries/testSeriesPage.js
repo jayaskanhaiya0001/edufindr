@@ -3,14 +3,29 @@ import { TestSeriesSection } from "../../common/TestSeriesSection/testSeriesSect
 import { MobileCall } from "../../common/MobileCall/mobileCall";
 import OnlineTestSeries from "../../../assets/Images/Online-Test-Series.png";
 import { Header } from "../../common/Header/header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "../../common/Footer/footer";
 import "./testSeriesPage.css";
+import axios from "axios";
 
 
 
 export const TestSeriesPage = () => {
-
+    const [testSeriesInfo , setTestSeriesInfo] = useState({}) 
+    const getTestSeriesInfo = async () => {
+        try {
+            let res = await axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
+            if(res?.status === 200) {
+                setTestSeriesInfo(res?.data)
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    useEffect(() => {
+        getTestSeriesInfo()
+    } , [])
+    console.log(testSeriesInfo , "testSeriesInfo")
     return (
         <>
             <Header />

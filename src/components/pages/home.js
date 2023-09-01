@@ -32,7 +32,7 @@ export const Homepage = () => {
     const [Teacher_Content, setTeacher_Content] = useState([]);
     // const [PopularExamNavItem, setPopularExamNavItem] = useState([]);
     const [testSeries, setTestSeries] = useState([])
-    const [succesAlert ,setSuccessAlert] = useState(false) 
+    const [succesAlert, setSuccessAlert] = useState(false)
 
     const onChange = (e) => {
         setLead(e.target.value);
@@ -95,19 +95,19 @@ export const Homepage = () => {
         // headerapi();
         testSeriesApi();
     }, []);
-    if(succesAlert) {
+    if (succesAlert) {
         setTimeout(() => {
             setSuccessAlert(false)
-        },5000)
+        }, 5000)
     }
-        
-    
+
+
     return (
 
         <>
 
             <Header />
-            {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)}
+            {succesAlert && (<GetCallBack succesAlert={succesAlert} />)}
             <div className="homePage-Container">
                 <section className="one-destination">
                     <div className="one-destination_box" >

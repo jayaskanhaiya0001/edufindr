@@ -1,0 +1,17 @@
+.Blog-Page-Image {
+    width: 483px;
+    min-height: 337px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+.Indvidual-Blog-Main-Container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Indvidual-Blog-Content-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
