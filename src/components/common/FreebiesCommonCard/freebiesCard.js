@@ -29,7 +29,7 @@ export const FreeBiesCards = ({ data, freebies , path , id}) => {
                 </div>
                 <div className="Freebies-View-Content">
                     {
-                       (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />{data?.createdAt}</span></p></>)
+                       (<><p className="date-container"><span><img src={Timer} alt="timer" />8 min read</span> <span><img src={Calendar} alt="claendar" />{data?.createdAt.slice(0, 10)}</span></p></>)
                     }
                     <div>
                         <h3 className="Freebies-title">{data?.title ? data?.title : "UPSC History Syllabus for UPSC Mains 2024"}</h3>
