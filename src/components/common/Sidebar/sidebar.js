@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./sidebar.css";
 const options = ['History', 'History', 'History', 'History', 'History', 'History', 'History', 'History', 'History', 'History', 'History', 'History']
-export const Sidebar = ({ width, data ,handleExam}) => {
- 
-    const [selectItem, setSelectItem] = useState(0);
+export const Sidebar = ({ width, data  , selectItem , handleSelectItem}) => {
+
     return (
         <>
         {   console.log(data,"hello")}
@@ -15,7 +14,7 @@ export const Sidebar = ({ width, data ,handleExam}) => {
                                 return (
                                     <>
 
-                                        <li id={index} onClick={() => {setSelectItem(index); handleExam(item)}} style={selectItem === index ? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}}>{item}</li>
+                                        <li id={index} onClick={() => {handleSelectItem(data[index]);}} style={selectItem === item ? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}}>{item}</li>
                                     </>
                                 )
                             })

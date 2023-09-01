@@ -11,15 +11,16 @@ export const Course = ({ title, children , display , path}) => {
   // const [NavItem, setNavItem] = useState({});
   const [courses, setCourses] = useState([]);
   const [category, setCategory] = useState("SSC")
-  const [exam, setExam] = useState("")
+  const [selectItem, setSelectItem] = useState(NavItem[category][0]);
   const handleCategory = (data) => {
     setCategory(data)
   }
-  const handleExam = (data) => {
-    setExam(data)
-  }
-  const courseapi = () => {
-    axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}`)
+  const handleSelectItem = (data) => {
+    setSelectItem(data)
+}
+
+const courseapi = () => {
+    axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${selectItem}&category=${category}`)
       .then(response => {
 
         setCourses(response.data.courses);
@@ -42,17 +43,17 @@ export const Course = ({ title, children , display , path}) => {
     // Make the API request here
     courseapi();
 
-  }, [category, exam]);
+  }, [category, selectItem]);
 
   return (
     <>
       <div className="exam-box">
         <div>
           <UpperHeader title={title} />
-          <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category}/>
+          <Nav navList={NavItem} handleCategory={handleCategory}  category={category}/>
         </div>
         <div className="Our-Course-Main-Container">
-          <Sidebar data={NavItem[category]} handleExam={handleExam} />
+          <Sidebar data={NavItem[category]}  selectItem={selectItem} handleSelectItem={handleSelectItem}/>
           <div className="horizontal-card-grid">
             {courses?.map((item) => {
               return (<HorizontalCard image={'./images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)

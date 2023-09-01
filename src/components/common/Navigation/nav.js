@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./nav.css";
-export const Nav = ({ navList, width, handleCategory, handleExam, category }) => {
+export const Nav = ({ navList, width, handleCategory,  category }) => {
     return (
         <>
 
@@ -11,7 +11,7 @@ export const Nav = ({ navList, width, handleCategory, handleExam, category }) =>
                             return (
                                 <>
                                 {console.log(item , index)}
-                                    <li onClick={() => { handleCategory(item); handleExam("") }} className="Popular-Exam-Nav-Item"  id={index}>{item}</li>
+                                    <li onClick={() => { handleCategory(item); }} className="Popular-Exam-Nav-Item"  id={index}>{item}</li>
                                 </>
                             )
                         })
