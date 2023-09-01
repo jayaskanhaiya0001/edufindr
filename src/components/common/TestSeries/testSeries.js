@@ -31,6 +31,7 @@ console.log(response.data.Tests)
       
         testSeriesApi();
     }, [category,exam]);
+    console.log(testSeries , "TEST")
     return (
         <>
         {console.log(testSeries,"heellllohimanshu",category)}
@@ -43,7 +44,7 @@ console.log(response.data.Tests)
                     <div className="TestSeries-card-grid">
 
                     {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item) => {
-                      return  <TestSeriesCard/>
+                      return  <TestSeriesCard id={item?._id} exam={exam} category={category}/>
                     })}
                     </div>
                 </div>

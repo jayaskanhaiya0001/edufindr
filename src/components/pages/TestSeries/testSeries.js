@@ -5,8 +5,43 @@ import { About } from "../../common/About/about";
 import { Highlight } from "../../common/Highlight/highlight";
 import { TestSeriesCard } from "../../common/TestSeriesCard/testSeries";
 import { MobileCall } from "../../common/MobileCall/mobileCall";
+import { useLocation , useParams} from "react-router-dom";
+import { useEffect , useState} from "react";
+import axios from "axios";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 export const TestSeries = () => {
+    const location = useLocation();
+    const params = useParams()
+    console.log(location , "Location")
+    const [testSeriesInfo , setTestSeriesInfo] = useState([]) 
+    const [individualTestInfo , setIndividualTestInfo] = useState({})
+    const getTestSeriesInfo = async () => {
+        try {
+            let res = await axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${location?.state?.category}&exam=${location?.state?.exam}`)
+            if(res?.status === 200) {
+                setTestSeriesInfo(res?.data)
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    const getIndividualTestSeries = async () => {
+        try {
+            let res = await axios.get(`https://courseselling.onrender.com/api/v1/Test/${params?.id}`)
+            console.log(res)
+            if(res?.status === 200) {
+                setIndividualTestInfo(res?.data?.data)
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+
+    useEffect(() => {
+        getIndividualTestSeries()
+        getTestSeriesInfo()
+    } , [])
     return (
         <>
             <Header />
