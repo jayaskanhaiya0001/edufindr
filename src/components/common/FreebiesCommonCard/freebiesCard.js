@@ -36,7 +36,7 @@ export const FreeBiesCards = ({ data, freebies , path , id}) => {
                         {/* {subTitle && (<><h3 className="Freebies-title">{subTitle}</h3></>)} */}
                     </div>
                     {
-                        data?.content && (<><p className="Freebies-discription">{data?.content ? data?.content : 'Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings'}</p></>)
+                        data?.content && (<><p className="Freebies-discription">{data?.content ? data?.content.slice(0, 100) : 'Millions of Indian youth aspire to clear the Civil Services Exam yearly to serve our country. Still, due to the intense competition and limited postings'}.........</p></>)
                     }
                 </div>
             </div>

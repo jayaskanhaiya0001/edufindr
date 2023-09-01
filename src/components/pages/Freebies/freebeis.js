@@ -74,7 +74,7 @@ export const Freebeis = () => {
                                 </>
                             ) : (
                                 <>
-                                    <FreebeisBlog FreeBiesCards={FreeBiesCards} />
+                                    <FreebeisBlog toggle={toggle} FreeBiesCards={FreeBiesCards} />
                                 </>
                             )}
                     </section>
@@ -125,10 +125,10 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
     )
 }
 
-const FreebeisBlog = ({ FreeBiesCards }) => {
+const FreebeisBlog = ({ FreeBiesCards,toggle }) => {
     const [blogs, setBlogs] = useState([])
     const InvokeFreebiesBlog = () => {
-        axios.get('https://courseselling.onrender.com/api/v1/blogs')
+        axios.get(`https://courseselling.onrender.com/api/v1/blogs?tags=${toggle}`)
             .then(response => {
                 setBlogs(response.data?.data);
             })
@@ -139,7 +139,7 @@ const FreebeisBlog = ({ FreeBiesCards }) => {
 
     useEffect(() => {
         InvokeFreebiesBlog()
-    }, []);
+    }, [toggle]);
     return (
         <>
             <div className="FreebeisBlogGrid">
