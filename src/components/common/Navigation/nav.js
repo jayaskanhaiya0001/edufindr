@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./nav.css";
 export const Nav = ({ navList, width, handleCategory, handleExam, category }) => {
+    console.log(category,"hhhh")
     return (
         <>
 

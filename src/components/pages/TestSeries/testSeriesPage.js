@@ -11,21 +11,21 @@ import axios from "axios";
 
 
 export const TestSeriesPage = () => {
-    const [testSeriesInfo , setTestSeriesInfo] = useState({}) 
-    const getTestSeriesInfo = async () => {
-        try {
-            let res = await axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
-            if(res?.status === 200) {
-                setTestSeriesInfo(res?.data)
-            }
-        } catch (err) {
-            console.log(err)
-        }
-    }
-    useEffect(() => {
-        getTestSeriesInfo()
-    } , [])
-    console.log(testSeriesInfo , "testSeriesInfo")
+    // const [testSeriesInfo , setTestSeriesInfo] = useState({}) 
+    // const getTestSeriesInfo = async () => {
+    //     try {
+    //         let res = await axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
+    //         if(res?.status === 200) {
+    //             setTestSeriesInfo(res?.data)
+    //         }
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
+    // useEffect(() => {
+    //     getTestSeriesInfo()
+    // } , [])
+    // console.log(testSeriesInfo , "testSeriesInfo")
     return (
         <>
             <Header />
