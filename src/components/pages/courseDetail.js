@@ -21,26 +21,48 @@ import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access
 import { Footer } from "../common/Footer/footer";
 import { Header } from "../common/Header/header";
 import "./courseDetail.css";
+import axios from "axios"
+import { useEffect,useState } from "react";
+import { useParams } from "react-router-dom";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
 export const CourseDetail = () => {
+    const param = useParams();
+    console.log(param?.id,"chh")
+    const [course, setCourse] = useState({})
+    const getCourse = async () => {
+        try {
+            let res = await axios.get(`https://courseselling.onrender.com/api/v1/course/${param?.id}`)
+            if(res?.data?.success){
+                setCourse(res?.data?.data)
+            } 
+        } catch (err) {
+
+        }
+    }
+    useEffect(() => {
+        getCourse()
+    }, [])
     return (
+       
         <>
+        { console.log(course,"hellllo")}
             <Header />
             <div className="Course-Detail-Top-Container">
                 <section id="Hero-Section">
                     <div className="main-container">
                         <div className="Left-Box">
                             <button className="Class-Mode">Online</button>
-                            <h1>GS Foundation <br />(Prelims Cum Mains)</h1>
-                            <p>By: <b>Snehil Tripathi & Team</b></p>
+                            <h1>{course?.title}</h1>
+                            <p>By: <b>{course?.mentorNames?.map((item) => item?.name).join(', ')},</b></p>
                             <div className="Starbox-Container">
-                                <div className="Rating-Box">4.7</div>
-                                <img src="/images/Star.svg" alt="star" />
-                                <img src="/images/Star.svg" alt="star" />
-                                <img src="/images/Star.svg" alt="star" />
-                                <img src="/images/Star.svg" alt="star" />
-                                <img src="/images/Star.svg" alt="star" />
+                                <div className="Rating-Box">{course?.rating}</div>
+                                {Array.from({ length: Math.ceil(course?.rating) }).map((_, index) => (
+  <img key={index} src="/images/Star.svg" alt="star" />
+))}
+
+                               
+                               
                             </div>
                             <div className="Course-Basic-Detail">
                                 <div className="Course-Basic-Detail-Row">
@@ -50,7 +72,7 @@ export const CourseDetail = () => {
                                         </div>
                                         <div className="Course-Basic-Content">
                                             <h3>Course Language</h3>
-                                            <span>English</span>
+                                            <span>{course?.language}</span>
                                         </div>
                                     </div>
                                     <div className="">
@@ -70,7 +92,7 @@ export const CourseDetail = () => {
                                         </div>
                                         <div className="Course-Basic-Content">
                                             <h3>Already Enrolled</h3>
-                                            <span>15</span>
+                                            <span>{course?.alreadyEnrolled}</span>
                                         </div>
                                     </div>
                                     <div className="">
@@ -79,7 +101,7 @@ export const CourseDetail = () => {
                                         </div>
                                         <div className="Course-Basic-Content">
                                             <h3>Duration</h3>
-                                            <span>8 Weeks</span>
+                                            <span>{course?.courseDuration}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +121,7 @@ export const CourseDetail = () => {
                     </div>
                     <section>
                         <div className="Price-Container">
-                            <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
+                            <div><span className="discounted-price">₹{course?.price}</span><span className="Price">₹50,000</span></div>
                             <button className="get-started">get started</button>
                         </div>
                     </section>
@@ -125,14 +147,13 @@ export const CourseDetail = () => {
                 </section>
                 <section>
                     <UpperHeader title={'Full Course Description'} />
-                    <About heading={'About Course'} about={'The 5-month course covers both papers of Public Administration optional in detail.'} />
-                    <Highlight heading={'Course Highlights'} hightlightListItems={hightlightListItems} />
+                    <About heading={'About Course'} about={course?.about} />
+                    <Highlight heading={'Course Highlights'} hightlightListItems={course?.highlights} />
                     <div className="course-language">
                         <h1>Course Language</h1>
                         <ul>
-                            <li>English</li>
-                            <li>Hindi</li>
-                            <li>Public Administration</li>
+                            <li>{course?.language}</li>
+                        
                         </ul>
                     </div>
                 </section>
