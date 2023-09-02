@@ -207,7 +207,7 @@
     border-radius: 7px;
     background: var(--purple-400, #722E60);
     color: #FFF;
-
+    cursor: pointer;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -272,6 +272,18 @@
     width: 278px;
     height: auto;
     object-fit: cover;
+}
+
+.Select-Batch-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.Similiar_test_Series_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 @media(min-width: 300px) and (max-width:575px) {

@@ -7,8 +7,12 @@ import { Header } from "../../common/Header/header";
 import { Footer } from "../../common/Footer/footer";
 import "./contact.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 const ContactKeyPoints = ["Interactive live classes", "High quality notes", "Doubt solving sessions", "Recorded video lectures", "Answer paper writing"]
 export const ContactUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <Header />

@@ -30,6 +30,7 @@ export const TeacherDetail = () => {
     useEffect(() => {
         // Make the API request here
         getTeachersApi()
+        window.scrollTo(0, 0);
     }, []);
     return (
         <>

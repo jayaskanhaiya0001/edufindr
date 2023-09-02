@@ -70,6 +70,7 @@
     border: 1px solid #DFE4E7;
     background: #FFF;
     padding: 16px;
+    grid-gap: 40px;
 }
 
 .Contact-Detail-Box {
@@ -132,6 +133,14 @@
 
 .Contact-us-About-section>.Contact-us-about-container {
     display: none;
+}
+
+.Contact-Details-Grid > :nth-child(1) {
+    border-right: 1px solid #DFE4E7;
+}
+
+.Contact-Details-Grid > :nth-child(2) {
+    border-right: 1px solid #DFE4E7;
 }
 
 @media (min-width: 300px) and (max-width: 575px) {
@@ -234,6 +243,13 @@
     }
     .Conatct-Content-Box{
         gap: 16px;
+    }
+    .Contact-Details-Grid > :nth-child(1) {
+        border-right: none;
+    }
+    
+    .Contact-Details-Grid > :nth-child(2) {
+        border-right: none;
     }
 }
 

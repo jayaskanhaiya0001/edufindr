@@ -74,6 +74,10 @@
     align-items: center;
 }
 
+.translate-language > img {
+    margin-right: 8px;
+}
+
 @media (max-width: 576px) {
     .common_btn {
         width: 100%;

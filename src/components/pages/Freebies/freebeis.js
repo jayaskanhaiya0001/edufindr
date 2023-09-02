@@ -17,7 +17,11 @@ export const Freebeis = () => {
             setBtnValue([{ Value: 'Videos', url: "/icons/Video.svg" }, { Value: 'File', url: "/icons/WritingWhite.svg" }])
             setToggle("File")
         }
+        
     }, [location.pathname])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]) 
     return (
         <>
             <div className="Freebeis-Main-Container">
