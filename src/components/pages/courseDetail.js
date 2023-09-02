@@ -20,7 +20,7 @@ import { Header } from "../common/Header/header";
 import { useNavigate } from "react-router-dom";
 import "./courseDetail.css";
 import axios from "axios"
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
@@ -31,6 +31,7 @@ export const CourseDetail = () => {
     console.log(param?.id, "chh")
     const [course, setCourse] = useState({})
     const [courses, setCourses] = useState([])
+    const [testSeriesInfo, setTestSeriesInfo] = useState([])
     const courseapi = (category) => {
         axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?category=${category}`)
             .then(response => {
@@ -53,10 +54,25 @@ export const CourseDetail = () => {
 
         }
     }
+    console.log(course, "Course")
+
+    const getTestSeries = async () => {
+        try {
+            let res = await axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${course?.category}&exam=${course?.exam}`)
+            if (res?.status === 200) {
+                setTestSeriesInfo(res?.data)
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
     useEffect(() => {
         getCourse()
+        getTestSeries()
         window.scrollTo(0, 0);
     }, [])
+
+    console.log(testSeriesInfo, "testSeriesInfo")
 
     return (
 
@@ -238,9 +254,13 @@ export const CourseDetail = () => {
                         <div className="Similiar_test_Series_Container">
                             <h1>Similar Test Series</h1>
                             <div className="Test-Series-Grid">
-                                <TestSeriesCard />
-                                <TestSeriesCard />
-                                <TestSeriesCard />
+                                {testSeriesInfo?.Tests?.map((data, index) => {
+                                    return (
+                                        <>
+                                            <TestSeriesCard data={data} exam={course?.exam} category={course?.category} id={data?._id} key={index} />
+                                        </>
+                                    )
+                                })}
                             </div>
                         </div>
 

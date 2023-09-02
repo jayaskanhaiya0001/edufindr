@@ -260,7 +260,6 @@
     grid-auto-flow: column;
     overflow-x: scroll;
     grid-template-columns: repeat(auto-fit, minmax(456px, 0fr));
-    grid-auto-columns: max-content;
     grid-gap: 24px;
 }
 
