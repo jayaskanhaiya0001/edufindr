@@ -42,7 +42,6 @@ export const Homepage = () => {
             mobileNumber: lead
         })
             .then(response => {
-                console.log("Lead generated")
                 setLead("")
                 if(response.data.success)
                 setSuccessAlert(true)
@@ -54,7 +53,6 @@ export const Homepage = () => {
     const testSeriesApi = () => {
         axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
             .then(response => {
-                console.log(response.data.Tests)
                 setTestSeries(response.data.Tests);
             })
             .catch(error => {
@@ -241,7 +239,7 @@ export const Homepage = () => {
                             {
                                 Teacher_Content?.map((data, index) => {
                                     return (
-                                        <div onClick={() => { navigate(`/teachers/${data._id}`) }} >
+                                        <div onClick={() => { navigate(`/teachers/${data._id}`) }}>
                                             <Card title={data?.title} description={data?.description} text={data?.text} />
                                         </div>
                                     )
@@ -256,7 +254,6 @@ export const Homepage = () => {
                         <UpperHeader title={'Popular Test Series'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                         <div className="test-series-grid" style={{ margin: "36px 0" }}>
                             {testSeries?.map((item) => {
-                                console.log(item , "ITEM")
                                 return <TestSeriesCard key={item.id} data={item} category={item?.category} exam={item?.Exam} id={item?._id}/>;
 
                             })}

@@ -3,10 +3,9 @@ import { Button } from "../Button/button";
 import "./testSeries.css";
 export const TestSeriesCard = ({ data, id, exam, category }) => {
     const navigate = useNavigate();
-    console.log(data, "Data")
     return (
         <>
-            <div className="test-series-container" onClick={() => navigate(`/testseries/test/${id}`, { state: { category: category, exam: exam } })}>
+            <div className="test-series-container" onClick={() => navigate(`/testseries/test/${id}`, { state: { category: category, exam: exam } })} >
                 <div className="test-series-main-box">
                     <div className="title-box">
                         <button className="User-count-button"> <img src="/images/Strength.svg" />{data?.alreadyEnrolled} Users</button>

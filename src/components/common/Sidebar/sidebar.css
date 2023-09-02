@@ -6,6 +6,7 @@
 
 .Common-Sidebar {
     width: 162px;
+    cursor: pointer;
 }
 
 .sidebar-container>ul {

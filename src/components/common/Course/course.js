@@ -16,7 +16,6 @@ export const Course = ({ title, children , display , path}) => {
   const search = queryParams.get('search');
   const type = queryParams.get('category');
   
-  console.log(search,type,"himanshu")
   const [courses, setCourses] = useState([]);
   const [category, setCategory] = useState(search? "": "SSC")
   const [exam, setExam] = useState("")
@@ -33,7 +32,7 @@ export const Course = ({ title, children , display , path}) => {
         setCourses(response.data.courses);
       })
       .catch(error => {
-        console.error('Error fetching data:', error);
+        
       });
   }
   // const headerapi = () => {

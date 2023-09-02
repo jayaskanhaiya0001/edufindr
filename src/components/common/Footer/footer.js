@@ -13,12 +13,10 @@ export const Footer = () => {
             }
             
             const leadGeneration=()=>{
-                console.log("hello")
                 axios.post('https://courseselling.onrender.com/api/v1/leadCollection',{
                     mobileNumber: lead
                 })
                 .then(response => {
-      
         setLead("")
         if(response.data.success){ setSuccessAlert(true)}
        

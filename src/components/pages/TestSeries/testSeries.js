@@ -11,7 +11,6 @@ const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 
 export const TestSeries = () => {
     const location = useLocation();
     const params = useParams()
-    console.log(location, "Location")
     const [testSeriesInfo, setTestSeriesInfo] = useState([])
     const [individualTestInfo, setIndividualTestInfo] = useState({})
     const [date, setDate] = useState({ date: "", month: "", year: "" })
@@ -29,7 +28,6 @@ export const TestSeries = () => {
     const getIndividualTestSeries = async () => {
         try {
             let res = await axios.get(`https://courseselling.onrender.com/api/v1/Test/${params?.id}`)
-            console.log(res)
             if (res?.status === 200) {
                 setIndividualTestInfo(res?.data?.data)
             }
@@ -55,15 +53,12 @@ export const TestSeries = () => {
         }
     }, [individualTestInfo])
     const getLanguage = () => {
-        console.log(individualTestInfo?.languages, "individualTestInfo?.languages")
         let language = individualTestInfo?.languages?.map((data, index) => individualTestInfo?.languages?.length - 1 === index ? `${"& " + data?.lanuguage
             }` : data?.lanuguage)
-        console.log(language, "language")
         if (language) {
             setLaguage(language?.join(", "))
         }
     }
-    console.log(testSeriesInfo , "testSeriesInfo")
     return (
         <>
             <Header />
