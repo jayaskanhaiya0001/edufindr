@@ -107,7 +107,6 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
     useEffect(() => {
         InvokeFreebiesFile()
     }, []);
-    console.log(files)
     return (
         <>
             <div className="FreebeisFilesGrid">

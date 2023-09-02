@@ -6,7 +6,6 @@ export const Sidebar = ({ width, data ,handleExam}) => {
     const [selectItem, setSelectItem] = useState(0);
     return (
         <>
-        {   console.log(data,"hello")}
             <aside className="Common-Sidebar" style={{ width: width }}>
                 <div className="sidebar-container">
                     <ul>

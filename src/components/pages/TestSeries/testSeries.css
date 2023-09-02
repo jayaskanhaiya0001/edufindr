@@ -1,0 +1,115 @@
+.Individual_Test_Series_Extra_Detail {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(1)>li {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(1)> :nth-child(1) {
+    border-right: 1px solid #000;
+    padding-right: 24px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(1)> :nth-child(2) {
+    border-right: 1px solid #000;
+    padding-right: 24px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(1)> :nth-child(3) {
+    border-right: 1px solid #000;
+    padding-right: 24px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Individual_Test_Series_Extra_Detail> :nth-child(2)>li {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    list-style: disc;
+    margin-left: 18px;
+}
+
+.More_Test {
+    color: #858585;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.Ind-Description-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+.Ind-Description-Content {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+.ind-des-head-box>h1 {
+    color: #505050;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.ind-des-head-box>p {
+    color: #505050;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.ind-des-head-box>ul>li {
+    color: #505050;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    list-style: disc;
+    margin-left: 18px;
+}
+
+.More_Test_Series_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.More_Test_Series_Heading {
+    color: #722E60;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

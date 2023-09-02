@@ -20,7 +20,6 @@ export const TestSeriesNav = ({ title , children}) => {
     const testSeriesApi = () => {
         axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${category}&exam=${exam}`)
             .then(response => {
-console.log(response.data.Tests)
                 setTestSeries(response.data.Tests);
             })
             .catch(error => {
@@ -31,10 +30,8 @@ console.log(response.data.Tests)
       
         testSeriesApi();
     }, [category,exam]);
-    console.log(testSeries , "TEST")
     return (
         <>
-        {console.log(testSeries,"heellllohimanshu",category)}
             <div className="exam-box">
                 <div>
                     <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category} />
@@ -44,7 +41,7 @@ console.log(response.data.Tests)
                     <div className="TestSeries-card-grid">
 
                     {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item) => {
-                      return  <TestSeriesCard id={item?._id} exam={exam} category={category}/>
+                      return  <TestSeriesCard id={item?._id} exam={exam} category={category} data={item}/>
                     })}
                     </div>
                 </div>

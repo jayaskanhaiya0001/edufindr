@@ -5,6 +5,7 @@
     background: #FFF;
     box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
     width: fit-content;
+    cursor: pointer;
 }
 
 .Horizontal-Common-Image-Box {

@@ -20,7 +20,6 @@ export const BlogPage = () => {
     useEffect(() => {
         getBlog()
     }, [])
-    console.log(blog)
     return (
         <>
             <Header />
