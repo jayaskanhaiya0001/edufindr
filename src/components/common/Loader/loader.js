@@ -24,10 +24,10 @@ export default class LottieControl extends React.Component {
             }
         };
 
-        return <div>
+        return <div className='Loader'> 
             <Lottie options={defaultOptions}
-                height={400}
-                width={400}
+                height={50}
+                width={50}
                 isStopped={this.state.isStopped}
                 isPaused={this.state.isPaused} />
         </div>

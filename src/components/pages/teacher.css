@@ -44,9 +44,9 @@
 
 .teacher-personal-detail>img {
     max-width: 100%;
-    min-height: 224px;
+    height: 224px;
     border-radius: 12px;
-    height: auto;
+    object-fit: cover;
 }
 
 .basic-detail {

@@ -123,7 +123,7 @@ export const CourseDetail = () => {
                         </div>
                         <div className="Right-Box">
                             <div className="Course-Start-Detail-Container">
-                                <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" />
+                                <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" className="Teacher_Corse_img"/>
                                 <div className="Course-Start-Detail-Content">
                                     <div>
                                         <h3>{course?.mentorNames?.[0]?._id?.name}</h3>
