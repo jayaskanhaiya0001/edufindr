@@ -4,12 +4,11 @@
     border-radius: 4px;
     background: #FFF;
     box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
-    width: fit-content;
     cursor: pointer;
 }
 
 .Horizontal-Common-Image-Box {
-    width: 185px;
+    min-width: 185px;
     /* height: 193px; */
 }
 
@@ -62,6 +61,7 @@
 }
 
 .Class-Mode {}
+
 @media(min-width: 300px) and (max-width:575px) {
     .Horizontal-Common-Image-Box {
         width: 158px;

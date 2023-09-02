@@ -268,7 +268,6 @@
     grid-template-columns: repeat(auto-fit, minmax(449px, 1fr));
     gap: 40px;
     grid-row-gap: 29px;
-    grid-template-rows: min-content;
 }
 
 .Our-Course-Main-Container {
