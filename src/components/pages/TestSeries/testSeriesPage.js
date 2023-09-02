@@ -11,6 +11,7 @@ import axios from "axios";
 
 
 export const TestSeriesPage = () => {
+    const [search,setSearch]=useState("")
     // const [testSeriesInfo , setTestSeriesInfo] = useState({}) 
     // const getTestSeriesInfo = async () => {
     //     try {
@@ -45,7 +46,7 @@ export const TestSeriesPage = () => {
                             <div className="search-bar-container">
                                 <h3 className="input-heading">Which exam you preparing for?</h3>
                                 <div className="input-box">
-                                    <input type="text" placeholder="search for your exam" />
+                                    <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder="search for your exam" />
                                     <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
@@ -62,16 +63,16 @@ export const TestSeriesPage = () => {
                             <p>Get exam-ready with concepts, questions and study notes as per the latest pattern</p>
                             <div className="search-bar-container">
                                 <div className="input-box">
-                                    <input type="text" placeholder="search for your exam" />
+                                    <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder="search for your exam" />
                                     <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav  />
+                        <TestSeriesNav  search={search} setSearch={setSearch} />
                     </div>
                 </section>
                 <section>
-                    <TestSeriesSection />
+                    <TestSeriesSection/>
                 </section>
                 <section>
                     <MobileCall />
