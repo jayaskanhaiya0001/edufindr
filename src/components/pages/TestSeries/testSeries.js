@@ -59,6 +59,7 @@ export const TestSeries = () => {
             setLaguage(language?.join(", "))
         }
     }
+    console.log(individualTestInfo, "individualTestInfo")
     return (
         <>
             <Header />
@@ -69,7 +70,7 @@ export const TestSeries = () => {
                             <h1 style={{ textTransform: "capitalize" }}>{individualTestInfo?.title}<br />(Prelims Cum Mains)</h1>
                             <p>Last updated on <b>{date?.month + " " + date?.date + ", " + date?.year}</b></p>
                             <div className="Starbox-Container">
-                                <div className="Rating-Box">4.7</div>
+                                <div className="Rating-Box">{individualTestInfo?.rating}</div>
                                 <img src="/images/Star.svg" alt="star" />
                                 <img src="/images/Star.svg" alt="star" />
                                 <img src="/images/Star.svg" alt="star" />
@@ -92,10 +93,10 @@ export const TestSeries = () => {
                                     </li>
                                 </ul>
                                 <ul>
-                                    {individualTestInfo?.testDivision?.map((data) => {
+                                    {individualTestInfo?.testDivision?.map((data , index) => {
                                         return (
                                             <>
-                                                <li>{data?.key} ( {data?.value} )</li>
+                                                <li key={index}>{data?.key} ( {data?.value} )</li>
                                             </>
                                         )
                                     })}
@@ -111,7 +112,7 @@ export const TestSeries = () => {
                     </div>
                     <section>
                         <div className="Price-Container">
-                            <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
+                            <div><span className="discounted-price">₹{individualTestInfo?.price}</span><span className="Price">₹50,000</span></div>
                             <button className="get-started">get started</button>
                         </div>
                     </section>
@@ -140,10 +141,10 @@ export const TestSeries = () => {
                                 <h1>Test Series Language</h1>
                                 <ul>
                                     {
-                                        individualTestInfo?.languages?.map((data) => {
+                                        individualTestInfo?.languages?.map((data , index) => {
                                             return (
                                                 <>
-                                                    <li>{data?.lanuguage}</li>
+                                                    <li key={index}>{data?.lanuguage}</li>
                                                 </>
                                             )
                                         })
@@ -159,10 +160,10 @@ export const TestSeries = () => {
                     <div className="More_Test_Series_Container">
                         <h1 className="More_Test_Series_Heading">Explore More Related Test Series</h1>
                         <div className="Test-Series-Grid">
-                            {testSeriesInfo?.Tests?.map((data) => {
+                            {testSeriesInfo?.Tests?.map((data , index) => {
                                 return (
                                     <>
-                                    <TestSeriesCard data={data} exam={location?.state?.exam} category={location?.state?.category} id={data?._id}/>   
+                                    <TestSeriesCard data={data} exam={location?.state?.exam} category={location?.state?.category} id={data?._id} key={index}/>   
                                     </>
                                 )
                             })}

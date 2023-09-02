@@ -7,17 +7,17 @@ import axios from "axios"
 import "./Freebies.css";
 export const Freebeis = () => {
     const location = useLocation();
-    const [btnValue , setBtnValue] = useState([])
+    const [btnValue, setBtnValue] = useState([])
     const [toggle, setToggle] = useState('File')
     useEffect(() => {
-        if(location.pathname !== "/freebeis"){
-            setBtnValue( [{Value:'All', url: ""}, {Value:'SSC', url: ""},{Value:'UPSC', url: ""},{Value:'Civil Services', url: ""},{Value:'Teaching Exams', url: ""},{Value:'Goverment Exams', url: ""},{Value:'Railway', url: ""}])
+        if (location.pathname !== "/freebeis") {
+            setBtnValue([{ Value: 'All', url: "" }, { Value: 'SSC', url: "" }, { Value: 'UPSC', url: "" }, { Value: 'Civil Services', url: "" }, { Value: 'Teaching Exams', url: "" }, { Value: 'Goverment Exams', url: "" }, { Value: 'Railway', url: "" }])
             setToggle("All")
-        }else {
-            setBtnValue([{Value:'File', url: ""}, {Value:'Videos', url: ""}])
+        } else {
+            setBtnValue([{ Value: 'Videos', url: "/icons/Video.svg" }, { Value: 'File', url: "/icons/WritingWhite.svg" }])
             setToggle("File")
         }
-    },[location.pathname])
+    }, [location.pathname])
     return (
         <>
             <div className="Freebeis-Main-Container">
@@ -25,14 +25,13 @@ export const Freebeis = () => {
                 <section>
                     <div className="Freebeis-Upper-Section">
                         <h1>Freebies</h1>
-                        <div>
+                        <div className="freebeis-btn-box">
                             {location.pathname === "/freebeis" ? (<>
                                 {btnValue?.map((data) => {
-                                    return(
+                                    return (
                                         <>
-                                        
-                                        <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? {background: "#722E60" , transition: "2s", color: "#fff",transitionTimingFunction: "ease"} : {background: "#fff"}}><img /><span>{data.Value}</span></button>
-                                        
+
+                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease" ,borderRadius: "8px"} : { background: "#fff" }}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
                                         </>
                                     )
                                 })}
@@ -40,18 +39,18 @@ export const Freebeis = () => {
 
                             </>) : (
                                 <>
-                                 {btnValue?.map((data) => {
-                                    return(
-                                        <>
-                                        
-                                        <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? {background: "#722E60" , transition: "2s", color: "#fff",transitionTimingFunction: "ease"} : {background: "#fff"}}><img /><span>{data.Value}</span></button>
-                                        
-                                        </>
-                                    )
-                                })}
+                                    {btnValue?.map((data) => {
+                                        return (
+                                            <>
+
+                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease" ,borderRadius: "8px"} : { background: "#fff" }}><span>{data.Value}</span></button>
+
+                                            </>
+                                        )
+                                    })}
                                 </>
                             )}
-                            </div>
+                        </div>
                     </div>
                 </section>
                 <div className="Freebeis-Card-Container">
@@ -85,7 +84,7 @@ export const Freebeis = () => {
     )
 }
 
-const FreebeisVideo = ({ FreeBiesCards }) => {
+const FreebeisVideo = ({ FreeBiesCards }) => { 
     return (
         <>
             <div className="FreebeisVideoGrid">
@@ -97,12 +96,13 @@ const FreebeisVideo = ({ FreeBiesCards }) => {
 
 const FreebeisFiles = ({ FreeBiesCards }) => {
     const [files, setFiles] = useState([])
-    const InvokeFreebiesFile = () => {
+    const InvokeFreebiesFile = async () => {
         const FreebiesFiles = [];
         for (let i = 0; i < 20; i++) {
             FreebiesFiles.push({ title: "Class 9th: History", subtitle: "India and the Contemporary World-1" })
         }
         setFiles(FreebiesFiles)
+        // let res =  axios.get(`https://courseselling.onrender.com/api/v1/blogs?tag=${toggle}`)
     }
     useEffect(() => {
         InvokeFreebiesFile()
@@ -124,7 +124,7 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
     )
 }
 
-const FreebeisBlog = ({ FreeBiesCards,toggle }) => {
+const FreebeisBlog = ({ FreeBiesCards, toggle }) => {
     const [blogs, setBlogs] = useState([])
     const InvokeFreebiesBlog = () => {
         axios.get(`https://courseselling.onrender.com/api/v1/blogs?tag=${toggle}`)
@@ -142,11 +142,11 @@ const FreebeisBlog = ({ FreeBiesCards,toggle }) => {
     return (
         <>
             <div className="FreebeisBlogGrid">
-                { blogs.length==0? <h1>No Blogs are their for this category</h1>:
+                {blogs.length == 0 ? <h1>No Blogs are their for this category</h1> :
                     blogs?.map((data) => {
                         return (
                             <>
-                                <FreeBiesCards data={data} date={true} path={true} id={data?._id}/>
+                                <FreeBiesCards data={data} date={true} path={true} id={data?._id} />
                             </>
                         )
                     })

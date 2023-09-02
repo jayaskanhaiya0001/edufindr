@@ -70,8 +70,8 @@ export const ContactUs = () => {
                         </div>
 
                         <div className="Contact-us-img-container">
-                            <div className="first_image"><img src="/images/dummy.png" alt="dummy" /></div>
-                            <div className="Second_image"><img src="/images/dummy.png" alt="dummy" /></div>
+                            <div className="first_image"><img src="/images/cm.png" alt="dummy" /></div>
+                            <div className="Second_image"><img src="/images/cg.png" alt="dummy" /></div>
                         </div>
                     </div>
                     <div className="Contact-us-about-container">

@@ -15,6 +15,10 @@
 
 .Freebeis-Upper-Section>div {
     display: flex;
+    border-radius: 12px;
+}
+.Freebeis-Upper-Section>div> button{
+    text-wrap: nowrap;
 }
 
 .Freebeis-Upper-Section>div>button {
@@ -50,10 +54,33 @@
     grid-gap: 42px 42px;
 }
 
+
+.freebeis-icon {
+    width: 15.065px;
+    height: 14.241px;
+    fill: var(--black-0, #000) !important;
+}
+
 @media(min-width: 300px) and (max-width:575px) {
     .Freebeis-Card-Container {
         padding: 0 16px;
         margin: 38px auto;
+    }
+    .Freebeis-Upper-Section{
+        padding: 16px;
+    }
+    .freebeis-btn-box {
+        overflow-x: scroll;
+    }
+    
+    .freebeis-btn-box::-webkit-scrollbar {
+        display: none;
+    }
+    .Freebeis-Upper-Section>div {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+
     }
 }
 
@@ -68,6 +95,22 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 42px 42px;
     }
+    .Freebeis-Upper-Section{
+        padding: 16px;
+    }
+    .freebeis-btn-box {
+        overflow-x: scroll;
+    }
+    
+    .freebeis-btn-box::-webkit-scrollbar {
+        display: none;
+    }
+    .Freebeis-Upper-Section>div {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
 }
 
 
@@ -76,6 +119,10 @@
         max-width: 720px;
         margin: 80px auto;
     }
+
+    .freebeis-btn-box{
+        overflow: none;
+    }
 }
 
 @media(min-width: 992px) and (max-width:1199px) {
@@ -83,11 +130,17 @@
         max-width: 960px;
         margin: 80px auto;
     }
+    .freebeis-btn-box{
+        overflow: none;
+    }
 }
 
 @media(min-width: 1200px) {
     .Freebeis-Card-Container {
         max-width: 1170px;
 
+    }
+    .freebeis-btn-box{
+        overflow: none;
     }
 }

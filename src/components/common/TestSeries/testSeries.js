@@ -40,8 +40,8 @@ export const TestSeriesNav = ({ title , children}) => {
                     <Sidebar width={'292px'} data={NavItem[category]} handleExam={handleExam}/>
                     <div className="TestSeries-card-grid">
 
-                    {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item) => {
-                      return  <TestSeriesCard id={item?._id} exam={exam} category={category} data={item}/>
+                    {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item , index) => {
+                      return  <TestSeriesCard id={item?._id} exam={exam} category={category} data={item} key={index}/>
                     })}
                     </div>
                 </div>
