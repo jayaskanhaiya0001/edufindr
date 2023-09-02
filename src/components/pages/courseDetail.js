@@ -27,6 +27,7 @@ import { useParams } from "react-router-dom";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
 export const CourseDetail = () => {
+    
     const param = useParams();
     console.log(param?.id,"chh")
     const [course, setCourse] = useState({})
@@ -59,7 +60,7 @@ export const CourseDetail = () => {
     return (
        
         <>
-        { console.log(course,"hellllo")}
+        
             <Header />
             <div className="Course-Detail-Top-Container">
                 <section id="Hero-Section">
@@ -122,11 +123,11 @@ export const CourseDetail = () => {
                         </div>
                         <div className="Right-Box">
                             <div className="Course-Start-Detail-Container">
-                                <img src={course?.mentorNames[0]?._id?.image} alt="dummy" />
+                                <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" />
                                 <div className="Course-Start-Detail-Content">
                                     <div>
-                                        <h3>{course?.mentorNames[0]?._id?.name}</h3>
-                                        <p>{course?.mentorNames[0]?._id?.studentsTaught}+ Students taught</p>
+                                        <h3>{course?.mentorNames?.[0]?._id?.name}</h3>
+                                        <p>{course?.mentorNames?.[0]?._id?.studentsTaught}+ Students taught</p>
                                     </div>
                                 </div>
                             </div>
