@@ -14,7 +14,7 @@ export const MobileCall = () => {
                     </div>
                     <form className="Mobile-Form">
                         <div>
-                            <img src={MobileIcon} alt="mob-icon" /> <input type="Number" placeholder="Please Enter your mobile number" />
+                            <img src={MobileIcon} alt="mob-icon" /> <input type="Number" placeholder="Please Enter your mobile number" className="EnterMobile"/>
                         </div>
                         <Button value={'Get Started'} background={'#722E60'} txtColor={'#FFF'} border={'1px solid #000'} margin={'0 auto'} width={'inherit'} />
                     </form>

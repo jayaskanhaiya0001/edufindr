@@ -31,7 +31,7 @@ export const Freebeis = () => {
                                     return (
                                         <>
 
-                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease" ,borderRadius: "8px"} : { background: "#fff" }}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
+                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
                                         </>
                                     )
                                 })}
@@ -43,7 +43,7 @@ export const Freebeis = () => {
                                         return (
                                             <>
 
-                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease" ,borderRadius: "8px"} : { background: "#fff" }}><span>{data.Value}</span></button>
+                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span>{data.Value}</span></button>
 
                                             </>
                                         )
@@ -84,25 +84,31 @@ export const Freebeis = () => {
     )
 }
 
-const FreebeisVideo = ({ FreeBiesCards }) => { 
-    const [video,setVideo]=useState([])
-    const FreebeesVideo=()=>{
+const FreebeisVideo = ({ FreeBiesCards }) => {
+    const [video, setVideo] = useState([])
+    const FreebeesVideo = () => {
         axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=video`)
-        .then(response => {
-            setVideo(response.data?.data);
-            console.log(response.data.data,"hhhhh")
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+            .then(response => {
+                setVideo(response.data?.data);
+                console.log(response.data.data, "hhhhh")
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
     }
     useEffect(() => {
         FreebeesVideo()
     }, []);
+    console.log(video, "Video]")
     return (
         <>
             <div className="FreebeisVideoGrid">
-                <FreeBiesCards freebies={"Video"} />
+                {
+                    video?.map((item) => {
+
+                        return <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""}/>
+                    })
+                }
             </div>
         </>
     )
@@ -110,13 +116,15 @@ const FreebeisVideo = ({ FreeBiesCards }) => {
 
 const FreebeisFiles = ({ FreeBiesCards }) => {
     const [files, setFiles] = useState([])
-    const InvokeFreebiesFile = async () => {
-        const FreebiesFiles = [];
-        for (let i = 0; i < 20; i++) {
-            FreebiesFiles.push({ title: "Class 9th: History", subtitle: "India and the Contemporary World-1" })
-        }
-        setFiles(FreebiesFiles)
-        // let res =  axios.get(`https://courseselling.onrender.com/api/v1/blogs?tag=${toggle}`)
+    const InvokeFreebiesFile = () => {
+        axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=file`)
+            .then(response => {
+                setFiles(response.data?.data);
+                console.log(response, "hhhhh1")
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
     }
     useEffect(() => {
         InvokeFreebiesFile()
@@ -128,7 +136,7 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
                     files?.map((data) => {
                         return (
                             <>
-                                <FreeBiesCards title={data.title} subTitle={data.subtitle} />
+                                <FreeBiesCards title={data.about}  path={data?.value} target={"_blank"}/>
                             </>
                         )
                     })
@@ -160,7 +168,7 @@ const FreebeisBlog = ({ FreeBiesCards, toggle }) => {
                     blogs?.map((data) => {
                         return (
                             <>
-                                <FreeBiesCards data={data} date={true} path={true} id={data?._id} />
+                                <FreeBiesCards data={data} title={data?.title} date={true} path={`/blog/${data?._id}`}  target={""}/>
                             </>
                         )
                     })

@@ -262,7 +262,7 @@ export const Homepage = () => {
                                     })}
                                 </div>
 
-                                <Button width={'max-content'} value={'Explore all Test Series'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} margin={'0 auto'} />
+                                <Button width={'max-content'} value={'Explore all Test Series'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} margin={'0 auto'} Path={"/testseries"}/>
 
                             </div>
                         </section>
