@@ -19,6 +19,7 @@ export const BlogPage = () => {
     }
     useEffect(() => {
         getBlog()
+        window.scrollTo(0, 0);
     }, [])
     return (
         <>

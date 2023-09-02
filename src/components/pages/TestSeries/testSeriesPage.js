@@ -26,6 +26,9 @@ export const TestSeriesPage = () => {
     //     getTestSeriesInfo()
     // } , [])
     // console.log(testSeriesInfo , "testSeriesInfo")
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <Header />

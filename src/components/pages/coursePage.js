@@ -6,12 +6,16 @@ import { Footer } from "../common/Footer/footer";
 import { useLocation } from "react-router-dom";
 import "./coursePage.css";
 import { Header } from "../common/Header/header";
+import { useEffect } from "react";
 const NavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching'];
 const title = '50+ Courses By Best Teachers';
 export const CoursePage = () => {
     const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const search = queryParams.get('search');
+    const queryParams = new URLSearchParams(location.search);
+    const search = queryParams.get('search');
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <>
             <Header />
@@ -27,15 +31,15 @@ export const CoursePage = () => {
 
 
                     <div className="course-page-grid-box">
-                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/reading-book.svg'}/>
-                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/open-book.svg'}/>
-                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/additional-discount.svg'}/>
-                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/fee-refund.svg'}/>
+                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/reading-book.svg'} />
+                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/open-book.svg'} />
+                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/additional-discount.svg'} />
+                        <SquareCard title={'Learn from the Best'} disc={'Learn from the masters of the subject, in the most engaging yet simplified ways'} backgroundColor={'#FFF1E9'} bgColor={'#D96A27'} src={'/images/fee-refund.svg'} />
                     </div>
                 </section>
-                
+
                 <section>
-                    <Course NavItem={NavItem} title={title} display={'none'}/>
+                    <Course NavItem={NavItem} title={title} display={'none'} />
                 </section>
                 <section>
                     <MobileCall />
