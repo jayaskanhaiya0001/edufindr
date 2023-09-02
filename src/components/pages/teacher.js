@@ -36,7 +36,7 @@ export const TeacherDetail = () => {
         <Header/>
             <div className="Teacher-Detail-Container">
                 <div className="teacher-personal-detail">
-                    <img src="/images/teacher.png" alt="" className="Teacher-Profile-image" />
+                    <img src={teacher?.image} alt="" className="Teacher-Profile-image" />
                     <div className="basic-detail">
                         <div>
                             <h1 className="Teacher-Name">{teacher?.name}<img src="" alt="" /></h1>
