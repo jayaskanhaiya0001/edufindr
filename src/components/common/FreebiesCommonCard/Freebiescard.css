@@ -1,8 +1,7 @@
 .FreeeBies-Card {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    width: min-content;
+    gap: 24px;  
 }
 
 .Freebies-View-Card {
@@ -63,6 +62,7 @@
 .Freebies-View-Card>img {
     object-fit: cover;
     height: 100%;
+    width: 100%;
 }
 
 @media(min-width: 300px) and (max-width:575px) {
@@ -82,8 +82,36 @@
     }
 }
 
+@media(min-width: 300px) and (max-width:575px) {
+    .FreeeBies-Card{
+        width: auto;
+    }
+    .Freebies-View-Card > img {
+        width: 100%;
+    }
+}
 @media(min-width: 576px) and (max-width:767px) {
     .Freebies-discription {
         width: 95%;
+    }
+    .FreeeBies-Card {
+        width: 100%;
+    }
+    .Freebies-View-Card>img{
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px) and (max-width:991px) {
+    .Freebies-View-Card>img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .Freebies-View-Card{
+        height: auto;
+    }
+    .FreeeBies-Card {
+        width: fit-content;
     }
 }

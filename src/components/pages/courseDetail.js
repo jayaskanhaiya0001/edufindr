@@ -145,10 +145,10 @@ export const CourseDetail = () => {
                     <div className="Course-Additional-Detail-Container">
                         <UpperHeader title={'What all you are getting'} />
                         <div className="Additional-Detail-grid-Container">
-                            {AllFeatures?.map((data) => {
+                            {AllFeatures?.map((data , index) => {
                                 return (
                                     <>
-                                        <div className="Additional-Detail-Box">
+                                        <div className="Additional-Detail-Box" key={index}>
                                             <span><img src={data?.imgurl} alt="" /></span>
                                             <p className="Additional-Detail-Disc">{data?.title}</p>
                                         </div>
