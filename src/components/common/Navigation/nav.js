@@ -12,7 +12,7 @@ export const Nav = ({ navList, width, handleCategory, handleExam, category }) =>
                             return (
                                 <>
                                 {console.log(item , index)}
-                                    <li onClick={() => { handleCategory(item); handleExam("") }} className="Popular-Exam-Nav-Item"  style={category == item ? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}} id={index}>{item}</li>
+                                    <li onClick={() => { handleCategory(item); handleExam("") }} className="Popular-Exam-Nav-Item"  style={category == item ? { borderBottom: "1px solid #722E60" , cursor: "pointer", color:"#722E60"} : {cursor: "pointer"}} id={index}>{item}</li>
                                 </>
                             )
                         })

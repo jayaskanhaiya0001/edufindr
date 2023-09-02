@@ -256,7 +256,8 @@ export const Homepage = () => {
                         <UpperHeader title={'Popular Test Series'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                         <div className="test-series-grid" style={{ margin: "36px 0" }}>
                             {testSeries?.map((item) => {
-                                return <TestSeriesCard key={item.id} data={item} />;
+                                console.log(item , "ITEM")
+                                return <TestSeriesCard key={item.id} data={item} category={item?.category} exam={item?.Exam} id={item?._id}/>;
 
                             })}
                         </div>

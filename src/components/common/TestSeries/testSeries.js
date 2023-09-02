@@ -44,7 +44,7 @@ console.log(response.data.Tests)
                     <div className="TestSeries-card-grid">
 
                     {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item) => {
-                      return  <TestSeriesCard id={item?._id} exam={exam} category={category}/>
+                      return  <TestSeriesCard id={item?._id} exam={exam} category={category} data={item}/>
                     })}
                     </div>
                 </div>
