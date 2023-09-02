@@ -26,7 +26,7 @@ export const FreeBiesCards = ({ data, freebies, path, id, title, url, target }) 
                             </>
                         ) : (
                             <>
-                                {target !== "" ? <img src="/icons/Pdf.svg" /> :
+                                {target !== "" ? <img src="/Icons/Pdf.svg" /> :
 
                                     <img src={data?.image ? data?.image : "/images/dummy.png"} alt="freebies" />}
                             </>

@@ -43,7 +43,7 @@ export const TestSeriesPage = () => {
                                 <h3 className="input-heading">Which exam you preparing for?</h3>
                                 <div className="input-box">
                                     <input type="text" placeholder="search for your exam" />
-                                    <span className="search-icon-box"> <img src="/icons/search.svg" alt="" /></span>
+                                    <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export const TestSeriesPage = () => {
                             <div className="search-bar-container">
                                 <div className="input-box">
                                     <input type="text" placeholder="search for your exam" />
-                                    <span className="search-icon-box"> <img src="/icons/search.svg" alt="" /></span>
+                                    <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
