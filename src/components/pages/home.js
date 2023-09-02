@@ -243,7 +243,7 @@ export const Homepage = () => {
                                         Teacher_Content?.map((data, index) => {
                                             return (
                                                 <div onClick={() => { navigate(`/teachers/${data._id}`) }} key={index}>
-                                                    <Card title={data?.title} description={data?.description} text={data?.text} />
+                                                    <Card data={data} title={data?.title} description={data?.description} text={data?.text} />
                                                 </div>
                                             )
                                         })
