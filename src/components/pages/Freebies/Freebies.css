@@ -69,6 +69,7 @@
     }
     .Freebeis-Upper-Section{
         padding: 16px;
+        align-items: flex-start;
     }
     .freebeis-btn-box {
         overflow-x: scroll;
@@ -81,7 +82,7 @@
         display: flex;
         width: 100%;
         overflow-x: scroll;
-
+        
     }
 }
 

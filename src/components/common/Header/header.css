@@ -103,6 +103,7 @@ ul li {
     font-weight: 600;
     padding: 20px;
     text-transform: capitalize;
+    cursor: pointer;
 }
 
 .hamburger {

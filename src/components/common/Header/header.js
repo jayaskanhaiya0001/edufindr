@@ -32,7 +32,7 @@ export const Header = () => {
                         <input onChange={(e)=>{setSearch(e.target.value)}}value={search} className="search_bar" placeholder="Search" />
                         <img onClick={()=>{navigate(`/course?search=${search}&category=${""}`)}} src="/images/search.svg" alt="search_icon" />
                     </div>
-                    <button className="get_started_btn">
+                    <button className="get_started_btn" onClick={() => navigate("/contact-us")}>
                         get started
                     </button>
                     <img src="/images/Hamburger.svg" className="hamburger" onClick={() => { setSidebarVisible(!sidebarVisible) }} />

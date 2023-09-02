@@ -37,6 +37,7 @@
     line-height: 22.4px;
     text-transform: capitalize;
     width: 100%;
+    cursor: pointer;
 }
 
 .home-form>p {
@@ -300,6 +301,13 @@
 
 .one-destination-card-box> :nth-child(3) {
     background: #E3F8FF;
+}
+
+.Loader-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 @media (min-width: 300px) and (max-width: 575px) {
@@ -755,6 +763,14 @@
 
     .one-destination_box>div {
         width: 100%;
+    }
+    .Popular_teacher_box{
+        min-height: 880px;
+        background: #fff;
+    }
+    .Popular_teacher_absolute_box{
+        gap: 25px;
+        flex-wrap: wrap;
     }
 }
 

@@ -10,7 +10,6 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 export const Course = ({ title, children , display , path}) => {
   const NavItem =  {'SSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'UPSC':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'civil service':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'GATE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'AE & JE':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Goverment Exmas':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Bamnking & Insurance':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Degfence Exams':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Raleway':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"], 'Teaching':["History","Anthropology","Sociology","Maithili","Public Administration","Law","Economics"]};
-  // const [NavItem, setNavItem] = useState({});
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const search = queryParams.get('search');
@@ -35,16 +34,7 @@ export const Course = ({ title, children , display , path}) => {
         
       });
   }
-  // const headerapi = () => {
-  //   axios.get('https://courseselling.onrender.com/api/v1/categories')
-  //     .then(response => {
 
-  //       setNavItem(response.data.data);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching data:', error);
-  //     });
-  // }
   useEffect(() => {
     // Make the API request here
     courseapi();
@@ -71,7 +61,7 @@ export const Course = ({ title, children , display , path}) => {
 
           </div>
         </div>
-        <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} display={display}/>
+        <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} display={display} Path={"/contact-us"}/>
       </div>}
     </>
   )

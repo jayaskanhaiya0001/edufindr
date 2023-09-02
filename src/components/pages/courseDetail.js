@@ -1,12 +1,9 @@
 import { UpperHeader } from "../common/Heading/upperHeader";
-import { About } from "../common/About/about";
-import { Highlight } from "../common/Highlight/highlight";
 import { Card } from "../common/Card/card";
 import { BatchCard } from "../common/BatchCard/batchCard";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
 import { TestSeriesCard } from "../common/TestSeriesCard/testSeries"
-import Hat from "../../assets/Icons/graduation_hat.svg";
 import Student from "../../assets/Course-Detailed-Page/Student.svg";
 import Translate from "../../assets/Course-Detailed-Page/Translate.svg";
 import Duration from "../../assets/Course-Detailed-Page/Duration.svg";
@@ -20,36 +17,38 @@ import AnswerPaper from "../../assets/Course-Detailed-Page/Answer-Paper.svg";
 import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access.svg";
 import { Footer } from "../common/Footer/footer";
 import { Header } from "../common/Header/header";
+import { useNavigate } from "react-router-dom";
 import "./courseDetail.css";
 import axios from "axios"
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
 export const CourseDetail = () => {
-    
+
     const param = useParams();
-    console.log(param?.id,"chh")
+    const navigate = useNavigate()
+    console.log(param?.id, "chh")
     const [course, setCourse] = useState({})
-    const [courses,setCourses]=useState([])
+    const [courses, setCourses] = useState([])
     const courseapi = (category) => {
         axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?category=${category}`)
-          .then(response => {
-    
-            setCourses(response.data.courses);
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      }
+            .then(response => {
+
+                setCourses(response.data.courses);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
     const getCourse = async () => {
         try {
             let res = await axios.get(`https://courseselling.onrender.com/api/v1/course/${param?.id}`)
-            if(res?.data?.success){
+            if (res?.data?.success) {
                 setCourse(res?.data?.data)
                 courseapi(res?.data?.data?.category)
 
-            } 
+            }
         } catch (err) {
 
         }
@@ -57,10 +56,11 @@ export const CourseDetail = () => {
     useEffect(() => {
         getCourse()
     }, [])
+    console.log(courses , "courses")
     return (
-       
+
         <>
-        
+
             <Header />
             <div className="Course-Detail-Top-Container">
                 <section id="Hero-Section">
@@ -72,11 +72,11 @@ export const CourseDetail = () => {
                             <div className="Starbox-Container">
                                 <div className="Rating-Box">{course?.rating}</div>
                                 {Array.from({ length: Math.ceil(course?.rating) }).map((_, index) => (
-  <img key={index} src="/images/Star.svg" alt="star" />
-))}
+                                    <img key={index} src="/images/Star.svg" alt="star" />
+                                ))}
 
-                               
-                               
+
+
                             </div>
                             <div className="Course-Basic-Detail">
                                 <div className="Course-Basic-Detail-Row">
@@ -123,7 +123,7 @@ export const CourseDetail = () => {
                         </div>
                         <div className="Right-Box">
                             <div className="Course-Start-Detail-Container">
-                                <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" className="Teacher_Corse_img"/>
+                                <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" className="Teacher_Corse_img" />
                                 <div className="Course-Start-Detail-Content">
                                     <div>
                                         <h3>{course?.mentorNames?.[0]?._id?.name}</h3>
@@ -136,7 +136,7 @@ export const CourseDetail = () => {
                     <section>
                         <div className="Price-Container">
                             <div><span className="discounted-price">₹{course?.price}</span><span className="Price">₹50,000</span></div>
-                            <button className="get-started">get started</button>
+                            <button className="get-started" onClick={() => navigate("/contact-us")}>get started</button>
                         </div>
                     </section>
                 </section>
@@ -145,7 +145,7 @@ export const CourseDetail = () => {
                     <div className="Course-Additional-Detail-Container">
                         <UpperHeader title={'What all you are getting'} />
                         <div className="Additional-Detail-grid-Container">
-                            {AllFeatures?.map((data , index) => {
+                            {AllFeatures?.map((data, index) => {
                                 return (
                                     <>
                                         <div className="Additional-Detail-Box" key={index}>
@@ -158,64 +158,91 @@ export const CourseDetail = () => {
 
                         </div>
                     </div>
-                </section>
+                </section> 
                 <section>
-                    <UpperHeader title={'Full Course Description'} />
-                    <About heading={'About Course'} about={course?.about} />
-                    <Highlight heading={'Course Highlights'} hightlightListItems={course?.highlights} />
-                    <div className="course-language">
-                        <h1>Course Language</h1>
-                        <ul>
-                            <li>{course?.language}</li>
-                        
-                        </ul>
+                    <div className="Ind-Description-Container">
+                        <h1>Full Course Description</h1>
+                        <div className="Ind-Description-Content">
+                            <div className="ind-des-head-box">
+                                <h1>About Course</h1>
+                                <p>{course?.about}</p>
+                            </div>
+                            <div className="ind-des-head-box">
+                                <h1>Course Highlights</h1>
+                                <ul>
+                                    {course?.highlights?.map((data) => {
+                                        return (
+                                            <>
+                                                <li>{data?.description}</li>
+                                            </>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                            <div className="course-language">
+                                <h1>Course Language</h1>
+                                <ul>
+
+                                    <li>{course?.language}</li>
+
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+
                 </section>
                 <section>
                     <div className="Teachers-Container">
                         <h1>Know your Teachers</h1>
                         <div className="teacher-grid-box">
-                            {course?.mentorNames?.map(data=>{
-                            return <Card data={data?._id}title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`}/>
-                        })}
+                            {course?.mentorNames?.map(data => {
+                                return <Card data={data?._id} title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`} />
+                            })}
                         </div>
                     </div>
                 </section>
                 <section>
-                    <h1>Select Batch</h1>
-                    <div className="Batch-Card-Grid">
-                        {course?.batches?.map(item=>{
-                           return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days}/>
-                        })}
-                        
-                    
-                   
+                    <div className="Select-Batch-Container">
+                        <h1>Select Batch</h1>
+                        <div className="Batch-Card-Grid">
+                            {course?.batches?.map(item => {
+                                return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days} />
+                            })}
+
+
+
+                        </div>
+                        <div className="Price-Container">
+                            <div><span className="discounted-price">₹{course?.price}</span><span className="Price">₹50,000</span></div>
+                            <button className="get-started" onClick={() => navigate("/contact-us")}>get started</button>
+                        </div>
                     </div>
-                    <div className="Price-Container">
-                        <div><span className="discounted-price">₹{course?.price}</span><span className="Price">₹50,000</span></div>
-                        <button className="get-started">get started</button>
-                    </div>
+
                 </section>
                 <section>
                     <h1>Similar Courses</h1>
                     <div className="Test-Series-Grid">
                         <div className="Similiar-Courses-Grid">
-                           { courses.map((item)=>{
-                            if(item?._id!=course?._id)
-                            return  <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                            {courses.map((item) => {
+                                if (item?._id != course?._id)
+                                    return <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
                             })}
-                            
-                            
+
+
                         </div>
                     </div>
                 </section>
                 <section>
-                    <h1>Similar Test Series</h1>
-                    <div className="Test-Series-Grid">
-                        <TestSeriesCard />
-                        <TestSeriesCard />
-                        <TestSeriesCard />
+                    <div className="Similiar_test_Series_Container">
+                        <h1>Similar Test Series</h1>
+                        <div className="Test-Series-Grid">
+                            <TestSeriesCard />
+                            <TestSeriesCard />
+                            <TestSeriesCard />
+                        </div>
                     </div>
+
                 </section>
                 <section>
                     <MobileCall />
