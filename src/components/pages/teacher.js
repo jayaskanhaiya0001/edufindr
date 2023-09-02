@@ -69,7 +69,7 @@ export const TeacherDetail = () => {
                         {teacher?.courses?.map((item)=>{
                             return (
                             <div onClick={()=>{navigate(`/course/course-detail/${item?._id}`)}}> 
-                            <HorizontalCard item={item} />
+                            <HorizontalCard item={item} title={item?.title}  />
                             </div>
                             )
                         })}

@@ -122,11 +122,11 @@ export const CourseDetail = () => {
                         </div>
                         <div className="Right-Box">
                             <div className="Course-Start-Detail-Container">
-                                <img src="/images/dummy.png" alt="dummy" />
+                                <img src={course?.mentorNames[0]?._id?.image} alt="dummy" />
                                 <div className="Course-Start-Detail-Content">
                                     <div>
-                                        <h3>Rahul Awasthi</h3>
-                                        <p>5000+ Students taught</p>
+                                        <h3>{course?.mentorNames[0]?._id?.name}</h3>
+                                        <p>{course?.mentorNames[0]?._id?.studentsTaught}+ Students taught</p>
                                     </div>
                                 </div>
                             </div>
@@ -174,9 +174,9 @@ export const CourseDetail = () => {
                     <div className="Teachers-Container">
                         <h1>Know your Teachers</h1>
                         <div className="teacher-grid-box">
-                            <Card title={'Rahul Awasthi'} image={'/images/dummy.png'} description={'5000+ Students taught'} text={'Vidya Education'} icon={Hat} />
-                            <Card title={'Rahul Awasthi'} image={'/images/dummy.png'} description={'5000+ Students taught'} text={'Vidya Education'} icon={Hat} />
-                            <Card title={'Rahul Awasthi'} image={'/images/dummy.png'} description={'5000+ Students taught'} text={'Vidya Education'} icon={Hat} />
+                            {course?.mentorNames?.map(data=>{
+                            return <Card data={data?._id}title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`}/>
+                        })}
                         </div>
                     </div>
                 </section>
