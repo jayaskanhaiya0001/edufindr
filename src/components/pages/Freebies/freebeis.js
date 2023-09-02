@@ -85,6 +85,20 @@ export const Freebeis = () => {
 }
 
 const FreebeisVideo = ({ FreeBiesCards }) => { 
+    const [video,setVideo]=useState([])
+    const FreebeesVideo=()=>{
+        axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=video`)
+        .then(response => {
+            setVideo(response.data?.data);
+            console.log(response.data.data,"hhhhh")
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }
+    useEffect(() => {
+        FreebeesVideo()
+    }, []);
     return (
         <>
             <div className="FreebeisVideoGrid">
