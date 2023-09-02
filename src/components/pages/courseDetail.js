@@ -30,11 +30,24 @@ export const CourseDetail = () => {
     const param = useParams();
     console.log(param?.id,"chh")
     const [course, setCourse] = useState({})
+    const [courses,setCourses]=useState([])
+    const courseapi = (category) => {
+        axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?category=${category}`)
+          .then(response => {
+    
+            setCourses(response.data.courses);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
     const getCourse = async () => {
         try {
             let res = await axios.get(`https://courseselling.onrender.com/api/v1/course/${param?.id}`)
             if(res?.data?.success){
                 setCourse(res?.data?.data)
+                courseapi(res?.data?.data?.category)
+
             } 
         } catch (err) {
 
@@ -170,13 +183,15 @@ export const CourseDetail = () => {
                 <section>
                     <h1>Select Batch</h1>
                     <div className="Batch-Card-Grid">
-                        <BatchCard />
-                        <BatchCard />
-                        <BatchCard />
-                        <BatchCard />
+                        {course?.batches?.map(item=>{
+                           return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days}/>
+                        })}
+                        
+                    
+                   
                     </div>
                     <div className="Price-Container">
-                        <div><span className="discounted-price">₹48,585</span><span className="Price">₹50,000</span></div>
+                        <div><span className="discounted-price">₹{course?.price}</span><span className="Price">₹50,000</span></div>
                         <button className="get-started">get started</button>
                     </div>
                 </section>
@@ -184,9 +199,12 @@ export const CourseDetail = () => {
                     <h1>Similar Courses</h1>
                     <div className="Test-Series-Grid">
                         <div className="Similiar-Courses-Grid">
-                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
-                            <HorizontalCard image={'/images/dummy.png'} title={'Title'} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                           { courses.map((item)=>{
+                            if(item?._id!=course?._id)
+                            return  <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                            })}
+                            
+                            
                         </div>
                     </div>
                 </section>
