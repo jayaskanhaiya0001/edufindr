@@ -43,19 +43,19 @@ export const Course = ({ title, children , display , path}) => {
 
   return (
     <>
-   { (search?.length!=0 && search!=undefined&& courses?.length==0)?<h1>No Course Found of your matching search</h1>:
+   { (search?.length!==0 && search!==undefined&& courses?.length===0)?<h1>No Course Found of your matching search</h1>:
       <div className="exam-box">
-        {(search?.length==0 || search==undefined )&& 
+        {(search?.length===0 || search===undefined )&& 
         <div>
           <UpperHeader title={title} />
           <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category}/>
         </div>}
         <div className="Our-Course-Main-Container">
-        {(search?.length==0 || search==undefined ) &&  <Sidebar data={NavItem[category]} handleExam={handleExam} />}
+        {(search?.length===0 || search===undefined ) &&  <Sidebar data={NavItem[category]} handleExam={handleExam} />}
           <div className="horizontal-card-grid">
-          {courses?.length==0? <h1>No Course Found of this type</h1>:
-            courses?.map((item) => {
-              return (<HorizontalCard image={'./images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path}/>)
+          {courses?.length===0? <h1>No Course Found of this type</h1>:
+            courses?.map((item , index) => {
+              return (<HorizontalCard image={'./images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} path={path} key={index}/>)
             })}
 
 

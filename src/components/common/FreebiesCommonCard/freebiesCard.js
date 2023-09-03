@@ -2,10 +2,10 @@ import Timer from "../../../assets/Icons/Timer.svg";
 import Calendar from "../../../assets/Icons/Calendar.svg";
 import { Link} from "react-router-dom";
 import "./Freebiescard.css";
-export const FreeBiesCards = ({ data, freebies, path, id, title, url, target , key}) => {
+export const FreeBiesCards = ({ data, freebies, path, id, title, url, target}) => {
     return (
         <>
-            <Link to={path} target={target} key={key}>
+            <Link to={path} target={target} >
                 <div className="FreeeBies-Card">
                     <div className={target !== "" ? "pdfViewer" : "Freebies-View-Card"}>
                         {(freebies === "Video") ? (

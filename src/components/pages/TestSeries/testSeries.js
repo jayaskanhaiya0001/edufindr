@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import { Header } from "../../common/Header/header";
@@ -109,9 +109,9 @@ export const TestSeries = () => {
                                         <ul>
                                             {individualTestInfo?.testDivision?.map((data, index) => {
                                                 return (
-                                                    <>
-                                                        <li key={index}>{data?.key} ( {data?.value} )</li>
-                                                    </>
+                                                    <Fragment key={index}>
+                                                        <li>{data?.key} ( {data?.value} )</li>
+                                                    </Fragment>
                                                 )
                                             })}
                                         </ul>
@@ -144,9 +144,9 @@ export const TestSeries = () => {
                                         <ul>
                                             {individualTestInfo?.highlights?.map((data , index) => {
                                                 return (
-                                                    <>
-                                                        <li key={index}>{data?.description}</li>
-                                                    </>
+                                                    <Fragment key={index}>
+                                                        <li>{data?.description}</li>
+                                                    </Fragment>
                                                 )
                                             })}
                                         </ul>
@@ -157,9 +157,9 @@ export const TestSeries = () => {
                                             {
                                                 individualTestInfo?.languages?.map((data, index) => {
                                                     return (
-                                                        <>
-                                                            <li key={index}>{data?.lanuguage}</li>
-                                                        </>
+                                                        <Fragment key={index}>
+                                                            <li>{data?.lanuguage}</li>
+                                                        </Fragment>
                                                     )
                                                 })
                                             }
@@ -176,9 +176,9 @@ export const TestSeries = () => {
                                 <div className="Test-Series-Grid">
                                     {testSeriesInfo?.Tests?.map((data, index) => {
                                         return (
-                                            <>
-                                                <TestSeriesCard data={data} exam={location?.state?.exam} category={location?.state?.category} id={data?._id} key={index} />
-                                            </>
+                                            <Fragment key={index}>
+                                                <TestSeriesCard data={data} exam={location?.state?.exam} category={location?.state?.category} id={data?._id}/>
+                                            </Fragment>
                                         )
                                     })}
                                 </div>

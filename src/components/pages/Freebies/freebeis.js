@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FreeBiesCards } from "../../common/FreebiesCommonCard/freebiesCard";
 import { Header } from "../../common/Header/header";
@@ -33,10 +33,10 @@ export const Freebeis = () => {
                             {location.pathname === "/freebeis" ? (<>
                                 {btnValue?.map((data , index) => {
                                     return (
-                                        <>
+                                        <Fragment key={index}>
 
-                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }} key={index}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
-                                        </>
+                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
+                                        </Fragment>
                                     )
                                 })}
 
@@ -46,8 +46,10 @@ export const Freebeis = () => {
                                     {btnValue?.map((data , index) => {
                                         return (
                                             <>
+                                            <Fragment key={index}>
 
-                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }} key={index}><span>{data.Value}</span></button>
+                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span>{data.Value}</span></button>
+                                            </Fragment>
 
                                             </>
                                         )
@@ -102,14 +104,21 @@ const FreebeisVideo = ({ FreeBiesCards }) => {
     useEffect(() => {
         FreebeesVideo()
     }, []);
-    console.log(video, "Video]")
     return (
         <>
             <div className="FreebeisVideoGrid">
                 {
                     video?.map((item , index) => {
 
-                        return <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""} key={index}/>
+                        return (
+
+                            <Fragment key={index}>
+
+
+                                <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""} />
+                            </Fragment>
+                        
+                        )
                     })
                 }
             </div>
@@ -123,7 +132,6 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
         axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=file`)
             .then(response => {
                 setFiles(response.data?.data);
-                console.log(response, "hhhhh1")
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -138,9 +146,9 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
                 {
                     files?.map((data , index) => {
                         return (
-                            <>
-                                <FreeBiesCards title={data.about}  path={data?.value} target={"_blank"} key={index}/>
-                            </>
+                            <Fragment key={index}>
+                                <FreeBiesCards title={data.about}  path={data?.value} target={"_blank"}/>
+                            </Fragment>
                         )
                     })
                 }
@@ -167,12 +175,12 @@ const FreebeisBlog = ({ FreeBiesCards, toggle }) => {
     return (
         <>
             <div className="FreebeisBlogGrid">
-                {blogs.length == 0 ? <h1>No Blogs are their for this category</h1> :
+                {blogs.length === 0 ? <h1>No Blogs are their for this category</h1> :
                     blogs?.map((data , index) => {
                         return (
-                            <>
+                            <Fragment key={index}>
                                 <FreeBiesCards data={data} title={data?.title} date={true} path={`/blog/${data?._id}`}  target={""} key={index}/>
-                            </>
+                            </Fragment>
                         )
                     })
                 }

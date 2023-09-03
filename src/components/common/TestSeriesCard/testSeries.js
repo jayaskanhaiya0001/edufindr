@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button/button";
 import "./testSeries.css";
-export const TestSeriesCard = ({ data, id, exam, category , key}) => {
+import { Fragment } from "react";
+export const TestSeriesCard = ({ data, id, exam, category}) => {
     const navigate = useNavigate();
     return (
         <>
-            <div className="test-series-container" onClick={() => navigate(`/testseries/test/${id}`, { state: { category: category, exam: exam } })} key={key}>
+            <div className="test-series-container" onClick={() => navigate(`/testseries/test/${id}`, { state: { category: category, exam: exam } })}>
                 <div className="test-series-main-box">
                     <div className="title-box">
                         <button className="User-count-button"> <img src="/images/Strength.svg" />{data?.alreadyEnrolled} Users</button>
@@ -22,9 +23,9 @@ export const TestSeriesCard = ({ data, id, exam, category , key}) => {
                     <ul className="Updated-test-box">
                         {data?.testDivision?.map((data , index) => {
                             return (
-                                <>
-                                    <li key={index}>{data?.key} ( {data?.value} )</li>
-                                </>
+                                <Fragment key={index}>
+                                    <li >{data?.key} ( {data?.value} )</li>
+                                </Fragment>
                             )
                         })}
                         <span>+685 more tests</span>

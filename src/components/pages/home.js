@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import { MobSlider } from "../common/MobSlider/mobslider";
 import { GetCallBack } from "../common/Popup/call";
 import { Footer } from "../common/Footer/footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import LottieControl from "../common/Loader/loader";
 import "./home.css";
 const destinationItem = ['learn', 'practice', 'improve', 'success'];
@@ -107,9 +107,9 @@ export const Homepage = () => {
                                                 {
                                                     destinationItem.map((item, index) => {
                                                         return (
-                                                            <>
-                                                                <li id={index} key={index}>{item}</li>
-                                                            </>
+                                                            <Fragment key={index}>
+                                                                <li id={index} >{item}</li>
+                                                            </Fragment>
                                                         )
                                                     })
                                                 }
@@ -148,16 +148,16 @@ export const Homepage = () => {
                                     {
                                         destinationCard.map((item, index) => {
                                             return (
-                                                <>
+                                                <Fragment key={index}>
 
-                                                    <div className="one-destination-card">
+                                                    <div className="one-destination-card" >
                                                         <img src={item.icon} alt="icon" />
                                                         <div className="one-destination-card-content">
                                                             <span>{item.title}</span>
                                                             <h2>{item.student}</h2>
                                                         </div>
                                                     </div>
-                                                </>
+                                                </Fragment>
                                             )
                                         })
                                     }
@@ -176,12 +176,12 @@ export const Homepage = () => {
                                         {
                                             PopularExam.map((item, index) => {
                                                 return (
-                                                    <>
-                                                        <div id={index} className="ind-exam" key={index}>
+                                                    <Fragment key={index}>
+                                                        <div id={index} className="ind-exam">
                                                             <span>{item}</span>
                                                             <img src="./images/chevron-right.svg" alt="chevron-right" />
                                                         </div>
-                                                    </>
+                                                    </Fragment>
                                                 )
                                             })
                                         }
@@ -229,7 +229,7 @@ export const Homepage = () => {
                                             Teacher_Content?.map((data, index) => {
                                                 return (
                                                     <div onClick={() => { navigate(`/teachers/${data._id}`) }} key={index}>
-                                                        <Card data={data} title={data?.title} description={data?.description} text={data?.text} />
+                                                        <Card data={data} title={data?.title} description={data?.description} text={data?.text} s/>
                                                     </div>
                                                 )
                                             })
@@ -242,9 +242,12 @@ export const Homepage = () => {
                                 <div className="TestSeries-Main-Container">
                                     <UpperHeader title={'Popular Test Series'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
                                     <div className="test-series-grid" style={{ margin: "36px 0" }}>
-                                        {testSeries?.map((item) => {
-                                            return <TestSeriesCard key={item.id} data={item} category={item?.category} exam={item?.Exam} id={item?._id} />;
-
+                                        {testSeries?.map((item, index) => {
+                                            return (
+                                                <Fragment key={index}>
+                                                    <TestSeriesCard  data={item} category={item?.category} exam={item?.Exam} id={item?._id} />
+                                                </ Fragment>
+                                            )
                                         })}
                                     </div>
 

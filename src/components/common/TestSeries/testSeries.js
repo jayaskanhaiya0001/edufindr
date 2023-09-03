@@ -1,7 +1,7 @@
 import { Nav } from "../Navigation/nav";
 import { Sidebar } from "../Sidebar/sidebar";
 import { Button } from "../Button/button";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import axios from "axios"
 import { TestSeriesCard } from "../TestSeriesCard/testSeries";
 import "./testSeries.css";
@@ -42,8 +42,12 @@ export const TestSeriesNav = ({ search , setSearch}) => {
                     <Sidebar width={'292px'} data={NavItem[category]} handleExam={handleExam}/>
                     <div className="TestSeries-card-grid">
 
-                    {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item , index) => {
-                      return  <TestSeriesCard id={item?._id} exam={exam} category={category} data={item} key={index}/>
+                    {testSeries.length===0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item , index) => {
+                      return  (
+                        <Fragment key={index}>
+                            <TestSeriesCard id={item?._id} exam={exam} category={category} data={item} />
+                        </Fragment>
+                      )
                     })}
                     </div>
                 </div>

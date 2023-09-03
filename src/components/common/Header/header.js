@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , Fragment} from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./header.css";
 import { useNavigate } from 'react-router-dom';
@@ -21,9 +21,9 @@ export const Header = () => {
                         {
                             navigationItem.map((item, index) => {
                                 return (
-                                    <>
-                                        <li id={index} className="nav_title" ><Link to={item.url} style={location.pathname === `${item.url}` ? { color: "#722E60" } : { color: "#000" }}>{item.name}</Link></li>
-                                    </>
+                                    <Fragment key={index+item}>
+                                        <li id={index} className="nav_title" key={item}><Link to={item.url} style={location.pathname === `${item.url}` ? { color: "#722E60" } : { color: "#000" }} key={index}>{item.name}</Link></li>
+                                    </Fragment>
                                 )
                             })
                         }

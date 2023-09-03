@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , Fragment} from "react";
 import { useNavigate } from "react-router-dom";
 import { UpperHeader } from "../common/Heading/upperHeader";
 import { Card } from "../common/Card/card";
@@ -160,12 +160,12 @@ export const CourseDetail = () => {
                             <div className="Additional-Detail-grid-Container">
                                 {AllFeatures?.map((data, index) => {
                                     return (
-                                        <>
-                                            <div className="Additional-Detail-Box" key={index}>
+                                        <Fragment key={index}>
+                                            <div className="Additional-Detail-Box">
                                                 <span><img src={data?.imgurl} alt="" /></span>
                                                 <p className="Additional-Detail-Disc">{data?.title}</p>
                                             </div>
-                                        </>
+                                        </Fragment>
                                     )
                                 })}
 
@@ -210,7 +210,7 @@ export const CourseDetail = () => {
                             <h1>Know your Teachers</h1>
                             <div className="teacher-grid-box">
                                 {course?.mentorNames?.map((data , index) => {
-                                    return <Card data={data?._id} title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`} key={index}/>
+                                    return <Card data={data?._id} title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`} keyId={index}/>
                                 })}
                             </div>
                         </div>
@@ -220,7 +220,7 @@ export const CourseDetail = () => {
                             <h1>Select Batch</h1>
                             <div className="Batch-Card-Grid">
                                 {course?.batches?.map((item , index) => {
-                                    return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days} key={index}/>
+                                    return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days} keyId={index}/>
                                 })}
 
 
@@ -239,7 +239,7 @@ export const CourseDetail = () => {
                             <div className="Similiar-Courses-Grid">
                                 {courses.map((item , index) => {
                                     if (item?._id !== course?._id)
-                                        return <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} key={index}/>
+                                        return <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} keyId={index}/>
                                 })}
 
 
@@ -252,9 +252,9 @@ export const CourseDetail = () => {
                             <div className="Test-Series-Grid">
                                 {testSeriesInfo?.Tests?.map((data, index) => {
                                     return (
-                                        <>
-                                            <TestSeriesCard data={data} exam={course?.exam} category={course?.category} id={data?._id} key={index} />
-                                        </>
+                                        <Fragment key={data?._id}>
+                                            <TestSeriesCard data={data} exam={course?.exam} category={course?.category} id={data?._id}/>
+                                        </Fragment>
                                     )
                                 })}
                             </div>
