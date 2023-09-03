@@ -1,12 +1,12 @@
+import { useEffect } from "react";
 import { Button } from "../common/Button/button";
 import { SquareCard } from "../common/SquareCard/squareCard";
 import { Course } from "../common/Course/course";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { Footer } from "../common/Footer/footer";
 import { useLocation } from "react-router-dom";
-import "./coursePage.css";
 import { Header } from "../common/Header/header";
-import { useEffect } from "react";
+import "./coursePage.css";
 const NavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching'];
 const title = '50+ Courses By Best Teachers';
 export const CoursePage = () => {

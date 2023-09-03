@@ -29,6 +29,8 @@ export const Homepage = () => {
     const [Teacher_Content, setTeacher_Content] = useState([]);
     const [testSeries, setTestSeries] = useState([])
     const [succesAlert, setSuccessAlert] = useState(false)
+    const [category, setCategory] = useState("")
+    const [exam, setExam] = useState("")
 
     const onChange = (e) => {
         setLead(e.target.value);
@@ -66,8 +68,7 @@ export const Homepage = () => {
                 console.error('Error fetching data:', error);
             });
     }
-    const [category, setCategory] = useState("")
-    const [exam, setExam] = useState("")
+
     const handleCategory = (data) => {
         setCategory(data)
     }
@@ -86,12 +87,10 @@ export const Homepage = () => {
         }, 5000)
     }
 
-
     return (
 
         <>
             {
-
                 (testSeries?.length > 0 && Teacher_Content?.length > 0) ? (
                     <>
                         <Header />
@@ -259,11 +258,7 @@ export const Homepage = () => {
                             <Footer />
                         </section>
                     </>
-
-
                 )
-
-
                     : (
                         <>
                             <div className="Loader-Container">
@@ -272,30 +267,6 @@ export const Homepage = () => {
 
                         </>
                     )}
-
-
-
-            {/* <section className="commonPadding" style={{ minHeight: "635px", marginTop: "100px" }}>
-                <TestSeriesSection />
-            </section> */}
-            {/* <section className="commonPadding" style={{ minHeight: "493px" }}>
-                <div className="Free-Courses-Container">
-
-                    <UpperHeader title={'Popular Teacher'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
-                    <div className="Course-main-Box">
-                        <div className="course-box">
-                            <img src="./images/dummy.png" alt="dummy" />
-                        </div>
-                        <div className="course-box">
-                            <img src="./images/dummy.png" alt="dummy" />
-                        </div>
-                        <div className="course-box">
-                            <img src="./images/dummy.png" alt="dummy" />
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
         </>
     )
 }

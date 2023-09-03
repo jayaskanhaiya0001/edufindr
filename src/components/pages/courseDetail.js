@@ -1,9 +1,13 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { UpperHeader } from "../common/Heading/upperHeader";
 import { Card } from "../common/Card/card";
 import { BatchCard } from "../common/BatchCard/batchCard";
 import { MobileCall } from "../common/MobileCall/mobileCall";
 import { HorizontalCard } from "../common/HorizontalCard/horizontalcard";
 import { TestSeriesCard } from "../common/TestSeriesCard/testSeries"
+import { Footer } from  "../common/Footer/footer";
+import { Header } from "../common/Header/header";
 import Student from "../../assets/Course-Detailed-Page/Student.svg";
 import Translate from "../../assets/Course-Detailed-Page/Translate.svg";
 import Duration from "../../assets/Course-Detailed-Page/Duration.svg";
@@ -15,14 +19,9 @@ import RecordedLectures from "../../assets/Course-Detailed-Page/Recorded-Lecture
 import DoubtSession from "../../assets/Course-Detailed-Page/Doubt-Session.svg";
 import AnswerPaper from "../../assets/Course-Detailed-Page/Answer-Paper.svg";
 import VideoAccess from "../../assets/Course-Detailed-Page/Extended-Video-Access.svg";
-import { Footer } from "../common/Footer/footer";
-import { Header } from "../common/Header/header";
-import { useNavigate } from "react-router-dom";
-import "./courseDetail.css";
 import axios from "axios"
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const hightlightListItems = ['Course Highlights Complete coverage of syllabus', 'Focus on building concepts.', 'Bi-weekly doubt resolution session.', '6 Class tests and 2 Full-length mock tests are included.', 'Special sessions for answer writing,']
+import "./courseDetail.css";
 const AllFeatures = [{ title: "Detail class Notes hard copy", imgurl: HardCopy }, { title: "Test Series", imgurl: TestSeriesIcon }, { title: "Online Live Lectures", imgurl: LiveLectures }, { title: "Recorded Video Lectures", imgurl: RecordedLectures }, { title: "Doubt solving session", imgurl: DoubtSession }, { title: "Answer paper writting", imgurl: AnswerPaper }, { title: "Extended video access", imgurl: VideoAccess }]
 export const CourseDetail = () => {
 
@@ -54,7 +53,6 @@ export const CourseDetail = () => {
 
         }
     }
-    console.log(course, "Course")
 
     const getTestSeries = async () => {
         try {
@@ -71,8 +69,6 @@ export const CourseDetail = () => {
         getTestSeries()
         window.scrollTo(0, 0);
     }, [])
-
-    console.log(testSeriesInfo, "testSeriesInfo")
 
     return (
 
@@ -187,10 +183,10 @@ export const CourseDetail = () => {
                                 <div className="ind-des-head-box">
                                     <h1>Course Highlights</h1>
                                     <ul>
-                                        {course?.highlights?.map((data) => {
+                                        {course?.highlights?.map((data , index) => {
                                             return (
                                                 <>
-                                                    <li>{data?.description}</li>
+                                                    <li key={index}>{data?.description}</li>
                                                 </>
                                             )
                                         })}
@@ -213,8 +209,8 @@ export const CourseDetail = () => {
                         <div className="Teachers-Container">
                             <h1>Know your Teachers</h1>
                             <div className="teacher-grid-box">
-                                {course?.mentorNames?.map(data => {
-                                    return <Card data={data?._id} title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`} />
+                                {course?.mentorNames?.map((data , index) => {
+                                    return <Card data={data?._id} title={data?._id?.title} description={data?._id?.description} text={data?._id?.text} path={`/teachers/${data?._id?._id}`} key={index}/>
                                 })}
                             </div>
                         </div>
@@ -223,8 +219,8 @@ export const CourseDetail = () => {
                         <div className="Select-Batch-Container">
                             <h1>Select Batch</h1>
                             <div className="Batch-Card-Grid">
-                                {course?.batches?.map(item => {
-                                    return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days} />
+                                {course?.batches?.map((item , index) => {
+                                    return <BatchCard item={item} price={course?.price} batchStarting={course?.batchStarting} enrollmentEndDate={course?.enrollmentEndDate} days={course?.days} key={index}/>
                                 })}
 
 
@@ -241,9 +237,9 @@ export const CourseDetail = () => {
                         <h1>Similar Courses</h1>
                         <div className="Test-Series-Grid">
                             <div className="Similiar-Courses-Grid">
-                                {courses.map((item) => {
-                                    if (item?._id != course?._id)
-                                        return <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} />
+                                {courses.map((item , index) => {
+                                    if (item?._id !== course?._id)
+                                        return <HorizontalCard image={'/images/dummy.png'} item={item} title={item?.title} additionalinfo={'Prelims Cum Mains'} desc={'By: Snehil Tripathi & Team'} bottomVal2={'Hinglish'} key={index}/>
                                 })}
 
 

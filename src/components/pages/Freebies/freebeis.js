@@ -31,11 +31,11 @@ export const Freebeis = () => {
                         <h1>Freebies</h1>
                         <div className="freebeis-btn-box">
                             {location.pathname === "/freebeis" ? (<>
-                                {btnValue?.map((data) => {
+                                {btnValue?.map((data , index) => {
                                     return (
                                         <>
 
-                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
+                                            <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }} key={index}><span><img src={data?.url} className="freebeis-icon" /></span><span>{data.Value}</span></button>
                                         </>
                                     )
                                 })}
@@ -43,11 +43,11 @@ export const Freebeis = () => {
 
                             </>) : (
                                 <>
-                                    {btnValue?.map((data) => {
+                                    {btnValue?.map((data , index) => {
                                         return (
                                             <>
 
-                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span>{data.Value}</span></button>
+                                                <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }} key={index}><span>{data.Value}</span></button>
 
                                             </>
                                         )
@@ -107,9 +107,9 @@ const FreebeisVideo = ({ FreeBiesCards }) => {
         <>
             <div className="FreebeisVideoGrid">
                 {
-                    video?.map((item) => {
+                    video?.map((item , index) => {
 
-                        return <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""}/>
+                        return <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""} key={index}/>
                     })
                 }
             </div>
@@ -136,10 +136,10 @@ const FreebeisFiles = ({ FreeBiesCards }) => {
         <>
             <div className="FreebeisFilesGrid">
                 {
-                    files?.map((data) => {
+                    files?.map((data , index) => {
                         return (
                             <>
-                                <FreeBiesCards title={data.about}  path={data?.value} target={"_blank"}/>
+                                <FreeBiesCards title={data.about}  path={data?.value} target={"_blank"} key={index}/>
                             </>
                         )
                     })
@@ -168,10 +168,10 @@ const FreebeisBlog = ({ FreeBiesCards, toggle }) => {
         <>
             <div className="FreebeisBlogGrid">
                 {blogs.length == 0 ? <h1>No Blogs are their for this category</h1> :
-                    blogs?.map((data) => {
+                    blogs?.map((data , index) => {
                         return (
                             <>
-                                <FreeBiesCards data={data} title={data?.title} date={true} path={`/blog/${data?._id}`}  target={""}/>
+                                <FreeBiesCards data={data} title={data?.title} date={true} path={`/blog/${data?._id}`}  target={""} key={index}/>
                             </>
                         )
                     })

@@ -9,7 +9,6 @@ import { Footer } from "../common/Footer/footer";
 import LottieControl from "../common/Loader/loader";
 import axios from "axios";
 import "./teacher.css";
-//const HightLightList = ["CoFounder of Vidya Education, one of the pioneer institute for BPSC aspirants.", "Eminent Faculty for History and Geography.", "Well Known for his unique teaching style and his motivation lectures among students."]
 export const TeacherDetail = () => {
     const [teacher, setTeacher] = useState()
     const [HightLightList, setHightLightList] = useState()

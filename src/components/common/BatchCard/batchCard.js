@@ -1,8 +1,8 @@
 import "./batchCard.css";
-export const BatchCard = ({item,price,enrollmentEndDate,days,batchStarting}) => {
+export const BatchCard = ({item,price,enrollmentEndDate,days,batchStarting , key}) => {
     return (
         <>
-            <div className="Batch-Card-Container">
+            <div className="Batch-Card-Container" key={key}>
                 <div className="batch-detail">
                     <div className="batch-general-detail">
                         <div>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import { Header } from "../../common/Header/header";
 import { Footer } from "../../common/Footer/footer";
 import LottieControl from "../../common/Loader/loader";
+import axios from "axios";
 import "./blog.css"
 export const BlogPage = () => {
     const param = useParams();

@@ -142,10 +142,10 @@ export const TestSeries = () => {
                                     <div className="ind-des-head-box">
                                         <h1>Test Series Highlights</h1>
                                         <ul>
-                                            {individualTestInfo?.highlights?.map((data) => {
+                                            {individualTestInfo?.highlights?.map((data , index) => {
                                                 return (
                                                     <>
-                                                        <li>{data?.description}</li>
+                                                        <li key={index}>{data?.description}</li>
                                                     </>
                                                 )
                                             })}
