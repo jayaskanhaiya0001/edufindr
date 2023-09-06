@@ -493,7 +493,7 @@
     }
 
     .Batch-Timing {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
     .Batch-Card-Grid {

@@ -665,7 +665,7 @@
     }
 
     .Popular-exam-box>nav>ul>li {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
 
@@ -738,7 +738,7 @@
     }
 
     .exam-box>div>nav>ul>li {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 }
 

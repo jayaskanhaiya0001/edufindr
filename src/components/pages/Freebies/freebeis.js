@@ -45,13 +45,9 @@ export const Freebeis = () => {
                                 <>
                                     {btnValue?.map((data , index) => {
                                         return (
-                                            <>
                                             <Fragment key={index}>
-
                                                 <button onClick={() => setToggle(data?.Value)} style={toggle === data.Value ? { background: "#722E60", transition: "2s", color: "#fff", transitionTimingFunction: "ease", borderRadius: "8px" } : { background: "#fff" }}><span>{data.Value}</span></button>
                                             </Fragment>
-
-                                            </>
                                         )
                                     })}
                                 </>

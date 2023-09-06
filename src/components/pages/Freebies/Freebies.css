@@ -18,7 +18,7 @@
     border-radius: 12px;
 }
 .Freebeis-Upper-Section>div> button{
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .Freebeis-Upper-Section>div>button {

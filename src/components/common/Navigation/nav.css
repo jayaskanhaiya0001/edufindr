@@ -20,5 +20,5 @@
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
