@@ -1,7 +1,7 @@
-import "./form.css";
 import Mobile from "../../../assets/Icons/mobile.svg";
 import Email from "../../../assets/Icons/Email.svg";
-const InputItems = [{ img: "", placeholder: "Full name", type: "text" }, { img: Mobile, placeholder: "Please enter your mobile number", type: "number" }, { img: Email, placeholder: "Please enter your e-mail address (Optional)", type: "email" }, { img: "", placeholder: "Message (Optional)", type: "text" }]
+import "./form.css";
+const InputItems = [{ img: "", placeholder: "Full name", type: "text", name: "FullName"}, { img: Mobile, placeholder: "Please enter your mobile number", type: "number"  ,name: "Mobile"}, { img: Email, placeholder: "Please enter your e-mail address (Optional)", type: "email" , name: "email"}, { img: "", placeholder: "Message (Optional)", type: "text" }]
 export const ContactForm = () => {
     return (
         <>

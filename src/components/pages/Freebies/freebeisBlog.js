@@ -5,8 +5,8 @@ import { Footer } from "../../common/Footer/footer";
 import LottieControl from "../../common/Loader/loader";
 import axios from "axios"
 import "./Freebies.css";
+const btnValue = [{ Value: 'All', url: "" }, { Value: 'SSC', url: "" }, { Value: 'UPSC', url: "" }, { Value: 'Civil Services', url: "" }, { Value: 'Teaching Exams', url: "" }, { Value: 'Goverment Exams', url: "" }, { Value: 'Railway', url: "" }]
 export const FreebeisBlog = () => {
-    const [btnValue, setBtnValue] = useState([{ Value: 'All', url: "" }, { Value: 'SSC', url: "" }, { Value: 'UPSC', url: "" }, { Value: 'Civil Services', url: "" }, { Value: 'Teaching Exams', url: "" }, { Value: 'Goverment Exams', url: "" }, { Value: 'Railway', url: "" }])
     const [toggle, setToggle] = useState('All')
     const [blogs, setBlogs] = useState([])
     const InvokeFreebiesBlog = () => {

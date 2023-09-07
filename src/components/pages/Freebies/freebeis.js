@@ -5,8 +5,8 @@ import { Footer } from "../../common/Footer/footer";
 import LottieControl from "../../common/Loader/loader";
 import axios from "axios"
 import "./Freebies.css";
+const btnValue =[{ Value: 'Videos', url: "/icons/video-black.svg", whiteUrl: "/icons/Video.svg" }, { Value: 'File', url: "/icons/WritingWhite.svg", whiteUrl: "/icons/Writing-white.svg" }]
 export const Freebeis = () => {
-    const [btnValue, setBtnValue] = useState([])
     const [toggle, setToggle] = useState('Videos')
     const [video, setVideo] = useState([])
     const [files, setFiles] = useState([])
@@ -31,7 +31,6 @@ export const Freebeis = () => {
     useEffect(() => {
         InvokeFreebiesFile()
         FreebeesVideo()
-        setBtnValue([{ Value: 'Videos', url: "/icons/video-black.svg", whiteUrl: "/icons/Video.svg" }, { Value: 'File', url: "/icons/WritingWhite.svg", whiteUrl: "/icons/Writing-white.svg" }])
     }, []);
     useEffect(() => {
         window.scrollTo(0, 0);
