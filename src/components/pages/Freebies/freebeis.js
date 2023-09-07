@@ -69,8 +69,6 @@ export const Freebeis = () => {
                                                         return (
 
                                                             <Fragment key={index}>
-
-
                                                                 <FreeBiesCards freebies={"Video"} title={item?.about} url={item?.value} target={""} />
                                                             </Fragment>
 
