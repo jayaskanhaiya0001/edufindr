@@ -269,7 +269,8 @@ export const Homepage = () => {
                             </div>
 
                         </>
-                    )}
+                    )
+                    }
         </>
     )
 }
