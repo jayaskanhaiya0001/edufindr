@@ -43,7 +43,7 @@ export const Course = ({ title, children , display , path }) => {
 
   return (
     <>
-   { (search?.length!==0 && search!==undefined&& courses?.length==0)?<h1>No Course Found of your matching search</h1>:
+   { (search?.length!=0 && search!=undefined&& courses?.length==0)?<h1>No Course Found of your matching search</h1>:
       <div className="exam-box">
         {(search?.length==0 || search==undefined )&& 
         <div>

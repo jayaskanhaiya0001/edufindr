@@ -36,9 +36,9 @@ export const MobileCall = () => {
                     </div>
                     <div className="Mobile-Form" action="">
                         <div>
-                            <img src={MobileIcon} alt="mob-icon" /> <input type="Number" placeholder="Please Enter your mobile number" className="EnterMobile"/>
+                            <img src={MobileIcon} alt="mob-icon" /> <input type="Number" placeholder="Please Enter your mobile number" className="EnterMobile" onChange={(e) => setLead(e.target.value)}/>
                         </div>
-                        {succesAlert && <li style={{color: "green"}}>Lorem Ipsum is simply dummy text</li>}
+                        {succesAlert && <li style={{color: "green" , listStyle: "none"}}>Lorem Ipsum is simply dummy text</li>}
                         <div onClick={() => leadGeneration()}>
                         <Button value={'Get Started'} background={'#722E60'} txtColor={'#FFF'} border={'1px solid #000'} margin={'0 auto'} width={'inherit'} />
                         </div>
