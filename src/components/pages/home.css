@@ -188,7 +188,7 @@
 .Popular-Ind-Exam-Box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 2fr));
-    gap: 1%;
+    gap: 3%;
     grid-row-gap: 29px;
 }
 
