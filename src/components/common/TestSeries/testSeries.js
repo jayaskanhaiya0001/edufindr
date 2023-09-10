@@ -51,7 +51,7 @@ export const TestSeriesNav = ({ search , setSearch}) => {
                     })}
                     </div>
                 </div>
-                <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} />
+                <Button value={'Get Started For Free'} background={'#fff'} txtColor={'#000'} border={'1px solid #000'} width={'fit-content'} margin={"0 auto"} Path={'/contact-us'}/>
             </div>
         </>
     )

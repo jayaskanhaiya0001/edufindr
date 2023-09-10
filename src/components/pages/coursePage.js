@@ -26,7 +26,7 @@ export const CoursePage = () => {
                             <h1>Why EduFindr?</h1>
                             <p>With <span>1.8+ Crore Students</span> and India’s Highest Selection Rate Amongst online learning platforms, you can surely rely on us to excel</p>
                         </div>
-                        <Button value={'Get Started For Free'} background={'#722E60'} txtColor={'#FFF'} border={'none'} width={'max-content'} margin={'0 auto'} />
+                        <Button value={'Get Started For Free'} background={'#722E60'} txtColor={'#FFF'} border={'none'} width={'max-content'} margin={'0 auto'} Path={"/contact-us"}/>
                     </div>
 
 

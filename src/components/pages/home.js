@@ -172,7 +172,7 @@ export const Homepage = () => {
                                                 return (
                                                     <Fragment key={index}>
                                                         {console.log(exam === index)}
-                                                        <div id={index} className="ind-exam" onClick={() => {setExam(index)}} style={(exam === index)? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}}>
+                                                        <div id={index} className="ind-exam" onClick={() => {setExam(index); navigate('/course')}} style={(exam === index)? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}}>
                                                             <span style={(exam === index)? {color: "#fff"} : {}}>{item}</span>
                                                             <img src="./images/chevron-right.svg" alt="chevron-right" />
                                                         </div>
