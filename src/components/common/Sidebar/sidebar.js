@@ -14,7 +14,7 @@ export const Sidebar = ({ width, data ,handleExam}) => {
                                 return (
                                     <Fragment key={index}>
 
-                                        <li id={index} onClick={() => {setSelectItem(index); handleExam(item)}} style={selectItem === index ? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}} key={index}>{item}</li>
+                                        <li id={index} onClick={(e) => {setSelectItem(index); handleExam(item); e.stopPropagation();}} style={selectItem === index ? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}} key={index}>{item}</li>
                                     </Fragment>
                                 )
                             })
