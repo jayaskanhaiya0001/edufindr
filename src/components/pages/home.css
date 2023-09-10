@@ -372,7 +372,7 @@
     .one-destination-card {
         padding: 0px;
         padding: 10.98px;
-        height: 56px;
+        min-height: 56px;
         justify-content: center;
         gap: 8.784px;
     }
