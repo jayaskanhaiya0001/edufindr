@@ -27,7 +27,7 @@ export const Footer = () => {
             }
     return (
         <>
-         {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)}
+         {/* {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)} */}
             <footer>
 
                 <div className="Footer-Container">
@@ -84,6 +84,7 @@ export const Footer = () => {
                                         <li>
                                             <input value ={lead} onChange={(e)=>{onChange(e)}}  placeholder="Your phone number" /><span onClick={()=>{leadGeneration()}}><img src="/images/right-arrow.svg" alt="" /></span>
                                         </li>
+                                        {succesAlert && <li style={{color: "green"}}>Lorem Ipsum is simply dummy text</li>}
                                     </ul>
                                 </li>
                             </ul>

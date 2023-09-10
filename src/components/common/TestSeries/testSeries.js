@@ -38,11 +38,11 @@ export const TestSeriesNav = ({ search , setSearch}) => {
                 <div>
                     <Nav navList={NavItem} handleCategory={handleCategory} handleExam={handleExam} category={category} />
                 </div>
-                <div className="Our-Course-Main-Container">
+                <div className="Our-Course-Main-Container our-test-series-main-container">
                     <Sidebar width={'292px'} data={NavItem[category]} handleExam={handleExam}/>
                     <div className="TestSeries-card-grid">
 
-                    {testSeries.length===0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item , index) => {
+                    {testSeries.length==0?<h1>No Test Series Related to this category</h1>:testSeries?.map((item , index) => {
                       return  (
                         <Fragment key={index}>
                             <TestSeriesCard id={item?._id} exam={exam} category={category} data={item} />

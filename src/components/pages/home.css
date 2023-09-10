@@ -310,6 +310,9 @@
 }
 
 @media (min-width: 300px) and (max-width: 575px) {
+    .Our-Course-Main-Container{
+        flex-direction: column;
+    }
     .one-destination-card-box {
         padding: 0px;
         box-shadow: none;
@@ -536,9 +539,6 @@
         width: 100%;
     }
 
-    .Our-Course-Main-Container>.horizontal-card-grid {
-        display: none;
-    }
 
     .Our-Course-Main-Container>.Common-Sidebar>div>ul>li {
         height: 57.494px;
@@ -585,11 +585,27 @@
     .edufinder-container>div {
         min-height: auto;
     }
-
+    .horizontal-card-grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        grid-row-gap: 29px;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .horizontal-card-grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        grid-row-gap: 29px;
+    }
+    .Our-Course-Main-Container {
+        flex-direction: column;
+    }
     .Our-Course-Main-Container>.Common-Sidebar {
         width: 100%;
     }

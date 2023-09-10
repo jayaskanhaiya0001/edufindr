@@ -20,8 +20,7 @@ import LottieControl from "../common/Loader/loader";
 import "./home.css";
 const destinationItem = ['learn', 'practice', 'improve', 'success'];
 const destinationCard = [{ icon: shield, title: "Trusted by", student: "4000+ Student" }, { icon: trophy, title: "Students Selected", student: "50+ Student" }, { icon: test, title: "Exam Attempted", student: "200+ Student" }]
-const PopularExamNavItem = { 'SSC': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Teaching Exams': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'UPSC': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'civil service': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'GATE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'AE & JE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Goverment Exmas': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Bamnking & Insurance': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Degfence Exams': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Raleway': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Teaching': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"] };
-const PopularExam = ['Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police', 'Delhi Police']
+const PopularExamNavItem = { 'SSC': ["SSC CGL", "SSC CHSL", "SSC JE", "SSC GD", "SSC CPO", "SSC Stenographer", "SSC MTS"], 'Teaching Exams': ["CGTET", "CTET Exam", "UTET Exam", "UPTET Exam", "REET Exam"], 'UPSC': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'civil service': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'GATE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'AE & JE': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Goverment Exmas': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Bamnking & Insurance': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Degfence Exams': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Raleway': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"], 'Teaching': ["History", "Anthropology", "Sociology", "Maithili", "Public Administration", "Law", "Economics"] };
 
 export const Homepage = () => {
     const navigate = useNavigate();
@@ -29,8 +28,8 @@ export const Homepage = () => {
     const [Teacher_Content, setTeacher_Content] = useState([]);
     const [testSeries, setTestSeries] = useState([])
     const [succesAlert, setSuccessAlert] = useState(false)
-    const [category, setCategory] = useState("")
-    const [exam, setExam] = useState("")
+    const [category, setCategory] = useState("SSC")
+    const [exam, setExam] = useState(0)
 
     const onChange = (e) => {
         setLead(e.target.value);
@@ -81,12 +80,6 @@ export const Homepage = () => {
         // headerapi();
         testSeriesApi();
     }, []);
-    if (succesAlert) {
-        setTimeout(() => {
-            setSuccessAlert(false)
-        }, 5000)
-    }
-
     return (
 
         <>
@@ -94,7 +87,7 @@ export const Homepage = () => {
                 (testSeries?.length > 0 && Teacher_Content?.length > 0) ? (
                     <>
                         <Header />
-                        {succesAlert && (<GetCallBack succesAlert={succesAlert} />)}
+                        {/* {succesAlert && (<GetCallBack succesAlert={succesAlert} />)} */}
                         <div className="homePage-Container">
                             <section className="one-destination">
                                 <div className="one-destination_box" >
@@ -119,6 +112,7 @@ export const Homepage = () => {
                                             <div>
                                                 <input onChange={(e) => { onChange(e) }} value={lead} maxLength={10} type="number" placeholder="Enter your mobile number" />
                                             </div>
+                                            {succesAlert && <p style={{color: "green"}}>Lorem Ipsum is simply dummy text</p>}
                                             <button onClick={() => { leadGeneration() }} className="Call-Back-Btn">Get a call back</button>
                                             <p><img src={shield} alt="" />30,000+ students trust us</p>
                                         </div>
@@ -171,14 +165,15 @@ export const Homepage = () => {
                             <div className="homePage-Container">
                                 <div className="Popular-exam-box" style={{ paddingBottom: "100px" }}>
                                     <UpperHeader title={'Popular Exam'} desc={'Get exam-ready with concepts, questions and study notes as per the latest pattern'} />
-                                    <Nav navList={PopularExamNavItem} handleCategory={handleCategory} handleExam={handleExam} />
+                                    <Nav navList={PopularExamNavItem} handleCategory={handleCategory} handleExam={handleExam} category={category}/>
                                     <div className="Popular-Ind-Exam-Box">
                                         {
-                                            PopularExam.map((item, index) => {
+                                            PopularExamNavItem[category]?.map((item, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <div id={index} className="ind-exam">
-                                                            <span>{item}</span>
+                                                        {console.log(exam === index)}
+                                                        <div id={index} className="ind-exam" onClick={() => {setExam(index)}} style={(exam === index)? { backgroundColor: "#722E60" , cursor: "pointer", color: "#fff" } : {}}>
+                                                            <span style={(exam === index)? {color: "#fff"} : {}}>{item}</span>
                                                             <img src="./images/chevron-right.svg" alt="chevron-right" />
                                                         </div>
                                                     </Fragment>
