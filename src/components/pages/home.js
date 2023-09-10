@@ -101,7 +101,7 @@ export const Homepage = () => {
                                                     destinationItem.map((item, index) => {
                                                         return (
                                                             <Fragment key={index}>
-                                                                <li id={index} >{item}</li>
+                                                                <li id={index} style={{textTransform: "capitalize"}}>{item}</li>
                                                             </Fragment>
                                                         )
                                                     })

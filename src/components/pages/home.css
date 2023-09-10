@@ -373,6 +373,7 @@
         padding: 0px;
         padding: 10.98px;
         min-height: 56px;
+        white-space: nowrap;
         justify-content: center;
         gap: 8.784px;
     }
