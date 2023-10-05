@@ -32,7 +32,7 @@ export const CourseDetail = () => {
     const [courses, setCourses] = useState([])
     const [testSeriesInfo, setTestSeriesInfo] = useState([])
     const courseapi = (category) => {
-        axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?category=${category}`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllcourses?category=${category}`)
             .then(response => {
 
                 setCourses(response.data.courses);
@@ -43,7 +43,7 @@ export const CourseDetail = () => {
     }
     const getCourse = async () => {
         try {
-            let res = await axios.get(`https://courseselling.onrender.com/api/v1/course/${param?.id}`)
+            let res = await axios.get(`https://edu-server-side-2023.onrender.com/api/v1/course/${param?.id}`)
             if (res?.data?.success) {
                 setCourse(res?.data?.data)
                 courseapi(res?.data?.data?.category)
@@ -56,7 +56,7 @@ export const CourseDetail = () => {
 
     const getTestSeries = async () => {
         try {
-            let res = await axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${course?.category}&exam=${course?.exam}`)
+            let res = await axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllTest?category=${course?.category}&exam=${course?.exam}`)
             if (res?.status === 200) {
                 setTestSeriesInfo(res?.data)
             }
@@ -136,11 +136,15 @@ export const CourseDetail = () => {
                             </div>
                             <div className="Right-Box">
                                 <div className="Course-Start-Detail-Container">
-                                    <img src={course?.mentorNames?.[0]?._id?.image} alt="dummy" className="Teacher_Corse_img" />
+                                    {
+                                        
+                                    }
+                                    {console.log(course , "Check Which Course")}
+                                    <img src={course?.image} alt="dummy" className="Teacher_Corse_img" />
                                     <div className="Course-Start-Detail-Content">
                                         <div>
                                             <h3>{course?.mentorNames?.[0]?._id?.name}</h3>
-                                            <p>{course?.mentorNames?.[0]?._id?.studentsTaught}+ Students taught</p>
+                                            {/* <p>{course?.mentorNames?.[0]?._id?.studentsTaught}+ Students taught</p> */}
                                         </div>
                                     </div>
                                 </div>

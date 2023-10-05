@@ -11,7 +11,7 @@ export const BlogPage = () => {
     const [loader, setLoader] = useState(false)
     const getBlog = async () => {
         try {
-            let res = await axios.get(`https://courseselling.onrender.com/api/v1/blog/${param?.id}`)
+            let res = await axios.get(`https://edu-server-side-2023.onrender.com/api/v1/blog/${param?.id}`)
             if (res?.data?.success) {
                 setBlog(res?.data?.data)
                 setLoader(true)

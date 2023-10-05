@@ -19,7 +19,7 @@ export const TestSeries = () => {
     const [loader, setLoader] = useState(false)
     const getTestSeriesInfo = async () => {
         try {
-            let res = await axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${location?.state?.category}&exam=${location?.state?.exam}`)
+            let res = await axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllTest?category=${location?.state?.category}&exam=${location?.state?.exam}`)
             if (res?.status === 200) {
                 setTestSeriesInfo(res?.data)
                 setLoader(true)
@@ -30,7 +30,7 @@ export const TestSeries = () => {
     }
     const getIndividualTestSeries = async () => {
         try {
-            let res = await axios.get(`https://courseselling.onrender.com/api/v1/Test/${params?.id}`)
+            let res = await axios.get(`https://edu-server-side-2023.onrender.com/api/v1/Test/${params?.id}`)
             if (res?.status === 200) {
                 setIndividualTestInfo(res?.data?.data)
             }

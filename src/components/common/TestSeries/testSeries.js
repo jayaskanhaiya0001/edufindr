@@ -19,7 +19,7 @@ export const TestSeriesNav = ({ search , setSearch}) => {
       setExam(data)
     }
     const testSeriesApi = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/getAllTest?category=${category}&exam=${exam}&search=${search}`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllTest?category=${category}&exam=${exam}&search=${search}`)
             .then(response => {
                 setTestSeries(response.data.Tests);
 

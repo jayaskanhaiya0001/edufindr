@@ -25,7 +25,7 @@ export const Course = ({ title, children , display , path }) => {
     setExam(data)
   }
   const courseapi = () => {
-    axios.get(`https://courseselling.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}&search=${search?search:""}`)
+    axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllcourses?exam=${exam}&category=${category}&search=${search?search:""}`)
       .then(response => {
 
         setCourses(response.data.courses);

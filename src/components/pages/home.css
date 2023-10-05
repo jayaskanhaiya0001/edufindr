@@ -25,6 +25,12 @@
     width: 100%;
 }
 
+.btn_box {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+}
+
 .Call-Back-Btn {
     padding: 17px 28px;
     border-radius: 4px;
@@ -268,6 +274,7 @@
     grid-template-columns: repeat(auto-fit, minmax(449px, 1fr));
     gap: 40px;
     grid-row-gap: 29px;
+    position: relative;
 }
 
 .Our-Course-Main-Container {
@@ -309,6 +316,18 @@
     height: 100vh;
 }
 
+.path-point > :nth-child(2){
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
+.path-point > :nth-child(3) {
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
+.path-point > :nth-child(4) {
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
 @media (min-width: 300px) and (max-width: 575px) {
     .Our-Course-Main-Container{
         flex-direction: column;

@@ -11,7 +11,7 @@ export const Freebeis = () => {
     const [video, setVideo] = useState([])
     const [files, setFiles] = useState([])
     const FreebeesVideo = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=video`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllFreebees?filter=video`)
             .then(response => {
                 setVideo(response.data?.data);
             })
@@ -20,7 +20,7 @@ export const Freebeis = () => {
             });
     }
     const InvokeFreebiesFile = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/getAllFreebees?filter=file`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/getAllFreebees?filter=file`)
             .then(response => {
                 setFiles(response.data?.data);
             })

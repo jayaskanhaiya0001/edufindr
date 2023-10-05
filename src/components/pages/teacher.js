@@ -16,7 +16,7 @@ export const TeacherDetail = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const getTeachersApi = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/teacher/${id}`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/teacher/${id}`)
             .then(response => {
 
                 setTeacher(response?.data?.data);

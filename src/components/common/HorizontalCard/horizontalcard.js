@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./horizontalcard.css";
-export const HorizontalCard = ({ item,image, title, additionalinfo, desc, bottomVal1, bottomVal2, path , keyId}) => {
+export const HorizontalCard = ({ item, image, title, additionalinfo, desc, bottomVal1, bottomVal2, path, keyId }) => {
     const navigate = useNavigate();
     return (
         <>
@@ -31,7 +31,11 @@ export const HorizontalCard = ({ item,image, title, additionalinfo, desc, bottom
                     </div>
 
                 </div>
+                <div className="hover-box">
+                    
+                </div>
             </div>
+
         </>
     )
 }

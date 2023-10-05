@@ -18,7 +18,7 @@ export const ContactForm = () => {
     const [succMessage , setSuccessMess] = useState("")
     const handleSendMessage = async () => {
         try {
-            const res = await axios.post('https://courseselling.onrender.com/api/v1/form', contactInfo)
+            const res = await axios.post('https://edu-server-side-2023.onrender.com/api/v1/form', contactInfo)
             if(res) {
                 console.log(res , "RES")
                 setSuccessMess("Lorem Ipsum is simply dummy text")

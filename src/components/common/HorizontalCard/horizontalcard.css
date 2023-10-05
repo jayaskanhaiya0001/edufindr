@@ -5,6 +5,7 @@
     background: #FFF;
     box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.10);
     cursor: pointer;
+    position: relative;
 }
 
 .Horizontal-Common-Image-Box {
@@ -62,6 +63,28 @@
 
 .Class-Mode {}
 
+.hover-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    display: none;
+}
+
+
+.Horizontal-Common-Card:hover {
+    .hover-box{
+        display: block;
+        transition: 3s;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('../../../../public/images/dummy.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
 @media(min-width: 300px) and (max-width:575px) {
     .Horizontal-Common-Image-Box {
         width: 158px;

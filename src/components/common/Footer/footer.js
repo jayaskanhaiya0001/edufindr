@@ -13,7 +13,7 @@ export const Footer = () => {
             }
             
             const leadGeneration=()=>{
-                axios.post('https://courseselling.onrender.com/api/v1/leadCollection',{
+                axios.post('https://edu-server-side-2023.onrender.com/api/v1/leadCollection',{
                     mobileNumber: lead
                 })
                 .then(response => {

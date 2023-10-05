@@ -10,7 +10,7 @@ export const FreebeisBlog = () => {
     const [toggle, setToggle] = useState('All')
     const [blogs, setBlogs] = useState([])
     const InvokeFreebiesBlog = () => {
-        axios.get(`https://courseselling.onrender.com/api/v1/blogs?tag=${toggle}`)
+        axios.get(`https://edu-server-side-2023.onrender.com/api/v1/blogs?tag=${toggle}`)
             .then(response => {
                 setBlogs(response.data?.data);
             })

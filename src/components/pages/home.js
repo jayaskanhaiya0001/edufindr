@@ -35,7 +35,7 @@ export const Homepage = () => {
         setLead(e.target.value);
     }
     const leadGeneration = () => {
-        axios.post('https://courseselling.onrender.com/api/v1/leadCollection', {
+        axios.post('https://edu-server-side-2023.onrender.com/api/v1/leadCollection', {
             mobileNumber: lead
         })
             .then(response => {
@@ -49,7 +49,7 @@ export const Homepage = () => {
             });
     }
     const testSeriesApi = () => {
-        axios.get('https://courseselling.onrender.com/api/v1/getAllTest')
+        axios.get('https://edu-server-side-2023.onrender.com/api/v1/getAllTest')
             .then(response => {
                 setTestSeries(response.data.Tests);
             })
@@ -58,7 +58,7 @@ export const Homepage = () => {
             });
     }
     const getAllTeachersApi = () => {
-        axios.get('https://courseselling.onrender.com/api/v1/getAllTeachers')
+        axios.get('https://edu-server-side-2023.onrender.com/api/v1/getAllTeachers')
             .then(response => {
 
                 setTeacher_Content(response.data.data);
@@ -101,7 +101,7 @@ export const Homepage = () => {
                                                     destinationItem.map((item, index) => {
                                                         return (
                                                             <Fragment key={index}>
-                                                                <li id={index} style={{textTransform: "capitalize"}}>{item}</li>
+                                                                <li id={index} style={{textTransform: "capitalize"}} className={`border_right${index}`}>{item}</li>
                                                             </Fragment>
                                                         )
                                                     })
