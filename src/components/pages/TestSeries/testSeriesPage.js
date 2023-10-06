@@ -3,10 +3,33 @@ import { TestSeriesSection } from "../../common/TestSeriesSection/testSeriesSect
 import { MobileCall } from "../../common/MobileCall/mobileCall";
 import OnlineTestSeries from "../../../assets/Images/Online-Test-Series.png";
 import { Header } from "../../common/Header/header";
+import { useEffect, useState } from "react";
 import { Footer } from "../../common/Footer/footer";
 import "./testSeriesPage.css";
-const NavItem = ['SSC', 'Teaching Exams', 'UPSC', 'civil service', 'GATE', 'AE & JE', 'Goverment Exmas', 'Bamnking & Insurance', 'Degfence Exams', 'Raleway', 'Teaching'];
+import axios from "axios";
+
+
+
 export const TestSeriesPage = () => {
+    const [search,setSearch]=useState("")
+    // const [testSeriesInfo , setTestSeriesInfo] = useState({}) 
+    // const getTestSeriesInfo = async () => {
+    //     try {
+    //         let res = await axios.get('https://edu-server-side-2023.onrender.com/api/v1/getAllTest')
+    //         if(res?.status === 200) {
+    //             setTestSeriesInfo(res?.data)
+    //         }
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
+    // useEffect(() => {
+    //     getTestSeriesInfo()
+    // } , [])
+    // console.log(testSeriesInfo , "testSeriesInfo")
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <Header />
@@ -23,8 +46,8 @@ export const TestSeriesPage = () => {
                             <div className="search-bar-container">
                                 <h3 className="input-heading">Which exam you preparing for?</h3>
                                 <div className="input-box">
-                                    <input type="text" placeholder="search for your exam" />
-                                    <span className="search-icon-box"> <img src="" alt="" /></span>
+                                    <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder="search for your exam" />
+                                    <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
@@ -40,16 +63,16 @@ export const TestSeriesPage = () => {
                             <p>Get exam-ready with concepts, questions and study notes as per the latest pattern</p>
                             <div className="search-bar-container">
                                 <div className="input-box">
-                                    <input type="text" placeholder="search for your exam" />
-                                    <span className="search-icon-box"> <img src="" alt="" /></span>
+                                    <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" placeholder="search for your exam" />
+                                    <span className="search-icon-box"> <img src="/Icons/search.svg" alt="" /></span>
                                 </div>
                             </div>
                         </div>
-                        <TestSeriesNav NavItem={NavItem} />
+                        <TestSeriesNav  search={search} setSearch={setSearch} />
                     </div>
                 </section>
                 <section>
-                    <TestSeriesSection />
+                    <TestSeriesSection/>
                 </section>
                 <section>
                     <MobileCall />

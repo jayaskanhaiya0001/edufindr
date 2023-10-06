@@ -1,0 +1,378 @@
+.Conatct-Us-Container {
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.Conatct-Top-Container {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.Conatct-Top-Container>* {
+    width: 50%;
+}
+
+.Conatct-Content-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+}
+
+.Contact-Head-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-key-point {
+    margin-left: 18px;
+}
+
+.contact-key-point>li {
+    list-style: disc;
+}
+
+.Contact-us-btm-container {
+    display: flex;
+    gap: 90px;
+    min-height: 620px;
+}
+
+.Contact-us-btm-container>* {
+    width: 50%;
+}
+
+.Contact-us-btm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Contact-us-img-container {
+    position: relative;
+}
+
+.Contact-us-img-container>div>img {
+    min-height: 395px;
+    width: 375px;
+    object-fit: cover;
+}
+
+.Contact-Details-Grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 16px;
+    border: 1px solid #DFE4E7;
+    background: #FFF;
+    padding: 16px;
+    grid-gap: 40px;
+}
+
+.Contact-Detail-Box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Contact-Detail-Box>p {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Contact-Detail-Box>p>img {
+    width: 30px;
+    height: 22.031px;
+}
+
+.Contact-Detail-Box>h6 {
+    color: #000;
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.first_image {
+    position: absolute;
+}
+
+.Second_image {
+    position: absolute;
+    top: 225px;
+    left: 172px;
+}
+
+.Contact-us-about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.Contact-us-about-container>h1 {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.709px;
+}
+
+.Contact-us-about-container>p {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.Contact-us-About-section>.Contact-us-about-container {
+    display: none;
+}
+
+.Contact-Details-Grid > :nth-child(1) {
+    border-right: 1px solid #DFE4E7;
+}
+
+.Contact-Details-Grid > :nth-child(2) {
+    border-right: 1px solid #DFE4E7;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+    .Conatct-Us-Container {
+        margin: 37px auto;
+        padding: 0 16px;
+        gap: 40px;
+    }
+
+    .Conatct-Top-Container {
+        flex-direction: column;
+    }
+
+    .Conatct-Top-Container>* {
+        width: 100%;
+    }
+
+    .Contact-Details-Grid {
+        border: none;
+        grid-gap: 20px;
+        padding: 0px;
+    }
+
+    .Contact-Details-Grid>a {
+        display: block;
+        border-radius: 8px;
+        border: 1px solid var(--orange-400, #B34F12);
+        background: var(--orange-0, #FFF6F0);
+        padding: 16px;
+    }
+
+    .Contact-Detail-Box>p {
+        color: var(--black-400, #000);
+        font-family: Satoshi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 38px;
+    }
+
+    .Contact-Detail-Box>h6 {
+        color: var(--black-400, #000);
+        font-family: Satoshi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .first_image {
+        position: static;
+    }
+
+    .Second_image {
+        position: static;
+    }
+
+    .Contact-us-btm-container {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .Contact-us-About-section>.Contact-us-about-container {
+        display: none;
+    }
+
+    .Contact-us-btm-container>* {
+        width: 100%;
+    
+    }
+
+    .Contact-us-img-container>div>img {
+        height: 207px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        min-height: auto;
+    }
+
+    .Second_image {
+        display: none;
+    }
+
+    .Contact-Head-Box>h1 {
+        color: #000;
+        font-family: Satoshi;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Contact-Head-Box>p {
+        color: #000;
+        font-family: Satoshi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .Conatct-Content-Box{
+        gap: 16px;
+    }
+    .Contact-Details-Grid > :nth-child(1) {
+        border-right: none;
+    }
+    
+    .Contact-Details-Grid > :nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .Conatct-Us-Container {
+        max-width: 540px;
+    }
+
+    .Conatct-Top-Container {
+        flex-direction: column;
+    }
+
+    .Conatct-Top-Container>* {
+        width: 100%;
+    }
+
+    .Contact-Details-Grid {
+        border: none;
+        grid-gap: 20px;
+    }
+
+    .first_image {
+        position: static;
+    }
+
+    .Second_image {
+        position: static;
+    }
+
+    .Contact-us-btm-container {
+        flex-direction: column-reverse;
+    }
+
+    .Contact-us-About-section>.Contact-us-about-container {
+        display: none;
+    }
+
+    .Contact-us-btm-container>* {
+        width: 100%;
+    }
+
+    .Contact-us-img-container>div>img {
+        min-height: auto;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .Second_image {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Conatct-Us-Container {
+        max-width: 720px;
+    }
+
+    .Conatct-Top-Container {
+        gap: 0px;
+    }
+
+
+
+    .Contact-us-img-container>div>img {
+        min-height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .Second_image {
+        position: absolute;
+        top: 120px;
+        left: 130px;
+    }
+
+    .Contact-us-btm-container {
+        gap: 24px;
+    }
+
+    .Contact-us-btm-content>.Contact-us-about-container {
+        display: none;
+    }
+
+    .Contact-us-btm-container {
+        min-height: 480px;
+    }
+
+    .Contact-us-About-section>.about-container {
+        display: block;
+    }
+
+    .Contact-form {
+        gap: 12px;
+    }
+
+    .Contact-Form-Container {
+        padding: 24px 10px;
+    }
+
+    .Contact-Details-Grid {
+        border: none;
+        grid-gap: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Conatct-Us-Container {
+        max-width: 960px;
+    }
+
+    .Contact-us-btm-container {
+        gap: 22px;
+    }
+
+    .Contact-us-img-container>div>img {
+        min-height: 300px;
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Conatct-Us-Container {
+        max-width: 1170px;
+    }
+}

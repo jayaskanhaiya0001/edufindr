@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 19px;
+    cursor: pointer;
 }
 
 .test-series-main-box {
@@ -71,6 +72,10 @@
     display: flex;
     gap: 11px;
     align-items: center;
+}
+
+.translate-language > img {
+    margin-right: 8px;
 }
 
 @media (max-width: 576px) {

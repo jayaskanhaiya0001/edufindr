@@ -2,6 +2,7 @@
     border-radius: 22px;
     border: 1px solid #DFE4E7;
 }
+
 .Freebeis-Upper-Section {
     display: flex;
     flex-direction: column;
@@ -11,10 +12,16 @@
     justify-content: center;
     gap: 40px;
 }
-.Freebeis-Upper-Section > div {
+
+.Freebeis-Upper-Section>div {
     display: flex;
+    border-radius: 12px;
 }
-.Freebeis-Upper-Section > div > button {
+.Freebeis-Upper-Section>div> button{
+    white-space: nowrap;
+}
+
+.Freebeis-Upper-Section>div>button {
     border: none;
     padding: 10.909px 20.966px 10.909px 21.818px;
     background-color: #fff;
@@ -33,6 +40,13 @@
 .FreebeisVideoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 42px 42px;
+}
+
+.FreebeisFilesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 42px 42px;
 }
 
 .FreebeisBlogGrid {
@@ -41,10 +55,34 @@
     grid-gap: 42px 42px;
 }
 
+
+.freebeis-icon {
+    width: 15.065px;
+    height: 14.241px;
+    fill: var(--black-0, #000) !important;
+}
+
 @media(min-width: 300px) and (max-width:575px) {
     .Freebeis-Card-Container {
         padding: 0 16px;
         margin: 38px auto;
+    }
+    .Freebeis-Upper-Section{
+        padding: 16px;
+        align-items: flex-start;
+    }
+    .freebeis-btn-box {
+        overflow-x: scroll;
+    }
+    
+    .freebeis-btn-box::-webkit-scrollbar {
+        display: none;
+    }
+    .Freebeis-Upper-Section>div {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        
     }
 }
 
@@ -59,6 +97,22 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 42px 42px;
     }
+    .Freebeis-Upper-Section{
+        padding: 16px;
+    }
+    .freebeis-btn-box {
+        overflow-x: scroll;
+    }
+    
+    .freebeis-btn-box::-webkit-scrollbar {
+        display: none;
+    }
+    .Freebeis-Upper-Section>div {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
 }
 
 
@@ -67,6 +121,10 @@
         max-width: 720px;
         margin: 80px auto;
     }
+
+    .freebeis-btn-box{
+        overflow: none;
+    }
 }
 
 @media(min-width: 992px) and (max-width:1199px) {
@@ -74,11 +132,17 @@
         max-width: 960px;
         margin: 80px auto;
     }
+    .freebeis-btn-box{
+        overflow: none;
+    }
 }
 
 @media(min-width: 1200px) {
     .Freebeis-Card-Container {
         max-width: 1170px;
 
+    }
+    .freebeis-btn-box{
+        overflow: none;
     }
 }

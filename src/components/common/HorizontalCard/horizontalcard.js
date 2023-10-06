@@ -1,17 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import "./horizontalcard.css";
-export const HorizontalCard = ({ image, title, additionalinfo, desc, bottomVal1, bottomVal2, path }) => {
+export const HorizontalCard = ({ item, image, title, additionalinfo, desc, bottomVal1, bottomVal2, path, keyId }) => {
     const navigate = useNavigate();
     return (
         <>
-            <div className="Horizontal-Common-Card" onClick={() => navigate(path)}>
+            <div className="Horizontal-Common-Card" onClick={() => navigate(`/course/course-detail/${item?._id}`)} key={keyId}>
                 <div className="Horizontal-Common-Image-Box">
-                    <img src={image} alt="" />
+                    <img src={item?.image} alt="" />
                 </div>
                 <div className="Horizontal-Common-Content-Box">
                     <div>
-                        <h2>{title}<br />({additionalinfo})</h2>
-                        <p className="Horizontal-Common-Content-disc">{desc}</p>
+                        <h2>{title}</h2>
+                        <p className="Horizontal-Common-Content-disc">By {item?.mentorNames.map((item) => item?.name).join(', ')},</p>
+
                     </div>
                     <div className="star-box">
                         <div>
@@ -25,12 +26,16 @@ export const HorizontalCard = ({ image, title, additionalinfo, desc, bottomVal1,
 
                         <p>
                             <span>{bottomVal1}</span>
-                            <span>{bottomVal2}</span>
+                            <span>{item?.language}</span>
                         </p>
                     </div>
 
                 </div>
+                <div className="hover-box">
+                    
+                </div>
             </div>
+
         </>
     )
 }

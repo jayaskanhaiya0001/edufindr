@@ -1,9 +1,35 @@
 import { Link } from "react-router-dom";
 import "./footer.css"
+import axios from "axios"
+import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import { GetCallBack } from "../Popup/call";
 export const Footer = () => {
+    const [succesAlert ,setSuccessAlert] = useState(false) 
+    const [lead,setLead]=useState("");
+    const navigate=useNavigate();
+    const onChange=(e)=>{
+        setLead(e.target.value);
+            }
+            
+            const leadGeneration=()=>{
+                axios.post('https://edu-server-side-2023.onrender.com/api/v1/leadCollection',{
+                    mobileNumber: lead
+                })
+                .then(response => {
+        setLead("")
+        if(response.data.success){ setSuccessAlert(true)}
+       
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+            }
     return (
         <>
+         {/* {succesAlert && (<GetCallBack succesAlert={succesAlert}/>)} */}
             <footer>
+
                 <div className="Footer-Container">
                     <div className="Footer-Main-Container">
                         <div className="Footer-Upper-Container">
@@ -13,9 +39,9 @@ export const Footer = () => {
                                 </li>
                                 <li>
                                     <ul>
-                                        <li>Learn from the finest educators <br /> in India.</li>
+                                        <li>Learn from the finest educatorss <br /> in India.</li>
                                         <li>
-                                            <input placeholder="Your phone number" /><span><img src="/images/right-arrow.svg" alt="" /></span>
+                                            <input placeholder="Your phone number" /><span >  <img src="/images/right-arrow.svg" alt="" /></span>
                                         </li>
                                     </ul>
                                     <ul>
@@ -56,8 +82,9 @@ export const Footer = () => {
                                     <ul>
                                         <li>Learn from the finest educators <br /> in India.</li>
                                         <li>
-                                            <input placeholder="Your phone number" /><span><img src="/images/right-arrow.svg" alt="" /></span>
+                                            <input value ={lead} onChange={(e)=>{onChange(e)}}  placeholder="Your phone number" /><span onClick={()=>{leadGeneration()}}><img src="/images/right-arrow.svg" alt="" /></span>
                                         </li>
+                                        {succesAlert && <li style={{color: "green"}}>Lorem Ipsum is simply dummy text</li>}
                                     </ul>
                                 </li>
                             </ul>
@@ -95,7 +122,7 @@ export const Footer = () => {
                                             <button>Get Started For Free</button>
                                         </li>
                                         <li>
-                                            <button>Contact Us</button>
+                                            <button onClick={()=>{navigate(`/contact-us`)}}>Contact Us</button>
                                         </li>
                                     </ul>
                                 </li>

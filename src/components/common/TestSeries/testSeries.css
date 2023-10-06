@@ -29,7 +29,21 @@
 
 .TestSeries-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(252.5px, 0fr));
+    grid-template-columns: repeat(auto-fit, minmax(252.5px, 1fr));
     flex-grow: 1;
     grid-gap: 32px;
+}
+@media (min-width: 300px) and (max-width: 575px) {
+    .Common-Sidebar {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .Our-Course-Main-Container {
+        gap: 35px;
+    }
+    .our-test-series-main-container{
+        flex-direction: row !important;
+    }
 }

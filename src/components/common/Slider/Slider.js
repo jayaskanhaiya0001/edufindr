@@ -1,7 +1,8 @@
+import { Fragment } from "react";
 import Slider from "react-slick";
-import StudentGrp from "../../../assets/slider-image/student-grp.svg";
-import library from "../../../assets/slider-image/library.svg";
-import Edufindr from "../../../assets/slider-image/edufindr-log.svg";
+import StudentGrp from "../../../assets/slider-image/student-grp.webp";
+import library from "../../../assets/slider-image/library.webp";
+import Edufindr from "../../../assets/slider-image/edufindr-log.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css"
@@ -23,11 +24,11 @@ export const SlickSlider = ({settings}) => {
                 {
                     sliderImage?.map((url, ind) => {
                         return (
-                            <>
-                                <div key={ind}>
+                            <Fragment key={ind}>
+                                <div key={`${ind+url}`}>
                                     <img src={url} alt="" />
                                 </div>
-                            </>
+                            </Fragment>
                         )
                     })
                 }

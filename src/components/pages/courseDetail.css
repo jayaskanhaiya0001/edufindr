@@ -21,7 +21,7 @@
 
 .Left-Box>h1 {
     color: #000;
-    
+
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -30,7 +30,6 @@
 
 .Left-Box>p {
     color: #3B4A54;
-    font-family: Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -44,7 +43,7 @@
     background: #FFF;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
     color: #000;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -150,7 +149,7 @@
 .Additional-Detail-Box>p {
     color: #000;
     text-align: center;
-    
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -185,7 +184,7 @@
 
 .Price-Container>div> :nth-child(1) {
     color: #000;
-    
+
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -194,7 +193,7 @@
 
 .Price-Container>div> :nth-child(2) {
     color: #000;
-    
+
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -208,7 +207,7 @@
     border-radius: 7px;
     background: var(--purple-400, #722E60);
     color: #FFF;
-    
+    cursor: pointer;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -225,7 +224,7 @@
 
 .Teachers-Container>h1 {
     color: #000;
-    
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -261,7 +260,6 @@
     grid-auto-flow: column;
     overflow-x: scroll;
     grid-template-columns: repeat(auto-fit, minmax(456px, 0fr));
-    grid-auto-columns: max-content;
     grid-gap: 24px;
 }
 
@@ -269,6 +267,23 @@
     display: none;
 }
 
+.Teacher_Corse_img {
+    width: 278px;
+    height: auto;
+    object-fit: cover;
+}
+
+.Select-Batch-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.Similiar_test_Series_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
 
 @media(min-width: 300px) and (max-width:575px) {
     .Course-Detail-Top-Container {
@@ -315,7 +330,7 @@
 
     .Class-Mode {
         color: #000;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -326,7 +341,7 @@
     .Left-Box>h1 {
         color: #000;
         text-align: center;
-        
+
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -335,7 +350,7 @@
 
     .Left-Box>p {
         color: #3B4A54;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -345,7 +360,7 @@
 
     .Left-Box>p>b {
         color: #3B4A54;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -360,7 +375,7 @@
 
     .Course-Basic-Content>h3 {
         color: #000;
-        
+
         font-size: 10px;
         font-style: normal;
         font-weight: 700;
@@ -370,7 +385,7 @@
 
     .Course-Basic-Content>span {
         color: #000;
-        
+
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -400,6 +415,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 33px;
     }
+
     .Similiar-Courses-Grid {
         padding-bottom: 20px;
         display: grid;
@@ -477,7 +493,7 @@
     }
 
     .Batch-Timing {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
     .Batch-Card-Grid {

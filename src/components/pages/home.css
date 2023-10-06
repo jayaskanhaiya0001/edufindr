@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
+    position: relative;
 }
 
 .home-form {
@@ -24,6 +25,12 @@
     width: 100%;
 }
 
+.btn_box {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+}
+
 .Call-Back-Btn {
     padding: 17px 28px;
     border-radius: 4px;
@@ -36,6 +43,7 @@
     line-height: 22.4px;
     text-transform: capitalize;
     width: 100%;
+    cursor: pointer;
 }
 
 .home-form>p {
@@ -186,7 +194,7 @@
 .Popular-Ind-Exam-Box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 2fr));
-    gap: 1%;
+    gap: 3%;
     grid-row-gap: 29px;
 }
 
@@ -266,6 +274,7 @@
     grid-template-columns: repeat(auto-fit, minmax(449px, 1fr));
     gap: 40px;
     grid-row-gap: 29px;
+    position: relative;
 }
 
 .Our-Course-Main-Container {
@@ -300,7 +309,29 @@
     background: #E3F8FF;
 }
 
+.Loader-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.path-point > :nth-child(2){
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
+.path-point > :nth-child(3) {
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
+.path-point > :nth-child(4) {
+    border-left: 1px solid #000 !important;
+    padding-left: 15px;
+}
 @media (min-width: 300px) and (max-width: 575px) {
+    .Our-Course-Main-Container{
+        flex-direction: column;
+    }
     .one-destination-card-box {
         padding: 0px;
         box-shadow: none;
@@ -360,7 +391,8 @@
     .one-destination-card {
         padding: 0px;
         padding: 10.98px;
-        height: 56px;
+        min-height: 56px;
+        white-space: nowrap;
         justify-content: center;
         gap: 8.784px;
     }
@@ -527,9 +559,6 @@
         width: 100%;
     }
 
-    .Our-Course-Main-Container>.horizontal-card-grid {
-        display: none;
-    }
 
     .Our-Course-Main-Container>.Common-Sidebar>div>ul>li {
         height: 57.494px;
@@ -576,11 +605,27 @@
     .edufinder-container>div {
         min-height: auto;
     }
-
+    .horizontal-card-grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        grid-row-gap: 29px;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .horizontal-card-grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        grid-row-gap: 29px;
+    }
+    .Our-Course-Main-Container {
+        flex-direction: column;
+    }
     .Our-Course-Main-Container>.Common-Sidebar {
         width: 100%;
     }
@@ -656,7 +701,7 @@
     }
 
     .Popular-exam-box>nav>ul>li {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
 
@@ -729,7 +774,7 @@
     }
 
     .exam-box>div>nav>ul>li {
-        text-wrap: nowrap;
+        white-space: nowrap;
     }
 }
 
@@ -753,6 +798,14 @@
 
     .one-destination_box>div {
         width: 100%;
+    }
+    .Popular_teacher_box{
+        min-height: 880px;
+        background: #fff;
+    }
+    .Popular_teacher_absolute_box{
+        gap: 25px;
+        flex-wrap: wrap;
     }
 }
 

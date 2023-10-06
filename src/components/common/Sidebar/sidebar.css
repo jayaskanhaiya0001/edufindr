@@ -1,11 +1,6 @@
-.sidebar-container>ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .Common-Sidebar {
     width: 162px;
+    cursor: pointer;
 }
 
 .sidebar-container>ul {
@@ -15,6 +10,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    white-space: nowrap;
 }
 
 .sidebar-container>ul>li {

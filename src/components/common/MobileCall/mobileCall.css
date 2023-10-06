@@ -38,8 +38,7 @@
 .Mobile-Form>div>input {
     outline: none;
     border: none;
-    color: #FFF;
-    font-family: Inter;
+    color: #000;
     font-size: 10.488px;
     font-style: normal;
     font-weight: 600;
@@ -60,14 +59,49 @@ input::-webkit-inner-spin-button {
     object-position: bottom;
 }
 
+
+
+.EnterMobile::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* Firefox */
+}
+
+.EnterMobile:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.EnterMobile::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #646F79;
+    font-family: Satoshi;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 @media(min-width: 300px) and (max-width: 575px) {
     .Mobile-Call-Container {
         flex-direction: column-reverse;
         gap: 24px;
     }
+
     .Form-Title-Container {
         margin: 0 auto;
     }
+
     .Form-Title-Container>h3 {
         color: #000;
         text-align: center;
@@ -88,6 +122,7 @@ input::-webkit-inner-spin-button {
         font-weight: 400;
         line-height: normal;
     }
+
     .Mobile-Call-Container>:nth-child(2)>img {
         min-width: 259px;
         display: block;
@@ -122,9 +157,11 @@ input::-webkit-inner-spin-button {
         font-weight: 400;
         line-height: normal;
     }
+
     .Form-Title-Container {
         width: 100%;
     }
+
     .Mobile-Call-Container>:nth-child(2)>img {
         min-width: 460px;
         display: block;
@@ -138,9 +175,10 @@ input::-webkit-inner-spin-button {
         flex-direction: column-reverse;
         gap: 50px;
     }
-    .Mobile-Call-Container > :nth-child(2) > img {
-       display: block;
-       margin: 0 auto;
+
+    .Mobile-Call-Container> :nth-child(2)>img {
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -148,10 +186,12 @@ input::-webkit-inner-spin-button {
     .Mobile-Call-Container {
         gap: 50px;
     }
-    .Mobile-Call-Container > div {
+
+    .Mobile-Call-Container>div {
         width: 50%;
     }
-    .Mobile-Call-Container > :nth-child(2) > img {
+
+    .Mobile-Call-Container> :nth-child(2)>img {
         width: 100%;
         height: 100%;
     }

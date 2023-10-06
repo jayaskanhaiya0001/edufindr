@@ -61,8 +61,23 @@
 
 .Freebies-View-Card>img {
     object-fit: cover;
-    width: 100%;
     height: 100%;
+    width: 100%;
+}
+
+.pdfViewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFECEC;
+    height: 236px;
+    border-radius: 22px;
+    border: 1px solid #DFE4E7;
+}
+
+.pdfViewer>img {
+    width: 64px;
+    height: 64px;
 }
 
 @media(min-width: 300px) and (max-width:575px) {
@@ -82,8 +97,42 @@
     }
 }
 
+@media(min-width: 300px) and (max-width:575px) {
+    .FreeeBies-Card {
+        width: auto;
+    }
+
+    .Freebies-View-Card>img {
+        width: 100%;
+    }
+}
+
 @media(min-width: 576px) and (max-width:767px) {
     .Freebies-discription {
         width: 95%;
+    }
+
+    .FreeeBies-Card {
+        width: 100%;
+    }
+
+    .Freebies-View-Card>img {
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px) and (max-width:991px) {
+    .Freebies-View-Card>img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Freebies-View-Card {
+        height: auto;
+    }
+
+    .FreeeBies-Card {
+        width: fit-content;
     }
 }
