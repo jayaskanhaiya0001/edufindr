@@ -10,8 +10,8 @@ export const HorizontalCard = ({ item, image, title, additionalinfo, desc, botto
                 </div>
                 <div className="Horizontal-Common-Content-Box">
                     <div>
-                        <h2>{title}</h2>
-                        <p className="Horizontal-Common-Content-disc">By {item?.mentorNames.map((item) => item?.name).join(', ')},</p>
+                        <h2>{item?.title}</h2>
+                        <p className="Horizontal-Common-Content-disc">By: {item?.mentorNames.map((item) => item?.name).join(', ')}</p>
 
                     </div>
                     <div className="star-box">
