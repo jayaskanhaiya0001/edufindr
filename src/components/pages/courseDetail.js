@@ -136,9 +136,6 @@ export const CourseDetail = () => {
                             </div>
                             <div className="Right-Box">
                                 <div className="Course-Start-Detail-Container">
-                                    {
-                                        
-                                    }
                                     {console.log(course , "Check Which Course")}
                                     <img src={course?.image} alt="dummy" className="Teacher_Corse_img" />
                                     <div className="Course-Start-Detail-Content">
