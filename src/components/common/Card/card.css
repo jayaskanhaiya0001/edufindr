@@ -31,11 +31,13 @@
 
 .common-card-description {
     color: #000;
-    
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .common-card-icon {
